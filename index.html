@@ -3,53 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Kylhab Marketing – Quality Products Delivered in Nairobi</title>
+    <title>Kylhab Marketing – Modern Dropshipping in Nairobi</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome for icons (free) -->
+    <!-- Font Awesome 6 (free) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- Header -->
-<header>
-    <div class="container">
-        <h1>Kylhab Marketing</h1>
-        <p>Your trusted dropshipping partner in Nairobi</p>
-        <div class="contact-header">
-            <a href="https://wa.me/254723652430" target="_blank"><i class="fab fa-whatsapp"></i> Order on WhatsApp</a>
-            <a href="tel:+254723652430"><i class="fas fa-phone-alt"></i> Call Us</a>
+    <!-- Modern Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Kylhab <span>Marketing</span></a>
+            <div class="nav-contact">
+                <a href="tel:+254700000000" class="nav-phone"><i class="fas fa-phone-alt"></i> <span class="hide-mobile">Call Us</span></a>
+                <a href="https://wa.me/254723652430" class="nav-wa" target="_blank"><i class="fab fa-whatsapp"></i> <span class="hide-mobile">Order on WhatsApp</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">Trusted Dropshipping Partner in Nairobi</div>
+                <h1>Quality products, <span class="highlight">delivered fast.</span></h1>
+                <p>Shop the latest gadgets, accessories, and lifestyle essentials. Experience a seamless, modern shopping experience with Kylhab Marketing.</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn-primary">Shop Now <i class="fas fa-arrow-right"></i></a>
+                    <a href="#inquiry" class="btn-secondary">Bulk Inquiry <i class="fas fa-file-signature"></i></a>
+                </div>
+                <div class="hero-trust">
+                    <div class="trust-item"><i class="fas fa-truck-fast"></i> 2-5 Day Delivery</div>
+                    <div class="trust-item"><i class="fas fa-shield-alt"></i> M-PESA Secure</div>
+                    <div class="trust-item"><i class="fas fa-headset"></i> 24/7 Support</div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <!-- abstract shape / placeholder for modern visual -->
+                <div class="hero-shape"></div>
+                <div class="hero-float-card">
+                    <i class="fas fa-box-open"></i>
+                    <span>#1 Rated in Nairobi</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Trust Signals -->
+    <div class="trust-banner">
+        <div class="container trust-grid">
+            <div class="trust-stat"><i class="fas fa-shopping-bag"></i> <span>500+ Orders Fulfilled</span></div>
+            <div class="trust-stat"><i class="fas fa-star"></i> <span>4.9 ★ Customer Rating</span></div>
+            <div class="trust-stat"><i class="fas fa-clock"></i> <span>Same-Day Dispatch</span></div>
         </div>
     </div>
-</header>
 
-<!-- Product Grid -->
-<main class="container">
-    <h2>🔥 Our Bestsellers</h2>
-    <div class="products-grid" id="productsGrid">
-        <!-- Products will be loaded from script.js -->
-    </div>
-</main>
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>🔥 Our Bestsellers</h2>
+                <p>Curated just for you. High-quality, in-demand products at unbeatable prices.</p>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- dynamic products from script.js -->
+            </div>
+        </div>
+    </section>
 
-<!-- Simple Inquiry Form (for bulk/wholesale) -->
-<section class="inquiry container">
-    <h3>📦 Need a specific product? Ask us!</h3>
-    <form id="inquiryForm">
-        <input type="text" id="inquiryName" placeholder="Your name" required>
-        <input type="email" id="inquiryEmail" placeholder="Your email">
-        <input type="text" id="inquiryProduct" placeholder="Product you're looking for" required>
-        <textarea id="inquiryMessage" rows="3" placeholder="Any details..."></textarea>
-        <button type="submit">Send via WhatsApp <i class="fab fa-whatsapp"></i></button>
-    </form>
-</section>
+    <!-- Enhanced Inquiry Section -->
+    <section id="inquiry" class="inquiry">
+        <div class="container inquiry-container">
+            <div class="inquiry-content">
+                <h3>📦 Need a specific product? We got you.</h3>
+                <p>Tell us what you're looking for — we'll source it directly from our partners. Fast, reliable, and hassle-free.</p>
+                <div class="inquiry-features">
+                    <div><i class="fas fa-check-circle"></i> Bulk pricing available</div>
+                    <div><i class="fas fa-check-circle"></i> Express delivery options</div>
+                    <div><i class="fas fa-check-circle"></i> Dedicated account manager</div>
+                </div>
+            </div>
+            <div class="inquiry-form">
+                <form id="inquiryForm">
+                    <div class="form-row">
+                        <input type="text" id="inquiryName" placeholder="Your name" required>
+                        <input type="email" id="inquiryEmail" placeholder="Your email">
+                    </div>
+                    <input type="text" id="inquiryProduct" placeholder="Product you're looking for" required>
+                    <textarea id="inquiryMessage" rows="3" placeholder="Any details... quantity, specs, etc."></textarea>
+                    <button type="submit" class="btn-primary full-width">Send Inquiry <i class="fab fa-whatsapp"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <p>&copy; 2026 Kylhab Marketing – Nairobi, Kenya</p>
-        <p>Delivery within 2-5 business days | M-PESA accepted</p>
-    </div>
-</footer>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Kylhab <span>Marketing</span></h3>
+                    <p>Your trusted dropshipping partner, delivering quality products across Kenya.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#inquiry">Bulk Orders</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fab fa-whatsapp"></i> +254 723 652 430</p>
+                    <p><i class="fas fa-envelope"></i> hello@kylhab.co.ke</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kylhab Marketing – Nairobi, Kenya. All rights reserved.</p>
+                <p class="payment-methods">We accept: M-PESA | Airtel Money | Bank Transfer</p>
+            </div>
+        </div>
+    </footer>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
