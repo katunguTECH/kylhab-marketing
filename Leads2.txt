@@ -1,0 +1,86 @@
+ Electronics & Gadgets
+#	Business Name	Phone Number	Product Focus
+11	K-Technics	0712 799123	Electronic equipment and ICT solutions
+12	Digital Congress Systems and Designs Ltd	0718 732811	Wholesale electronics, event/Tech hardware
+13	Copiac Digital Systems Ltd	0714298241	Digital systems, office automation
+14	Glantix Solutions	700 000736 / 700 000736	IT and electronics solutions
+15	Cytech Digitals	0726 166061	Mobile devices, accessories, general electronics
+16	Tech Zote	+254701334455	Electronics, gadgets, online tech retailer
+17	Airduka.com	+254 111 108 000	Online marketplace selling electronics & general merchandise
+18	Dantes Merchants	+254726 383909	Electronics and general merchandise
+19	Happy Kitchen Appliances	+254723 837426	Home appliances, kitchen utensils
+🖥️ Computer & IT Solutions
+#	Business Name	Phone Number	Product Focus
+1	Gigatech Technologies	(+254) 723 464410	Apple, Dell, HP laptops & ICT gadgets
+2	Motech Computers	(via directory)	Computers & related products
+👗 Fashion & Apparel
+#	Business Name	Phone Number	Product Focus
+12	Sangyug Enterprises Ltd	(via directory)	General merchandise incl. apparel
+13	LALE Lingerie Shop	0710 333356	Lingerie, intimate apparel
+14	African Fabric And Designs Kenya Ltd	0710 660524	Fabrics, textiles, African prints
+15	Almasi Couture	+254700326386	Leather goods, African fabrics
+16	Wild Elegance Africa Limited	0722 616181 / 0721 501503	Fashion apparel & accessories
+17	Neoking Trading	+254 798972888	Wholesale clothing & apparel
+18	Vast Made by Africa	+254 79 6159 970	African-made fashion
+19	MI TARA	+254 713 543 020	Fashion & lifestyle products
+🏠 Furniture & Home Décor
+#	Business Name	Phone Number	Product Focus
+14	Big Bones Investments	0724 412659	Furniture & home investments
+15	Unique Properties	0711 424979	Furniture & property
+16	I home Furniture Showroom	0735 990663	General furniture showroom
+17	BuildMart Africa	+254-722819552 / +254 713 235 559	Kitchen furniture & building supplies
+18	Mima Designs Furniture	0700 921918	Modern furniture design
+19	Hudson Furnishing	0722 797126 / 0758 175604 / 0768 246122	Thoughtfully designed furniture
+20	PM Furniture and Pulpits	+254 741 371095	Furniture & custom woodwork
+21	Reynard Africa	+ 254 722 476 939	Furniture & home accessories
+22	Victoria Furnitures Ltd	0770 876140	Wholesale furniture & hardware
+🪑 Kitchen & Hospitality Equipment
+#	Business Name	Phone Number	Product Focus
+3	Wright Press Limited	+254 020 231 6823	Printing, publishing, branded merchandise
+11	Happy Kitchen Appliances	+254723 837426	Home appliances, kitchen utensils
+12	Bansi Suppliers	0722353974 / 0797619609	Kitchen equipment & supplies
+13	Magill Electricals and Supplies	+254719601863	Electrical equipment & kitchen appliances
+💄 Beauty & Cosmetics
+#	Business Name	Phone Number	Product Focus
+10	MNF Cosmetics	+254224570029	Cosmetics & beauty products
+11	Aladeen General Suppliers	(via directory)	Beauty, kitchenware, stationery
+12	List Of Best Cosmetics Wholesalers	0711 897 632	General cosmetics wholesale
+13	Beauty Wholesale Ltd	020 218 5076	Cosmetics & general merchandise
+14	Linton's Beauty World	0716 825 042	High-end beauty retail & wholesale
+15	Mum's Care International Ltd	+254720289687	Beauty & personal care
+16	Beauty Body Shapers	+254202217252	Beauty & wellness products
+17	OWANGO Cosmetics Supply	254723470120	Cosmetics & beauty supply
+18	Toppline Kenya	+254704556034 / +254733269500	London Beauty & cosmetics
+19	Ruaka Go Down	(via directory)	Hair & beauty products distribution
+📦 General Merchandise & Wholesale Distributors
+#	Business Name	Phone Number	Product Focus
+14	Mega Wholesalers Ltd	(via directory)	Major distributor, Eastleigh-based
+15	Aladeen General Suppliers	(via directory)	Stationery, kitchenware, beauty, chemicals
+16	Somlak General Supplies	0719 453724	General contracting & supplies
+17	Sonsy General Suppliers	+254720461125 / +254720461125	General merchandise on Mombasa Road
+18	Oshwal Wholesalers (K) Ltd	Call: 0724 483 887 / WhatsApp: 0753 120 020	General merchandise wholesaler
+19	Onestop Wholesalers	(via directory)	Household, cleaning, personal care, kitchen
+20	Brownly Supreme Suppliers	+254715108308	Machine spare consumables
+21	ELORA SUPPLY AND LOGISTICS LTD	0708030892	Logistics & general supply
+22	Eegol Kenya	soko@eegol.co.ke	Bulk products at competitive prices
+🐾 Pet Supplies & Agrovet
+#	Business Name	Phone Number	Product Focus
+2	Merry Pet Toys Limited	0724 263033	Pet toys & accessories
+3	ANICARE LTD	254-733-621367	Veterinary & pet supplies
+4	Petzone Kenya	+254 119 331616 / +254 119 331616	General pet supplies
+5	Mwiki Agrovet	0725 264953 / 0732 222376	Pet & agricultural supplies
+6	Petcity	0708710983	Complete pet shop
+7	Petsasa Kenya	+254 114 560 668	Online pet supplies
+8	Anicare	+254 20 3741897	Veterinary wholesale
+👶 Baby Products
+#	Business Name	Phone Number	Product Focus
+1	Mamas Toto	0736411441	Baby products & essentials
+2	Marvel Five Investments Ltd	+254711 214118 / +254711 214118	Baby care & personal care hygiene
+3	Made For Mums	0718740619	Baby & maternity products
+4	Mahitaji Enterprises Ltd	0734 317 097	Baby care, electronics, food items
+5	Roopam Ltd	0202218090	General merchandise including baby care
+6	Rosans Baby Shop	0723748057	Baby products
+7	jfc group	0725670147	General merchandise
+⚕️ Health & Personal Care
+#	Business Name	Phone Number	Product Focus
+1	Marvel Five Investments Ltd	+254711 214118 / +254711 214118	KEBS approved personal care hygiene products
