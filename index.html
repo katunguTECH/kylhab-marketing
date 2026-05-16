@@ -2,143 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Kylhab Marketing – Modern Dropshipping in Nairobi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kylhab Marketing | Nairobi</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome 6 (free) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts for modern typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Modern Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">Kylhab <span>Marketing</span></a>
-            <div class="nav-contact">
-                <a href="tel:+254700000000" class="nav-phone"><i class="fas fa-phone-alt"></i> <span class="hide-mobile">Call Us</span></a>
-                <a href="https://wa.me/254700000000" class="nav-wa" target="_blank"><i class="fab fa-whatsapp"></i> <span class="hide-mobile">Order on WhatsApp</span></a>
+    <header>
+        <nav class="container">
+            <div class="logo">Kylhab Marketing</div>
+            <div class="contact-header">
+                <a href="tel:+254700000000" class="btn-call">Call Us</a>
+                <a href="https://wa.me/254700000000" class="btn-wa">Order on WhatsApp</a>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <div class="hero-badge">Trusted Dropshipping Partner in Nairobi</div>
-                <h1>Quality products, <span class="highlight">delivered fast.</span></h1>
-                <p>Shop the latest gadgets, accessories, and lifestyle essentials. Experience a seamless, modern shopping experience with Kylhab Marketing.</p>
-                <div class="hero-buttons">
-                    <a href="#products" class="btn-primary">Shop Now <i class="fas fa-arrow-right"></i></a>
-                    <a href="#inquiry" class="btn-secondary">Bulk Inquiry <i class="fas fa-file-signature"></i></a>
-                </div>
-                <div class="hero-trust">
-                    <div class="trust-item"><i class="fas fa-truck-fast"></i> 2-5 Day Delivery</div>
-                    <div class="trust-item"><i class="fas fa-shield-alt"></i> M-PESA Secure</div>
-                    <div class="trust-item"><i class="fas fa-headset"></i> 24/7 Support</div>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-shape"></div>
-                <div class="hero-float-card">
-                    <i class="fas fa-box-open"></i>
-                    <span>#1 Rated in Nairobi</span>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main>
+        <section class="hero container">
+            <h1>Trusted Dropshipping Partner in Nairobi</h1>
+            <p>Quality products, delivered fast. Experience a seamless, modern shopping experience.</p>
+            <button class="btn-primary">Shop Now</button>
+        </section>
 
-    <!-- Social Proof / Trust Signals -->
-    <div class="trust-banner">
-        <div class="container trust-grid">
-            <div class="trust-stat"><i class="fas fa-shopping-bag"></i> <span>500+ Orders Fulfilled</span></div>
-            <div class="trust-stat"><i class="fas fa-star"></i> <span>4.9 ★ Customer Rating</span></div>
-            <div class="trust-stat"><i class="fas fa-clock"></i> <span>Same-Day Dispatch</span></div>
-        </div>
-    </div>
-
-    <!-- Products Section (existing) -->
-    <section id="products" class="products-section">
-        <div class="container">
-            <div class="section-header">
+        <section id="products" class="products-section">
+            <div class="container">
                 <h2>🔥 Our Bestsellers</h2>
-                <p>Curated just for you. High-quality, in-demand products at unbeatable prices.</p>
-            </div>
-            <div class="products-grid" id="productsGrid">
-                <!-- dynamic products from script.js -->
-            </div>
-        </div>
-    </section>
-
-    <!-- NEW: Autos, Motor Vehicles, Cars, Lorries & Vans Section -->
-    <section class="products-section" style="background: #f9fafc;">
-        <div class="container">
-            <div class="section-header">
-                <h2>🚗 Autos, Motor Vehicles, Cars, Lorries & Vans</h2>
-                <p>Quality used vehicles – accident free, well maintained, ready to drive.</p>
-            </div>
-            <div class="vehicles-grid" id="vehiclesGrid">
-                <!-- Vehicles will be loaded from script.js -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Enhanced Inquiry Section -->
-    <section id="inquiry" class="inquiry">
-        <div class="container inquiry-container">
-            <div class="inquiry-content">
-                <h3>📦 Need a specific product? We got you.</h3>
-                <p>Tell us what you're looking for — we'll source it directly from our partners. Fast, reliable, and hassle-free.</p>
-                <div class="inquiry-features">
-                    <div><i class="fas fa-check-circle"></i> Bulk pricing available</div>
-                    <div><i class="fas fa-check-circle"></i> Express delivery options</div>
-                    <div><i class="fas fa-check-circle"></i> Dedicated account manager</div>
-                </div>
-            </div>
-            <div class="inquiry-form">
-                <form id="inquiryForm">
-                    <div class="form-row">
-                        <input type="text" id="inquiryName" placeholder="Your name" required>
-                        <input type="email" id="inquiryEmail" placeholder="Your email">
+                <div class="products-grid" id="productsGrid">
                     </div>
-                    <input type="text" id="inquiryProduct" placeholder="Product you're looking for" required>
-                    <textarea id="inquiryMessage" rows="3" placeholder="Any details... quantity, specs, etc."></textarea>
-                    <button type="submit" class="btn-primary full-width">Send Inquiry <i class="fab fa-whatsapp"></i></button>
-                </form>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <section id="vehicles" class="products-section" style="background: #f4f7f6;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>🚗 Autos, Motor Vehicles, Cars, Lorries & Vans</h2>
+                    <p>Quality used vehicles – accident free, well maintained, ready to drive.</p>
+                </div>
+                <div class="products-grid" id="vehiclesGrid"></div>
+            </div>
+        </section>
+
+        <section class="inquiry-section container">
+            <h2>📦 Need a specific product? We got you.</h2>
+            <p>Tell us what you're looking for — we'll source it directly.</p>
+            <button class="btn-secondary">Send Inquiry</button>
+        </section>
+    </main>
+
     <footer>
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3>Kylhab <span>Marketing</span></h3>
-                    <p>Your trusted dropshipping partner, delivering quality products across Kenya.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#vehicles">Vehicles</a></li>
-                        <li><a href="#inquiry">Bulk Orders</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <p><i class="fab fa-whatsapp"></i> +254 700 000 000</p>
-                    <p><i class="fas fa-envelope"></i> alice.mweru@dukaapp.online</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Kylhab Marketing – Nairobi, Kenya. All rights reserved.</p>
-                <p class="payment-methods">We accept: M-PESA | Airtel Money | Bank Transfer</p>
-            </div>
+            <p>&copy; 2026 Kylhab Marketing – Nairobi, Kenya.</p>
         </div>
     </footer>
 
