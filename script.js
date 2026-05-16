@@ -37,6 +37,60 @@ const products = [
 ];
 
 // --------------------------------------------------------------
+// VEHICLES ARRAY (Autos, Motor Vehicles, Cars, Lorries, Vans)
+// --------------------------------------------------------------
+const vehicles = [
+    {
+        id: 1,
+        name: "Mazda Axela 2014",
+        details: "1500cc Petrol, well maintained, clean dark fabric interior",
+        price: "1,420,000 KSh (negotiable)",
+        image: "images/autos/Mazda Axela 2014 y o m 1500cc Petrol engine Well maintained Clean dark fabric interior 1 420 000 negotiable.jpg",
+        whatsappMsg: "Hi, I'm interested in the Mazda Axela 2014 (1,420,000 KSh negotiable). Please provide more details."
+    },
+    {
+        id: 2,
+        name: "Mazda Axela 2015",
+        details: "1500cc 2WD, accident free, low mileage (125k kms), HUD, front & rear camera",
+        price: "Call for price",
+        image: "images/autos/MAZDA AXELA 2015 MODEL 1500CC 2WD VERY CLEAN ACCIDENT FREE LOW MILEAGE 125K KMS HEAD UPS DISPLAY FRONT & REVERSE CAMERA.jpg",
+        whatsappMsg: "Hi, I'm interested in the Mazda Axela 2015 with HUD & cameras. Please share price and more info."
+    },
+    {
+        id: 3,
+        name: "Nissan Nismo 2016",
+        details: "1200cc Petrol, new tyres, original paint, accident free, fabric interior",
+        price: "1,090,000 KSh",
+        image: "images/autos/QUICKSALE NISSAN NISMO YOM 2016 PETROL 1200CC NEW TYRES ORIGINAL PAINT ACCIDENT FREE FABRIC INTERIOR PRICE 1 09M.jpg",
+        whatsappMsg: "Hi, I'm interested in the Nissan Nismo 2016 (1.09M). Please share more details."
+    },
+    {
+        id: 4,
+        name: "Toyota Axio 2013",
+        details: "1500cc 2WD, accident free",
+        price: "1,250,000 KSh",
+        image: "images/autos/TOYOTA AXIO 2013 MODEL 1500CC 2WD ACCIDENT FREE PRICE 1.25M.jpg",
+        whatsappMsg: "Hi, I'm interested in the Toyota Axio 2013 (1.25M). Please share more photos and condition."
+    },
+    {
+        id: 5,
+        name: "Toyota Harrier 240",
+        details: "2400cc Petrol, original paint, dark leather interior, automatic transmission, extremely clean",
+        price: "Call for price",
+        image: "images/autos/TOYOTA HARRIER 240 FOR SALE EXTREMELY CLEAN ORIGINAL PAINT DARK NEAT LEATHER INTERIOR DESIGN AUTOMATIC TRANSMISSION 2 4CC PETROL.jpg",
+        whatsappMsg: "Hi, I'm interested in the Toyota Harrier 240 with leather interior. Please share price and more details."
+    },
+    {
+        id: 6,
+        name: "Mazda Demio 2011",
+        details: "Aftermarket alloy rims, mechanically excellent, accident free, low mileage, clean dark interior",
+        price: "635,000 KSh",
+        image: "images/autos/Mazda Demio 635000 2011 Model Aftermarket Alloy Rims Mechanically Excellent Accident free low mileage very clean dark interior in mint.jpg",
+        whatsappMsg: "Hi, I'm interested in the Mazda Demio 2011 (635k). Please share more details and arrange a viewing."
+    }
+];
+
+// --------------------------------------------------------------
 // RENDER PRODUCTS
 // --------------------------------------------------------------
 function loadProducts() {
@@ -59,12 +113,43 @@ function loadProducts() {
         grid.appendChild(card);
     });
 
-    // attach event listeners to each WhatsApp button
     document.querySelectorAll('.whatsapp-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const msg = btn.getAttribute('data-msg');
-            // 🔁 REPLACE WITH YOUR REAL WHATSAPP NUMBER (2547XXXXXXXX)
-            const phone = "254723652430";
+            const phone = "254700000000"; // 🔁 Replace with your real WhatsApp number
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+            window.open(url, '_blank');
+        });
+    });
+}
+
+// --------------------------------------------------------------
+// RENDER VEHICLES
+// --------------------------------------------------------------
+function loadVehicles() {
+    const grid = document.getElementById('vehiclesGrid');
+    if (!grid) return;
+
+    grid.innerHTML = '';
+    vehicles.forEach(vehicle => {
+        const card = document.createElement('div');
+        card.className = 'product-card'; // reuse same card style
+        card.innerHTML = `
+            <img class="product-img" src="${vehicle.image}" alt="${vehicle.name}" loading="lazy" onerror="this.src='https://placehold.co/600x400/eef2f7/1a2a36?text=Image+Not+Found'">
+            <div class="product-title">${vehicle.name}</div>
+            <div class="product-price">${vehicle.price}</div>
+            <div class="product-desc">${vehicle.details}</div>
+            <button class="whatsapp-btn" data-msg="${vehicle.whatsappMsg}">
+                <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+            </button>
+        `;
+        grid.appendChild(card);
+    });
+
+    document.querySelectorAll('.whatsapp-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const msg = btn.getAttribute('data-msg');
+            const phone = "254700000000"; // 🔁 Replace with your real WhatsApp number
             const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
             window.open(url, '_blank');
         });
@@ -86,8 +171,7 @@ function setupInquiryForm() {
         const message = document.getElementById('inquiryMessage').value;
 
         const fullMsg = `*Inquiry from Kylhab Marketing website*%0A%0AName: ${name}%0AEmail: ${email}%0AProduct wanted: ${product}%0AMessage: ${message}`;
-        // 🔁 REPLACE WITH YOUR REAL WHATSAPP NUMBER (same format)
-        const phone = "254723652430";
+        const phone = "254700000000"; // 🔁 Replace with your real WhatsApp number
         window.open(`https://wa.me/${phone}?text=${fullMsg}`, '_blank');
     });
 }
@@ -97,5 +181,6 @@ function setupInquiryForm() {
 // --------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
     loadProducts();
+    loadVehicles();
     setupInquiryForm();
 });
