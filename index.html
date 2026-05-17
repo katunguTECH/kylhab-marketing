@@ -303,6 +303,7 @@
             font-size: 0.85rem;
             color: #6f7e8f;
             margin: 0 1rem 1rem;
+            line-height: 1.4;
         }
         .whatsapp-btn {
             background: #25D366;
@@ -498,7 +499,7 @@
     </div>
 
     <main>
-        <!-- Featured Autos Section (all vehicles) -->
+        <!-- Featured Autos Section -->
         <section class="products-section" id="vehicles">
             <div class="container">
                 <div class="section-header">
@@ -506,6 +507,17 @@
                     <p>Verified, accident-free, and ready to drive. Quality vehicles in Nairobi.</p>
                 </div>
                 <div class="products-grid" id="vehiclesGrid"></div>
+            </div>
+        </section>
+
+        <!-- NEW: Kitchenware Section -->
+        <section class="products-section" id="kitchenware" style="background-color: #fefaf5;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>🍳 Premium Kitchenware</h2>
+                    <p>Upgrade your cooking with high-quality cookware, appliances & serving essentials.</p>
+                </div>
+                <div class="products-grid" id="kitchenwareGrid"></div>
             </div>
         </section>
 
@@ -560,6 +572,7 @@
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#vehicles">Vehicles</a></li>
+                        <li><a href="#kitchenware">Kitchenware</a></li>
                         <li><a href="#products">Products</a></li>
                         <li><a href="#inquiry">Bulk Orders</a></li>
                         <li><a href="#">Terms & Conditions</a></li>
@@ -579,129 +592,41 @@
     </footer>
 
     <script>
-        // VEHICLE DATA (existing 5 + 7 new = 12 vehicles)
+        // VEHICLE DATA (12 vehicles)
         const vehicles = [
-            // Existing vehicles
-            {
-                name: "Mazda Axela 2014",
-                price: "1,420,000 KSh (negotiable)",
-                desc: "1500cc Petrol, well maintained, clean dark fabric interior",
-                image: "images/autos/mazda-2014.jpg",
-                msg: "Hi, I'm interested in the Mazda Axela 2014 (1,420,000 KSh negotiable)."
-            },
-            {
-                name: "Mazda Axela 2015",
-                price: "Call for price",
-                desc: "1500cc 2WD, accident free, low mileage (125k kms), HUD, front & rear camera",
-                image: "images/autos/mazda-2015.jpg",
-                msg: "Hi, I'm interested in the Mazda Axela 2015 with HUD & cameras."
-            },
-            {
-                name: "Nissan Nismo 2016",
-                price: "1,090,000 KSh",
-                desc: "1200cc Petrol, new tyres, original paint, accident free, fabric interior",
-                image: "images/autos/nissan-nismo.jpg",
-                msg: "Hi, I'm interested in the Nissan Nismo 2016 (1.09M)."
-            },
-            {
-                name: "Toyota Axio 2013",
-                price: "1,250,000 KSh",
-                desc: "1500cc 2WD, accident free",
-                image: "images/autos/axio-2013.jpg",
-                msg: "Hi, I'm interested in the Toyota Axio 2013 (1.25M)."
-            },
-            {
-                name: "Toyota Harrier 240",
-                price: "Call for price",
-                desc: "2400cc Petrol, original paint, dark leather interior, automatic transmission",
-                image: "images/autos/harrier.jpg",
-                msg: "Hi, I'm interested in the Toyota Harrier 240 with leather interior."
-            },
-            // New vehicles (7)
-            {
-                name: "Toyota Axio 2007",
-                price: "799,000 KSh",
-                desc: "1500cc, trade-in accepted, bank/SACCO finance available",
-                image: "images/autos/axio-2007.jpg",
-                msg: "Hi, I'm interested in the Toyota Axio 2007 (799,000 KSh). Please provide more details."
-            },
-            {
-                name: "Toyota Axio 2010",
-                price: "920,000 KSh",
-                desc: "1500cc 2WD, KCL year 2010",
-                image: "images/autos/axio-2010.jpg",
-                msg: "Hi, I'm interested in the Toyota Axio 2010 (920,000 KSh)."
-            },
-            {
-                name: "Toyota Fielder 2013",
-                price: "1,250,000 KSh (slightly negotiable)",
-                desc: "1500cc, auto, 2WD, original paint, new tyres & alloy rims, fabric seats, ready documents, trade-in accepted",
-                image: "images/autos/fielder-2013.jpg",
-                msg: "Hi, I'm interested in the Toyota Fielder 2013 (1.25M negotiable)."
-            },
-            {
-                name: "Subaru Forester 2009",
-                price: "1,430,000 KSh",
-                desc: "2000cc non-turbo, dark leather seats, sunroof, accident free, low mileage, ready logbook",
-                image: "images/autos/forester.jpg",
-                msg: "Hi, I'm interested in the Subaru Forester 2009 (1.43M)."
-            },
-            {
-                name: "Toyota Land Cruiser Tour Van 2018",
-                price: "6,900,000 KSh",
-                desc: "Extremely clean, well maintained",
-                image: "images/autos/landcruiser-2018.jpg",
-                msg: "Hi, I'm interested in the Toyota Land Cruiser Tour Van 2018 (6.9M)."
-            },
-            {
-                name: "Toyota Land Cruiser 100 Series 2007",
-                price: "3,950,000 KSh",
-                desc: "4200cc 1HD diesel, automatic, original paint, grey fabric interior, low mileage, bullbar, Kiambu Road",
-                image: "images/autos/landcruiser-100.jpg",
-                msg: "Hi, I'm interested in the Toyota Land Cruiser 100 Series (3.95M)."
-            },
-            {
-                name: "Toyota Wish 2013",
-                price: "1,290,000 KSh",
-                desc: "1800cc 2WD, accident free, buy and drive",
-                image: "images/autos/wish-2013.jpg",
-                msg: "Hi, I'm interested in the Toyota Wish 2013 (1.29M)."
-            }
+            { name: "Mazda Axela 2014", price: "1,420,000 KSh (negotiable)", desc: "1500cc Petrol, well maintained, clean dark fabric interior", image: "images/autos/mazda-2014.jpg", msg: "Hi, I'm interested in the Mazda Axela 2014 (1,420,000 KSh negotiable)." },
+            { name: "Mazda Axela 2015", price: "Call for price", desc: "1500cc 2WD, accident free, low mileage (125k kms), HUD, front & rear camera", image: "images/autos/mazda-2015.jpg", msg: "Hi, I'm interested in the Mazda Axela 2015 with HUD & cameras." },
+            { name: "Nissan Nismo 2016", price: "1,090,000 KSh", desc: "1200cc Petrol, new tyres, original paint, accident free, fabric interior", image: "images/autos/nissan-nismo.jpg", msg: "Hi, I'm interested in the Nissan Nismo 2016 (1.09M)." },
+            { name: "Toyota Axio 2013", price: "1,250,000 KSh", desc: "1500cc 2WD, accident free", image: "images/autos/axio-2013.jpg", msg: "Hi, I'm interested in the Toyota Axio 2013 (1.25M)." },
+            { name: "Toyota Harrier 240", price: "Call for price", desc: "2400cc Petrol, original paint, dark leather interior, automatic transmission", image: "images/autos/harrier.jpg", msg: "Hi, I'm interested in the Toyota Harrier 240 with leather interior." },
+            { name: "Toyota Axio 2007", price: "799,000 KSh", desc: "1500cc, trade-in accepted, bank/SACCO finance available", image: "images/autos/axio-2007.jpg", msg: "Hi, I'm interested in the Toyota Axio 2007 (799,000 KSh)." },
+            { name: "Toyota Axio 2010", price: "920,000 KSh", desc: "1500cc 2WD, KCL year 2010", image: "images/autos/axio-2010.jpg", msg: "Hi, I'm interested in the Toyota Axio 2010 (920,000 KSh)." },
+            { name: "Toyota Fielder 2013", price: "1,250,000 KSh (slightly negotiable)", desc: "1500cc, auto, 2WD, original paint, new tyres & alloy rims, ready documents, trade-in accepted", image: "images/autos/fielder-2013.jpg", msg: "Hi, I'm interested in the Toyota Fielder 2013 (1.25M negotiable)." },
+            { name: "Subaru Forester 2009", price: "1,430,000 KSh", desc: "2000cc non-turbo, dark leather seats, sunroof, accident free, low mileage", image: "images/autos/forester.jpg", msg: "Hi, I'm interested in the Subaru Forester 2009 (1.43M)." },
+            { name: "Toyota Land Cruiser Tour Van 2018", price: "6,900,000 KSh", desc: "Extremely clean, well maintained", image: "images/autos/landcruiser-2018.jpg", msg: "Hi, I'm interested in the Toyota Land Cruiser Tour Van 2018 (6.9M)." },
+            { name: "Toyota Land Cruiser 100 Series 2007", price: "3,950,000 KSh", desc: "4200cc 1HD diesel, auto, original paint, grey fabric interior, bullbar", image: "images/autos/landcruiser-100.jpg", msg: "Hi, I'm interested in the Toyota Land Cruiser 100 Series (3.95M)." },
+            { name: "Toyota Wish 2013", price: "1,290,000 KSh", desc: "1800cc 2WD, accident free, buy and drive", image: "images/autos/wish-2013.jpg", msg: "Hi, I'm interested in the Toyota Wish 2013 (1.29M)." }
         ];
 
-        // PRODUCT DATA (original dropshipping products – you can expand)
+        // KITCHENWARE DATA (6 items)
+        const kitchenware = [
+            { name: "Bosch 11pc Cookware", price: "8,600 KSh (Promotion)", desc: "Made in Germany, small diamond texture, black colour, includes silicone lid covers", image: "images/kitchenware/bosch-11pcs.jpg", msg: "Hi, I'm interested in the Bosch 11pc Cookware set (8,600 KSh promotion price)." },
+            { name: "3-in-1 Chaffing Dish", price: "6,800 KSh", desc: "Dark green & gold chaffing dishes with glass lid – elegant for catering", image: "images/kitchenware/goldchaffing.jpg", msg: "Hi, I'm interested in the 3-in-1 gold chaffing dish (6,800 KSh)." },
+            { name: "Ecomax 3+1 Standing Cooker", price: "20,000 KSh", desc: "50*55cm, comes with free gas pipe, spatula, gloves, 13Kg regulator & clips", image: "images/kitchenware/ecomax-cooker.jpg", msg: "Hi, I'm interested in the Ecomax standing cooker (20,000 KSh)." },
+            { name: "6 Space Gold Glass Holder", price: "2,500 KSh", desc: "Elegant 6-space gold finish glass holder – perfect for kitchen or bar", image: "images/kitchenware/sixspace-glassholder.jpg", msg: "Hi, I'm interested in the 6-space gold glass holder (2,500 KSh)." },
+            { name: "Nunix Water Dispenser", price: "12,500 KSh", desc: "Black Nunix A1C-X2 Bottom Load Hot & Cold Water Dispenser with music system", image: "images/kitchenware/nunix-dispenser.jpg", msg: "Hi, I'm interested in the Nunix water dispenser (12,500 KSh)." },
+            { name: "Donnor Berry 16pcs Cookware Set", price: "16,500 KSh", desc: "Granite nonstick, Germany technology, 6-layer protection, includes 7 pots + utensils. Colours: brown, ivory, black, grey", image: "images/kitchenware/donnerberry-cookware.jpg", msg: "Hi, I'm interested in the Donnor Berry 16-piece cookware set (16,500 KSh)." }
+        ];
+
+        // PRODUCT DATA (original)
         const products = [
-            {
-                name: "Wireless Bluetooth Earbuds",
-                price: "1,850 KSh",
-                desc: "HD sound, 20h battery, fast pairing",
-                image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Earbuds",
-                msg: "Hi! I'm interested in Wireless Bluetooth Earbuds (1,850 KSh)"
-            },
-            {
-                name: "Smart LED Desk Lamp",
-                price: "2,450 KSh",
-                desc: "Touch control, 3 colors, USB charging port",
-                image: "https://placehold.co/600x400/eef2f7/1a2a36?text=LED+Lamp",
-                msg: "Hi, I'd like to buy the Smart LED Desk Lamp (2,450 KSh)"
-            },
-            {
-                name: "Men's Casual Wristwatch",
-                price: "1,250 KSh",
-                desc: "Water resistant, leather strap, analog",
-                image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Watch",
-                msg: "Hello, order for Men's Casual Watch (1,250 KSh)"
-            },
-            {
-                name: "Foldable Laptop Stand",
-                price: "1,950 KSh",
-                desc: "Aluminum, ergonomic, portable",
-                image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Laptop+Stand",
-                msg: "I want the Foldable Laptop Stand (1,950 KSh)"
-            }
+            { name: "Wireless Bluetooth Earbuds", price: "1,850 KSh", desc: "HD sound, 20h battery, fast pairing", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Earbuds", msg: "Hi! I'm interested in Wireless Bluetooth Earbuds (1,850 KSh)" },
+            { name: "Smart LED Desk Lamp", price: "2,450 KSh", desc: "Touch control, 3 colors, USB charging port", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=LED+Lamp", msg: "Hi, I'd like to buy the Smart LED Desk Lamp (2,450 KSh)" },
+            { name: "Men's Casual Wristwatch", price: "1,250 KSh", desc: "Water resistant, leather strap, analog", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Watch", msg: "Hello, order for Men's Casual Watch (1,250 KSh)" },
+            { name: "Foldable Laptop Stand", price: "1,950 KSh", desc: "Aluminum, ergonomic, portable", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Laptop+Stand", msg: "I want the Foldable Laptop Stand (1,950 KSh)" }
         ];
 
-        // Helper to render grids
+        // Helper to render any grid
         function renderGrid(containerId, items, whatsappNumber) {
             const grid = document.getElementById(containerId);
             if (!grid) return;
@@ -720,7 +645,6 @@
                 `;
                 grid.appendChild(card);
             });
-            // attach events
             document.querySelectorAll(`#${containerId} .whatsapp-btn`).forEach(btn => {
                 btn.addEventListener('click', () => {
                     const msg = btn.getAttribute('data-msg');
@@ -744,11 +668,11 @@
             });
         }
 
-        // Your WhatsApp number
         const MY_WHATSAPP = "254723652430";
 
         document.addEventListener('DOMContentLoaded', () => {
             renderGrid('vehiclesGrid', vehicles, MY_WHATSAPP);
+            renderGrid('kitchenwareGrid', kitchenware, MY_WHATSAPP);
             renderGrid('productsGrid', products, MY_WHATSAPP);
             setupInquiryForm(MY_WHATSAPP);
         });
