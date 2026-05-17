@@ -8,450 +8,80 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
         /* ===== FULL ORIGINAL STYLES (SaaS look) ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #ffffff;
-            color: #1a2530;
-            line-height: 1.5;
-            scroll-behavior: smooth;
-        }
-        .container {
-            width: 90%;
-            max-width: 1280px;
-            margin: 0 auto;
-        }
-        /* navigation */
-        .navbar {
-            background: rgba(255,255,255,0.96);
-            backdrop-filter: blur(8px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            padding: 1rem 0;
-            border-bottom: 1px solid #eef2f5;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-        }
-        .nav-container {
-            width: 90%;
-            max-width: 1280px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .nav-logo {
-            font-size: 1.6rem;
-            font-weight: 700;
-            text-decoration: none;
-            letter-spacing: -0.02em;
-            background: linear-gradient(135deg, #1e2f3f, #2c3e50);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-        .nav-logo span {
-            background: none;
-            color: #e67e22;
-        }
-        .nav-contact {
-            display: flex;
-            gap: 1rem;
-        }
-        .nav-contact a {
-            text-decoration: none;
-            padding: 0.5rem 1.2rem;
-            border-radius: 40px;
-            font-weight: 500;
-            transition: 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .nav-contact a:first-child {
-            background: #f5f7fa;
-            color: #1e2f3f;
-            border: 1px solid #e0e7ed;
-        }
-        .nav-contact a:last-child {
-            background: #25D366;
-            color: white;
-            box-shadow: 0 4px 10px rgba(37,211,102,0.2);
-        }
-        .nav-contact a:hover {
-            transform: translateY(-2px);
-        }
-        /* hero */
-        .hero {
-            padding: 3rem 0 5rem;
-            background: linear-gradient(145deg, #ffffff 0%, #fef9f2 100%);
-        }
-        .hero-grid {
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-        }
-        .hero-content {
-            flex: 1;
-            min-width: 280px;
-        }
-        .hero-badge {
-            display: inline-block;
-            background: #eef2f5;
-            padding: 0.3rem 1rem;
-            border-radius: 60px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-            color: #e67e22;
-        }
-        .hero-content h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1.2rem;
-            letter-spacing: -0.02em;
-            color: #0b2b3b;
-        }
-        .highlight {
-            background: linear-gradient(120deg, #e67e22, #f39c12);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-        .hero-content p {
-            font-size: 1.125rem;
-            color: #4a5b6e;
-            margin-bottom: 2rem;
-            max-width: 90%;
-        }
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-bottom: 2rem;
-        }
-        .btn-primary {
-            background: #1a2a36;
-            color: white;
-            padding: 0.8rem 1.8rem;
-            border-radius: 48px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            border: none;
-            cursor: pointer;
-        }
-        .btn-primary:hover {
-            background: #e67e22;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-        }
-        .btn-secondary {
-            background: transparent;
-            border: 1.5px solid #cdd7e2;
-            color: #1a2a36;
-            padding: 0.8rem 1.8rem;
-            border-radius: 48px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .btn-secondary:hover {
-            border-color: #e67e22;
-            color: #e67e22;
-            transform: translateY(-2px);
-        }
-        .full-width {
-            width: 100%;
-            justify-content: center;
-        }
-        .hero-trust {
-            display: flex;
-            gap: 1.8rem;
-            flex-wrap: wrap;
-            font-size: 0.85rem;
-            color: #2c3e50;
-            font-weight: 500;
-        }
-        .trust-item i {
-            color: #e67e22;
-            margin-right: 0.4rem;
-        }
-        .hero-visual {
-            flex: 1;
-            min-width: 260px;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .hero-shape {
-            width: 260px;
-            height: 260px;
-            background: radial-gradient(circle, rgba(230,126,34,0.12) 0%, rgba(230,126,34,0.02) 80%);
-            border-radius: 50%;
-            animation: pulse 6s infinite ease;
-        }
-        .hero-float-card {
-            position: absolute;
-            background: white;
-            padding: 0.7rem 1.4rem;
-            border-radius: 100px;
-            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.1);
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            bottom: 25%;
-            right: 15%;
-            border: 1px solid #f0e2d4;
-        }
-        @keyframes pulse {
-            0% { transform: scale(0.95); opacity: 0.6; }
-            50% { transform: scale(1.05); opacity: 1; }
-            100% { transform: scale(0.95); opacity: 0.6; }
-        }
-        .trust-banner {
-            background: #1a2530;
-            color: white;
-            padding: 1.5rem 0;
-            margin: 0;
-        }
-        .trust-grid {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            text-align: center;
-        }
-        .trust-stat {
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            font-size: 1rem;
-        }
-        .trust-stat i {
-            color: #e67e22;
-            font-size: 1.2rem;
-        }
-        .products-section {
-            padding: 5rem 0;
-            background: #ffffff;
-        }
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        .section-header h2 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        .section-header p {
-            color: #5b6e82;
-        }
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        .product-card {
-            background: white;
-            border-radius: 32px;
-            overflow: hidden;
-            transition: all 0.25s ease;
-            box-shadow: 0 12px 28px -8px rgba(0,0,0,0.05);
-            border: 1px solid #edf2f7;
-            padding-bottom: 1.5rem;
-        }
-        .product-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 25px 35px -12px rgba(0,0,0,0.12);
-            border-color: #e2eaf1;
-        }
-        .product-img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            background: #f8fafc;
-        }
-        .product-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin: 1rem 1rem 0.3rem;
-        }
-        .product-price {
-            color: #e67e22;
-            font-size: 1.35rem;
-            font-weight: 700;
-            margin: 0.2rem 1rem;
-        }
-        .product-desc {
-            font-size: 0.85rem;
-            color: #6f7e8f;
-            margin: 0 1rem 1rem;
-            line-height: 1.4;
-        }
-        .whatsapp-btn {
-            background: #25D366;
-            color: white;
-            border: none;
-            margin: 0 1rem;
-            padding: 0.75rem;
-            border-radius: 44px;
-            font-weight: 700;
-            cursor: pointer;
-            width: calc(100% - 2rem);
-            transition: 0.15s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-        .whatsapp-btn:hover {
-            background: #128C7E;
-            transform: scale(0.97);
-        }
-        .inquiry {
-            background: #fafcfc;
-            padding: 4rem 0;
-            border-top: 1px solid #eef2f5;
-            border-bottom: 1px solid #eef2f5;
-        }
-        .inquiry-container {
-            display: flex;
-            gap: 3rem;
-            flex-wrap: wrap;
-        }
-        .inquiry-content {
-            flex: 1.2;
-        }
-        .inquiry-content h3 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 0.8rem;
-        }
-        .inquiry-features {
-            margin-top: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.6rem;
-        }
-        .inquiry-features div i {
-            color: #e67e22;
-            margin-right: 0.5rem;
-        }
-        .inquiry-form {
-            flex: 0.9;
-            background: white;
-            padding: 2rem;
-            border-radius: 32px;
-            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.05);
-            border: 1px solid #eef2f5;
-        }
-        .form-row {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 0.8rem;
-            flex-wrap: wrap;
-        }
-        .form-row input {
-            flex: 1;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 1rem;
-            border: 1px solid #dee6ef;
-            border-radius: 24px;
-            font-family: 'Inter', sans-serif;
-            margin-bottom: 1rem;
-            transition: 0.1s;
-            font-size: 0.9rem;
-        }
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: #e67e22;
-            box-shadow: 0 0 0 3px rgba(230,126,34,0.1);
-        }
-        footer {
-            background: #0c1a24;
-            color: #b9cdde;
-            padding-top: 3rem;
-        }
-        .footer-grid {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #1f3a48;
-        }
-        .footer-brand h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .footer-brand span {
-            color: #e67e22;
-        }
-        .footer-links ul {
-            list-style: none;
-        }
-        .footer-links ul li a {
-            color: #b9cdde;
-            text-decoration: none;
-            transition: 0.1s;
-        }
-        .footer-links ul li a:hover {
-            color: #e67e22;
-        }
-        .footer-contact p i {
-            margin-right: 0.5rem;
-            width: 1.5rem;
-        }
-        .footer-bottom {
-            text-align: center;
-            padding: 2rem 0;
-            font-size: 0.8rem;
-        }
-        .payment-methods {
-            margin-top: 0.5rem;
-            font-size: 0.75rem;
-        }
-        @media (max-width: 760px) {
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-            .hero-content p {
-                max-width: 100%;
-            }
-            .hide-mobile {
-                display: none;
-            }
-            .nav-contact a {
-                padding: 0.4rem 1rem;
-            }
-            .trust-grid {
-                justify-content: center;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #ffffff; color: #1a2530; line-height: 1.5; scroll-behavior: smooth; }
+        .container { width: 90%; max-width: 1280px; margin: 0 auto; }
+        .navbar { background: rgba(255,255,255,0.96); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 100; padding: 1rem 0; border-bottom: 1px solid #eef2f5; box-shadow: 0 4px 20px rgba(0,0,0,0.02); }
+        .nav-container { width: 90%; max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-size: 1.6rem; font-weight: 700; text-decoration: none; letter-spacing: -0.02em; background: linear-gradient(135deg, #1e2f3f, #2c3e50); background-clip: text; -webkit-background-clip: text; color: transparent; }
+        .nav-logo span { background: none; color: #e67e22; }
+        .nav-contact { display: flex; gap: 1rem; }
+        .nav-contact a { text-decoration: none; padding: 0.5rem 1.2rem; border-radius: 40px; font-weight: 500; transition: 0.2s; display: inline-flex; align-items: center; gap: 0.5rem; }
+        .nav-contact a:first-child { background: #f5f7fa; color: #1e2f3f; border: 1px solid #e0e7ed; }
+        .nav-contact a:last-child { background: #25D366; color: white; box-shadow: 0 4px 10px rgba(37,211,102,0.2); }
+        .nav-contact a:hover { transform: translateY(-2px); }
+        .hero { padding: 3rem 0 5rem; background: linear-gradient(145deg, #ffffff 0%, #fef9f2 100%); }
+        .hero-grid { display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; }
+        .hero-content { flex: 1; min-width: 280px; }
+        .hero-badge { display: inline-block; background: #eef2f5; padding: 0.3rem 1rem; border-radius: 60px; font-size: 0.8rem; font-weight: 500; margin-bottom: 1.5rem; color: #e67e22; }
+        .hero-content h1 { font-size: 3rem; font-weight: 700; line-height: 1.2; margin-bottom: 1.2rem; letter-spacing: -0.02em; color: #0b2b3b; }
+        .highlight { background: linear-gradient(120deg, #e67e22, #f39c12); background-clip: text; -webkit-background-clip: text; color: transparent; }
+        .hero-content p { font-size: 1.125rem; color: #4a5b6e; margin-bottom: 2rem; max-width: 90%; }
+        .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+        .btn-primary { background: #1a2a36; color: white; padding: 0.8rem 1.8rem; border-radius: 48px; text-decoration: none; font-weight: 600; transition: 0.2s; display: inline-flex; align-items: center; gap: 0.5rem; border: none; cursor: pointer; }
+        .btn-primary:hover { background: #e67e22; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
+        .btn-secondary { background: transparent; border: 1.5px solid #cdd7e2; color: #1a2a36; padding: 0.8rem 1.8rem; border-radius: 48px; text-decoration: none; font-weight: 600; transition: 0.2s; display: inline-flex; align-items: center; gap: 0.5rem; }
+        .btn-secondary:hover { border-color: #e67e22; color: #e67e22; transform: translateY(-2px); }
+        .full-width { width: 100%; justify-content: center; }
+        .hero-trust { display: flex; gap: 1.8rem; flex-wrap: wrap; font-size: 0.85rem; color: #2c3e50; font-weight: 500; }
+        .trust-item i { color: #e67e22; margin-right: 0.4rem; }
+        .hero-visual { flex: 1; min-width: 260px; position: relative; display: flex; justify-content: center; align-items: center; }
+        .hero-shape { width: 260px; height: 260px; background: radial-gradient(circle, rgba(230,126,34,0.12) 0%, rgba(230,126,34,0.02) 80%); border-radius: 50%; animation: pulse 6s infinite ease; }
+        .hero-float-card { position: absolute; background: white; padding: 0.7rem 1.4rem; border-radius: 100px; box-shadow: 0 20px 35px -10px rgba(0,0,0,0.1); font-weight: 600; display: flex; align-items: center; gap: 0.5rem; bottom: 25%; right: 15%; border: 1px solid #f0e2d4; }
+        @keyframes pulse { 0% { transform: scale(0.95); opacity: 0.6; } 50% { transform: scale(1.05); opacity: 1; } 100% { transform: scale(0.95); opacity: 0.6; } }
+        .trust-banner { background: #1a2530; color: white; padding: 1.5rem 0; margin: 0; }
+        .trust-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; text-align: center; }
+        .trust-stat { font-weight: 600; display: flex; align-items: center; gap: 0.6rem; font-size: 1rem; }
+        .trust-stat i { color: #e67e22; font-size: 1.2rem; }
+        .products-section { padding: 5rem 0; background: #ffffff; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-header h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .section-header p { color: #5b6e82; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; }
+        .product-card { background: white; border-radius: 32px; overflow: hidden; transition: all 0.25s ease; box-shadow: 0 12px 28px -8px rgba(0,0,0,0.05); border: 1px solid #edf2f7; padding-bottom: 1.5rem; }
+        .product-card:hover { transform: translateY(-6px); box-shadow: 0 25px 35px -12px rgba(0,0,0,0.12); border-color: #e2eaf1; }
+        .product-img { width: 100%; height: 220px; object-fit: cover; background: #f8fafc; }
+        .product-title { font-size: 1.2rem; font-weight: 700; margin: 1rem 1rem 0.3rem; }
+        .product-price { color: #e67e22; font-size: 1.35rem; font-weight: 700; margin: 0.2rem 1rem; }
+        .product-desc { font-size: 0.85rem; color: #6f7e8f; margin: 0 1rem 1rem; line-height: 1.4; }
+        .whatsapp-btn { background: #25D366; color: white; border: none; margin: 0 1rem; padding: 0.75rem; border-radius: 44px; font-weight: 700; cursor: pointer; width: calc(100% - 2rem); transition: 0.15s; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+        .whatsapp-btn:hover { background: #128C7E; transform: scale(0.97); }
+        .inquiry { background: #fafcfc; padding: 4rem 0; border-top: 1px solid #eef2f5; border-bottom: 1px solid #eef2f5; }
+        .inquiry-container { display: flex; gap: 3rem; flex-wrap: wrap; }
+        .inquiry-content { flex: 1.2; }
+        .inquiry-content h3 { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.8rem; }
+        .inquiry-features { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; }
+        .inquiry-features div i { color: #e67e22; margin-right: 0.5rem; }
+        .inquiry-form { flex: 0.9; background: white; padding: 2rem; border-radius: 32px; box-shadow: 0 20px 35px -10px rgba(0,0,0,0.05); border: 1px solid #eef2f5; }
+        .form-row { display: flex; gap: 1rem; margin-bottom: 0.8rem; flex-wrap: wrap; }
+        .form-row input { flex: 1; }
+        input, textarea { width: 100%; padding: 1rem; border: 1px solid #dee6ef; border-radius: 24px; font-family: 'Inter', sans-serif; margin-bottom: 1rem; transition: 0.1s; font-size: 0.9rem; }
+        input:focus, textarea:focus { outline: none; border-color: #e67e22; box-shadow: 0 0 0 3px rgba(230,126,34,0.1); }
+        footer { background: #0c1a24; color: #b9cdde; padding-top: 3rem; }
+        .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #1f3a48; }
+        .footer-brand h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .footer-brand span { color: #e67e22; }
+        .footer-links ul { list-style: none; }
+        .footer-links ul li a { color: #b9cdde; text-decoration: none; transition: 0.1s; }
+        .footer-links ul li a:hover { color: #e67e22; }
+        .footer-contact p i { margin-right: 0.5rem; width: 1.5rem; }
+        .footer-bottom { text-align: center; padding: 2rem 0; font-size: 0.8rem; }
+        .payment-methods { margin-top: 0.5rem; font-size: 0.75rem; }
+        @media (max-width: 760px) { .hero-content h1 { font-size: 2rem; } .hero-content p { max-width: 100%; } .hide-mobile { display: none; } .nav-contact a { padding: 0.4rem 1rem; } .trust-grid { justify-content: center; } }
     </style>
 </head>
 <body>
 
-    <!-- Original Navbar -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo">Kylhab <span>Marketing</span></a>
@@ -462,7 +92,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-grid">
             <div class="hero-content">
@@ -481,15 +110,11 @@
             </div>
             <div class="hero-visual">
                 <div class="hero-shape"></div>
-                <div class="hero-float-card">
-                    <i class="fas fa-box-open"></i>
-                    <span>#1 Rated in Nairobi</span>
-                </div>
+                <div class="hero-float-card"><i class="fas fa-box-open"></i><span>#1 Rated in Nairobi</span></div>
             </div>
         </div>
     </section>
 
-    <!-- Trust Banner -->
     <div class="trust-banner">
         <div class="container trust-grid">
             <div class="trust-stat"><i class="fas fa-shopping-bag"></i> <span>500+ Orders Fulfilled</span></div>
@@ -499,7 +124,6 @@
     </div>
 
     <main>
-        <!-- Featured Autos Section -->
         <section class="products-section" id="vehicles">
             <div class="container">
                 <div class="section-header">
@@ -510,7 +134,6 @@
             </div>
         </section>
 
-        <!-- NEW: Kitchenware Section -->
         <section class="products-section" id="kitchenware" style="background-color: #fefaf5;">
             <div class="container">
                 <div class="section-header">
@@ -521,7 +144,6 @@
             </div>
         </section>
 
-        <!-- Bestselling Products Section -->
         <section class="products-section" id="products">
             <div class="container">
                 <div class="section-header">
@@ -532,7 +154,6 @@
             </div>
         </section>
 
-        <!-- Inquiry Section -->
         <section id="inquiry" class="inquiry">
             <div class="container inquiry-container">
                 <div class="inquiry-content">
@@ -559,35 +180,14 @@
         </section>
     </main>
 
-    <!-- Original Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3>Kylhab <span>Marketing</span></h3>
-                    <p>Your trusted dropshipping partner, delivering quality products & vehicles across Kenya.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#vehicles">Vehicles</a></li>
-                        <li><a href="#kitchenware">Kitchenware</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#inquiry">Bulk Orders</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <p><i class="fab fa-whatsapp"></i> +254 723 652 430</p>
-                    <p><i class="fas fa-envelope"></i> alice.mweru@dukaapp.online</p>
-                </div>
+                <div class="footer-brand"><h3>Kylhab <span>Marketing</span></h3><p>Your trusted dropshipping partner, delivering quality products & vehicles across Kenya.</p></div>
+                <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="#">Home</a></li><li><a href="#vehicles">Vehicles</a></li><li><a href="#kitchenware">Kitchenware</a></li><li><a href="#products">Products</a></li><li><a href="#inquiry">Bulk Orders</a></li><li><a href="#">Terms & Conditions</a></li></ul></div>
+                <div class="footer-contact"><h4>Contact Us</h4><p><i class="fab fa-whatsapp"></i> +254 723 652 430</p><p><i class="fas fa-envelope"></i> alice.mweru@dukaapp.online</p></div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Kylhab Marketing – Nairobi, Kenya. All rights reserved.</p>
-                <p class="payment-methods">We accept: M-PESA | Airtel Money | Bank Transfer</p>
-            </div>
+            <div class="footer-bottom"><p>&copy; 2026 Kylhab Marketing – Nairobi, Kenya. All rights reserved.</p><p class="payment-methods">We accept: M-PESA | Airtel Money | Bank Transfer</p></div>
         </div>
     </footer>
 
@@ -608,14 +208,17 @@
             { name: "Toyota Wish 2013", price: "1,290,000 KSh", desc: "1800cc 2WD, accident free, buy and drive", image: "images/autos/wish-2013.jpg", msg: "Hi, I'm interested in the Toyota Wish 2013 (1.29M)." }
         ];
 
-        // KITCHENWARE DATA (6 items)
+        // KITCHENWARE DATA (8 items – added two new ones)
         const kitchenware = [
             { name: "Bosch 11pc Cookware", price: "8,600 KSh (Promotion)", desc: "Made in Germany, small diamond texture, black colour, includes silicone lid covers", image: "images/kitchenware/bosch-11pcs.jpg", msg: "Hi, I'm interested in the Bosch 11pc Cookware set (8,600 KSh promotion price)." },
             { name: "3-in-1 Chaffing Dish", price: "6,800 KSh", desc: "Dark green & gold chaffing dishes with glass lid – elegant for catering", image: "images/kitchenware/goldchaffing.jpg", msg: "Hi, I'm interested in the 3-in-1 gold chaffing dish (6,800 KSh)." },
             { name: "Ecomax 3+1 Standing Cooker", price: "20,000 KSh", desc: "50*55cm, comes with free gas pipe, spatula, gloves, 13Kg regulator & clips", image: "images/kitchenware/ecomax-cooker.jpg", msg: "Hi, I'm interested in the Ecomax standing cooker (20,000 KSh)." },
             { name: "6 Space Gold Glass Holder", price: "2,500 KSh", desc: "Elegant 6-space gold finish glass holder – perfect for kitchen or bar", image: "images/kitchenware/sixspace-glassholder.jpg", msg: "Hi, I'm interested in the 6-space gold glass holder (2,500 KSh)." },
             { name: "Nunix Water Dispenser", price: "12,500 KSh", desc: "Black Nunix A1C-X2 Bottom Load Hot & Cold Water Dispenser with music system", image: "images/kitchenware/nunix-dispenser.jpg", msg: "Hi, I'm interested in the Nunix water dispenser (12,500 KSh)." },
-            { name: "Donnor Berry 16pcs Cookware Set", price: "16,500 KSh", desc: "Granite nonstick, Germany technology, 6-layer protection, includes 7 pots + utensils. Colours: brown, ivory, black, grey", image: "images/kitchenware/donnerberry-cookware.jpg", msg: "Hi, I'm interested in the Donnor Berry 16-piece cookware set (16,500 KSh)." }
+            { name: "Donnor Berry 16pcs Cookware Set", price: "16,500 KSh", desc: "Granite nonstick, Germany technology, 6-layer protection, includes 7 pots + utensils. Colours: brown, ivory, black, grey", image: "images/kitchenware/donnerberry-cookware.jpg", msg: "Hi, I'm interested in the Donnor Berry 16-piece cookware set (16,500 KSh)." },
+            // NEW ITEMS:
+            { name: "Single Gold Fruit Rack", price: "1,200 KSh", desc: "Elegant single gold fruit rack – perfect for kitchen counter", image: "images/kitchenware/gold-fruitrack.jpg", msg: "Hi, I'm interested in the Single Gold Fruit Rack (1,200 KSh)." },
+            { name: "Phisma 9pc Cookware Set", price: "13,000 KSh", desc: "Phisma cookware set 9 pieces – quality nonstick cookware", image: "images/kitchenware/phisma-cookware.jpg", msg: "Hi, I'm interested in the Phisma 9pc Cookware Set (13,000 KSh)." }
         ];
 
         // PRODUCT DATA (original)
@@ -626,7 +229,6 @@
             { name: "Foldable Laptop Stand", price: "1,950 KSh", desc: "Aluminum, ergonomic, portable", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Laptop+Stand", msg: "I want the Foldable Laptop Stand (1,950 KSh)" }
         ];
 
-        // Helper to render any grid
         function renderGrid(containerId, items, whatsappNumber) {
             const grid = document.getElementById(containerId);
             if (!grid) return;
@@ -653,7 +255,6 @@
             });
         }
 
-        // Inquiry form
         function setupInquiryForm(whatsappNumber) {
             const form = document.getElementById('inquiryForm');
             if (!form) return;
