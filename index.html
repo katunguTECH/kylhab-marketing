@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Kylhab Marketing – Modern Dropshipping in Nairobi</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
@@ -499,7 +498,7 @@
     </div>
 
     <main>
-        <!-- Featured Autos Section (keeps all current vehicle listings) -->
+        <!-- Featured Autos Section (updated images & removed Demio) -->
         <section class="products-section" id="vehicles">
             <div class="container">
                 <div class="section-header">
@@ -580,53 +579,46 @@
     </footer>
 
     <script>
-        // VEHICLE DATA (exactly as you had them – keep all current listings)
+        // VEHICLE DATA (updated with correct image paths, removed Demio)
         const vehicles = [
             {
                 name: "Mazda Axela 2014",
                 price: "1,420,000 KSh (negotiable)",
                 desc: "1500cc Petrol, well maintained, clean dark fabric interior",
-                image: "Mazda Axela 2014 y o m 1500cc Petrol engine Well maintained Clean dark fabric interior 1 420 000 negotiable.jpg",
+                image: "images/autos/mazda-2014.jpg",
                 msg: "Hi, I'm interested in the Mazda Axela 2014 (1,420,000 KSh negotiable)."
             },
             {
                 name: "Mazda Axela 2015",
                 price: "Call for price",
                 desc: "1500cc 2WD, accident free, low mileage (125k kms), HUD, front & rear camera",
-                image: "MAZDA AXELA 2015 MODEL 1500CC 2WD VERY CLEAN ACCIDENT FREE LOW MILEAGE 125K KMS HEAD UPS DISPLAY FRONT & REVERSE CAMERA.jpg",
+                image: "images/autos/mazda-2015.jpg",
                 msg: "Hi, I'm interested in the Mazda Axela 2015 with HUD & cameras."
             },
             {
                 name: "Nissan Nismo 2016",
                 price: "1,090,000 KSh",
                 desc: "1200cc Petrol, new tyres, original paint, accident free, fabric interior",
-                image: "QUICKSALE NISSAN NISMO YOM 2016 PETROL 1200CC NEW TYRES ORIGINAL PAINT ACCIDENT FREE FABRIC INTERIOR PRICE 1 09M.jpg",
+                image: "images/autos/nissan-nismo.jpg",
                 msg: "Hi, I'm interested in the Nissan Nismo 2016 (1.09M)."
             },
             {
                 name: "Toyota Axio 2013",
                 price: "1,250,000 KSh",
                 desc: "1500cc 2WD, accident free",
-                image: "TOYOTA AXIO 2013 MODEL 1500CC 2WD ACCIDENT FREE PRICE 1.25M.jpg",
+                image: "images/autos/axio-2013.jpg",
                 msg: "Hi, I'm interested in the Toyota Axio 2013 (1.25M)."
             },
             {
                 name: "Toyota Harrier 240",
                 price: "Call for price",
                 desc: "2400cc Petrol, original paint, dark leather interior, automatic transmission",
-                image: "TOYOTA HARRIER 240 FOR SALE EXTREMELY CLEAN ORIGINAL PAINT DARK NEAT LEATHER INTERIOR DESIGN AUTOMATIC TRANSMISSION 2 4CC PETROL.jpg",
+                image: "images/autos/harrier.jpg",
                 msg: "Hi, I'm interested in the Toyota Harrier 240 with leather interior."
-            },
-            {
-                name: "Mazda Demio 2011",
-                price: "635,000 KSh",
-                desc: "Aftermarket alloy rims, mechanically excellent, accident free, low mileage",
-                image: "Mazda Demio 635000 2011 Model Aftermarket Alloy Rims Mechanically Excellent Accident free low mileage very clean dark interior in mint.jpg",
-                msg: "Hi, I'm interested in the Mazda Demio 2011 (635k)."
             }
         ];
 
-        // PRODUCT DATA (original dropshipping products – you can replace later)
+        // PRODUCT DATA (original dropshipping products – you can expand)
         const products = [
             {
                 name: "Wireless Bluetooth Earbuds",
@@ -701,7 +693,7 @@
             });
         }
 
-        // Set your WhatsApp number (same as in navbar)
+        // Your WhatsApp number
         const MY_WHATSAPP = "254723652430";
 
         document.addEventListener('DOMContentLoaded', () => {
