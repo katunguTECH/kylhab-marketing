@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
-        /* ===== FULL ORIGINAL STYLES (SaaS look) ===== */
+        /* ===== FULL ORIGINAL STYLES (SaaS look) - compressed for brevity ===== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #ffffff; color: #1a2530; line-height: 1.5; scroll-behavior: smooth; }
         .container { width: 90%; max-width: 1280px; margin: 0 auto; }
@@ -192,8 +192,9 @@
     </footer>
 
     <script>
-        // VEHICLE DATA (12 vehicles)
+        // VEHICLE DATA: 12 existing + 12 new = 24 vehicles
         const vehicles = [
+            // Existing 12 vehicles (from earlier)
             { name: "Mazda Axela 2014", price: "1,420,000 KSh (negotiable)", desc: "1500cc Petrol, well maintained, clean dark fabric interior", image: "images/autos/mazda-2014.jpg", msg: "Hi, I'm interested in the Mazda Axela 2014 (1,420,000 KSh negotiable)." },
             { name: "Mazda Axela 2015", price: "Call for price", desc: "1500cc 2WD, accident free, low mileage (125k kms), HUD, front & rear camera", image: "images/autos/mazda-2015.jpg", msg: "Hi, I'm interested in the Mazda Axela 2015 with HUD & cameras." },
             { name: "Nissan Nismo 2016", price: "1,090,000 KSh", desc: "1200cc Petrol, new tyres, original paint, accident free, fabric interior", image: "images/autos/nissan-nismo.jpg", msg: "Hi, I'm interested in the Nissan Nismo 2016 (1.09M)." },
@@ -205,10 +206,23 @@
             { name: "Subaru Forester 2009", price: "1,430,000 KSh", desc: "2000cc non-turbo, dark leather seats, sunroof, accident free, low mileage", image: "images/autos/forester.jpg", msg: "Hi, I'm interested in the Subaru Forester 2009 (1.43M)." },
             { name: "Toyota Land Cruiser Tour Van 2018", price: "6,900,000 KSh", desc: "Extremely clean, well maintained", image: "images/autos/landcruiser-2018.jpg", msg: "Hi, I'm interested in the Toyota Land Cruiser Tour Van 2018 (6.9M)." },
             { name: "Toyota Land Cruiser 100 Series 2007", price: "3,950,000 KSh", desc: "4200cc 1HD diesel, auto, original paint, grey fabric interior, bullbar", image: "images/autos/landcruiser-100.jpg", msg: "Hi, I'm interested in the Toyota Land Cruiser 100 Series (3.95M)." },
-            { name: "Toyota Wish 2013", price: "1,290,000 KSh", desc: "1800cc 2WD, accident free, buy and drive", image: "images/autos/wish-2013.jpg", msg: "Hi, I'm interested in the Toyota Wish 2013 (1.29M)." }
+            { name: "Toyota Wish 2013", price: "1,290,000 KSh", desc: "1800cc 2WD, accident free, buy and drive", image: "images/autos/wish-2013.jpg", msg: "Hi, I'm interested in the Toyota Wish 2013 (1.29M)." },
+            // NEW VEHICLES (12)
+            { name: "Honda Fit 2012", price: "770,000 KSh", desc: "1300cc, well maintained", image: "images/autos/honda-fit2012.jpg", msg: "Hi, I'm interested in the Honda Fit 2012 (770,000 KSh)." },
+            { name: "Toyota Runx 2006", price: "770,000 KSh", desc: "1500cc petrol, extremely clean, grey fabric interior, alloy rims, ready documents", image: "images/autos/toyota-runx2006.jpg", msg: "Hi, I'm interested in the Toyota Runx 2006 (770,000 KSh)." },
+            { name: "Subaru Forester SG5", price: "690,000 KSh", desc: "2000cc non turbo, alloys, clean, Kiambu road", image: "images/autos/forester-sg5.jpg", msg: "Hi, I'm interested in the Subaru Forester SG5 (690,000 KSh)." },
+            { name: "Volkswagen Golf TSI 2015", price: "1,390,000 KSh", desc: "1400cc, alloys, steering controls, cruise control, Kiambu road", image: "images/autos/golf-tsi2005.jpg", msg: "Hi, I'm interested in the Volkswagen Golf TSI 2015 (1.39M)." },
+            { name: "Subaru Forester SH5 2010", price: "1,400,000 KSh (negotiable)", desc: "Non turbo, original paint", image: "images/autos/forester-sh52010.jpg", msg: "Hi, I'm interested in the Subaru Forester SH5 2010 (1.4M negotiable)." },
+            { name: "Mercedes Benz A180 2013", price: "1,490,000 KSh (ONO)", desc: "Low mileage 49k kms, 1600cc turbo, keyless entry, original paint", image: "images/autos/benz-a1802010.jpg", msg: "Hi, I'm interested in the Mercedes Benz A180 2013 (1.49M)." },
+            { name: "Subaru Forester SH5 2011", price: "1,470,000 KSh (slightly negotiable)", desc: "2000cc petrol, accident free, original paint, automatic, fabric interior", image: "images/autos/forester-sh52011.jpg", msg: "Hi, I'm interested in the Subaru Forester SH5 2011 (1.47M)." },
+            { name: "Toyota Noah 2015", price: "1,800,000 KSh", desc: "2000cc, rating valve Matic engine, accident free, original paint", image: "images/autos/noah-20155.jpg", msg: "Hi, I'm interested in the Toyota Noah 2015 (1.8M)." },
+            { name: "Toyota Fielder WXB 2014", price: "1,280,000 KSh (negotiable)", desc: "Fully loaded, half leather seats, 1500cc 2wd", image: "images/autos/fielder-2014.jpg", msg: "Hi, I'm interested in the Toyota Fielder WXB 2014 (1.28M negotiable)." },
+            { name: "Honda Vezel Hybrid 2014", price: "1,700,000 KSh (negotiable)", desc: "1500cc hybrid, ready documents", image: "images/autos/vezel-2014.jpg", msg: "Hi, I'm interested in the Honda Vezel Hybrid 2014 (1.7M)." },
+            { name: "Toyota Fielder 2009", price: "980,000 KSh", desc: "1500cc 2WD, original paint, extremely clean", image: "images/autos/fielder-2009.jpg", msg: "Hi, I'm interested in the Toyota Fielder 2009 (980,000 KSh)." },
+            { name: "Toyota Land Cruiser LC200 2010", price: "4,700,000 KSh", desc: "4600cc V8 petrol, full leather, sunroof, 7-seater, cooled seats, cruise control", image: "images/autos/landcruiser-2010.jpg", msg: "Hi, I'm interested in the Toyota Land Cruiser LC200 2010 (4.7M)." }
         ];
 
-        // KITCHENWARE DATA (8 items – added two new ones)
+        // KITCHENWARE DATA (8 items - unchanged)
         const kitchenware = [
             { name: "Bosch 11pc Cookware", price: "8,600 KSh (Promotion)", desc: "Made in Germany, small diamond texture, black colour, includes silicone lid covers", image: "images/kitchenware/bosch-11pcs.jpg", msg: "Hi, I'm interested in the Bosch 11pc Cookware set (8,600 KSh promotion price)." },
             { name: "3-in-1 Chaffing Dish", price: "6,800 KSh", desc: "Dark green & gold chaffing dishes with glass lid – elegant for catering", image: "images/kitchenware/goldchaffing.jpg", msg: "Hi, I'm interested in the 3-in-1 gold chaffing dish (6,800 KSh)." },
@@ -216,7 +230,6 @@
             { name: "6 Space Gold Glass Holder", price: "2,500 KSh", desc: "Elegant 6-space gold finish glass holder – perfect for kitchen or bar", image: "images/kitchenware/sixspace-glassholder.jpg", msg: "Hi, I'm interested in the 6-space gold glass holder (2,500 KSh)." },
             { name: "Nunix Water Dispenser", price: "12,500 KSh", desc: "Black Nunix A1C-X2 Bottom Load Hot & Cold Water Dispenser with music system", image: "images/kitchenware/nunix-dispenser.jpg", msg: "Hi, I'm interested in the Nunix water dispenser (12,500 KSh)." },
             { name: "Donnor Berry 16pcs Cookware Set", price: "16,500 KSh", desc: "Granite nonstick, Germany technology, 6-layer protection, includes 7 pots + utensils. Colours: brown, ivory, black, grey", image: "images/kitchenware/donnerberry-cookware.jpg", msg: "Hi, I'm interested in the Donnor Berry 16-piece cookware set (16,500 KSh)." },
-            // NEW ITEMS:
             { name: "Single Gold Fruit Rack", price: "1,200 KSh", desc: "Elegant single gold fruit rack – perfect for kitchen counter", image: "images/kitchenware/gold-fruitrack.jpg", msg: "Hi, I'm interested in the Single Gold Fruit Rack (1,200 KSh)." },
             { name: "Phisma 9pc Cookware Set", price: "13,000 KSh", desc: "Phisma cookware set 9 pieces – quality nonstick cookware", image: "images/kitchenware/phisma-cookware.jpg", msg: "Hi, I'm interested in the Phisma 9pc Cookware Set (13,000 KSh)." }
         ];
