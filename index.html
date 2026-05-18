@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
-        /* ===== FULL ORIGINAL STYLES (SaaS look) - compressed for brevity ===== */
+        /* Same styles as before – compressed for brevity */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #ffffff; color: #1a2530; line-height: 1.5; scroll-behavior: smooth; }
         .container { width: 90%; max-width: 1280px; margin: 0 auto; }
@@ -192,9 +192,9 @@
     </footer>
 
     <script>
-        // VEHICLE DATA: 12 existing + 12 new = 24 vehicles
+        // VEHICLE DATA – All existing vehicles plus all new ones (total ~70)
         const vehicles = [
-            // Existing 12 vehicles (from earlier)
+            // Existing 24 vehicles (from previous updates)
             { name: "Mazda Axela 2014", price: "1,420,000 KSh (negotiable)", desc: "1500cc Petrol, well maintained, clean dark fabric interior", image: "images/autos/mazda-2014.jpg", msg: "Hi, I'm interested in the Mazda Axela 2014 (1,420,000 KSh negotiable)." },
             { name: "Mazda Axela 2015", price: "Call for price", desc: "1500cc 2WD, accident free, low mileage (125k kms), HUD, front & rear camera", image: "images/autos/mazda-2015.jpg", msg: "Hi, I'm interested in the Mazda Axela 2015 with HUD & cameras." },
             { name: "Nissan Nismo 2016", price: "1,090,000 KSh", desc: "1200cc Petrol, new tyres, original paint, accident free, fabric interior", image: "images/autos/nissan-nismo.jpg", msg: "Hi, I'm interested in the Nissan Nismo 2016 (1.09M)." },
@@ -207,7 +207,6 @@
             { name: "Toyota Land Cruiser Tour Van 2018", price: "6,900,000 KSh", desc: "Extremely clean, well maintained", image: "images/autos/landcruiser-2018.jpg", msg: "Hi, I'm interested in the Toyota Land Cruiser Tour Van 2018 (6.9M)." },
             { name: "Toyota Land Cruiser 100 Series 2007", price: "3,950,000 KSh", desc: "4200cc 1HD diesel, auto, original paint, grey fabric interior, bullbar", image: "images/autos/landcruiser-100.jpg", msg: "Hi, I'm interested in the Toyota Land Cruiser 100 Series (3.95M)." },
             { name: "Toyota Wish 2013", price: "1,290,000 KSh", desc: "1800cc 2WD, accident free, buy and drive", image: "images/autos/wish-2013.jpg", msg: "Hi, I'm interested in the Toyota Wish 2013 (1.29M)." },
-            // NEW VEHICLES (12)
             { name: "Honda Fit 2012", price: "770,000 KSh", desc: "1300cc, well maintained", image: "images/autos/honda-fit2012.jpg", msg: "Hi, I'm interested in the Honda Fit 2012 (770,000 KSh)." },
             { name: "Toyota Runx 2006", price: "770,000 KSh", desc: "1500cc petrol, extremely clean, grey fabric interior, alloy rims, ready documents", image: "images/autos/toyota-runx2006.jpg", msg: "Hi, I'm interested in the Toyota Runx 2006 (770,000 KSh)." },
             { name: "Subaru Forester SG5", price: "690,000 KSh", desc: "2000cc non turbo, alloys, clean, Kiambu road", image: "images/autos/forester-sg5.jpg", msg: "Hi, I'm interested in the Subaru Forester SG5 (690,000 KSh)." },
@@ -219,10 +218,49 @@
             { name: "Toyota Fielder WXB 2014", price: "1,280,000 KSh (negotiable)", desc: "Fully loaded, half leather seats, 1500cc 2wd", image: "images/autos/fielder-2014.jpg", msg: "Hi, I'm interested in the Toyota Fielder WXB 2014 (1.28M negotiable)." },
             { name: "Honda Vezel Hybrid 2014", price: "1,700,000 KSh (negotiable)", desc: "1500cc hybrid, ready documents", image: "images/autos/vezel-2014.jpg", msg: "Hi, I'm interested in the Honda Vezel Hybrid 2014 (1.7M)." },
             { name: "Toyota Fielder 2009", price: "980,000 KSh", desc: "1500cc 2WD, original paint, extremely clean", image: "images/autos/fielder-2009.jpg", msg: "Hi, I'm interested in the Toyota Fielder 2009 (980,000 KSh)." },
-            { name: "Toyota Land Cruiser LC200 2010", price: "4,700,000 KSh", desc: "4600cc V8 petrol, full leather, sunroof, 7-seater, cooled seats, cruise control", image: "images/autos/landcruiser-2010.jpg", msg: "Hi, I'm interested in the Toyota Land Cruiser LC200 2010 (4.7M)." }
+            { name: "Toyota Land Cruiser LC200 2010", price: "4,700,000 KSh", desc: "4600cc V8 petrol, full leather, sunroof, 7-seater, cooled seats, cruise control", image: "images/autos/landcruiser-2010.jpg", msg: "Hi, I'm interested in the Toyota Land Cruiser LC200 2010 (4.7M)." },
+            // NEW VEHICLES (as provided)
+            { name: "Toyota Harrier KDE 2014", price: "2,550,000 KSh (negotiable)", desc: "2000cc Valvematic, leather seats, electric seats, powered boot, cruise control, auto start-stop, panoramic sunroof", image: "images/autos/harrier-2014.jpg", msg: "Hi, I'm interested in the Toyota Harrier KDE 2014 (2.55M)." },
+            { name: "Nissan Note 2010", price: "560,000 KSh (negotiable)", desc: "1500cc 2wd, purely clean, low genuine mileage", image: "images/autos/note-2010.jpg", msg: "Hi, I'm interested in the Nissan Note 2010 (560,000 KSh)." },
+            { name: "Toyota Alphard 2010", price: "1,100,000 KSh", desc: "2400cc, accident free, 7 seater, well maintained, Kiambu Road", image: "images/autos/alphard-2010.jpg", msg: "Hi, I'm interested in the Toyota Alphard 2010 (1.1M)." },
+            { name: "Toyota Hilux 2015 (Local)", price: "2,400,000 KSh (slightly negotiable)", desc: "Original paint, accident free, 2KD engine, well maintained", image: "images/autos/hilux-2015.jpg", msg: "Hi, I'm interested in the Toyota Hilux 2015 (2.4M)." },
+            { name: "Toyota Mark X 2009", price: "850,000 KSh (slightly negotiable)", desc: "V6 2500cc petrol, extremely clean, original paint, beige fabric interior, electric seats, reverse camera, alloy rims", image: "images/autos/markx-2009.jpg", msg: "Hi, I'm interested in the Toyota Mark X 2009 (850K)." },
+            { name: "Honda Odyssey 2015", price: "1,095,000 KSh", desc: "7 seater, original paint, Nairobi location", image: "images/autos/odyssey.jpg", msg: "Hi, I'm interested in the Honda Odyssey 2015 (1.095M)." },
+            { name: "Mazda Verisa 2009", price: "595,000 KSh", desc: "1490cc, leather seats, 186,000kms", image: "images/autos/verisa-2009.jpg", msg: "Hi, I'm interested in the Mazda Verisa 2009 (595,000 KSh)." },
+            { name: "Isuzu NKR 2020", price: "2,600,000 KSh", desc: "4300cc diesel, local assembled, chassis engine intact, cabin original paint, extremely clean", image: "images/autos/isuzu-nkr.jpg", msg: "Hi, I'm interested in the Isuzu NKR 2020 (2.6M)." },
+            { name: "Toyota Hilux Double Cab 2012", price: "1,950,000 KSh (neg)", desc: "2500cc, local, manual transmission", image: "images/autos/hilux-2012.jpg", msg: "Hi, I'm interested in the Toyota Hilux Double Cab 2012 (1.95M)." },
+            { name: "Toyota Axio 2011", price: "900,000 KSh", desc: "1800cc 2wd, accident free", image: "images/autos/axio-2011.jpg", msg: "Hi, I'm interested in the Toyota Axio 2011 (900,000 KSh)." },
+            { name: "Toyota Noah Valmatic 2015", price: "1,900,000 KSh", desc: "2000cc, mileage 161,420", image: "images/autos/valmatic-2015.jpg", msg: "Hi, I'm interested in the Toyota Noah Valmatic 2015 (1.9M)." },
+            { name: "Subaru Forester SJ5 2014", price: "2,150,000 KSh", desc: "2000cc non turbo, Eyesight, lane assist, idle stop, X-mode, Si-Drive, seat warmers, paddle shifters", image: "images/autos/forester-sj5.jpg", msg: "Hi, I'm interested in the Subaru Forester SJ5 2014 (2.15M)." },
+            { name: "Toyota Hilux Double Cab 2010", price: "2,650,000 KSh (slightly negotiable)", desc: "3000cc, super clean interior and exterior", image: "images/autos/hilux-doublecab.jpg", msg: "Hi, I'm interested in the Toyota Hilux Double Cab 2010 (2.65M)." },
+            { name: "Subaru Forester SH5 Turbo 2008", price: "1,350,000 KSh", desc: "2000cc turbo, accident free, zero dents, original paint, low mileage, fully loaded, dark fabric seats, AWD, cruise control", image: "images/autos/forester-2008.jpg", msg: "Hi, I'm interested in the Subaru Forester SH5 Turbo 2008 (1.35M)." },
+            { name: "Toyota Hilux Single Cab 2012", price: "1,990,000 KSh", desc: "2500cc, accident free, ready documents, buy and drive", image: "images/autos/hilux2-2012.jpg", msg: "Hi, I'm interested in the Toyota Hilux Single Cab 2012 (1.99M)." },
+            { name: "Subaru Impreza GG3 2007", price: "680,000 KSh (neg)", desc: "1500cc, accident free, well maintained", image: "images/autos/impreza-gg3.jpg", msg: "Hi, I'm interested in the Subaru Impreza GG3 2007 (680K)." },
+            { name: "Toyota Crown Athlete 2009", price: "950,000 KSh", desc: "2500cc petrol, automatic, beige leather interior, new tyres, push start, cool music system", image: "images/autos/crown-athlete.jpg", msg: "Hi, I'm interested in the Toyota Crown Athlete 2009 (950,000 KSh)." },
+            { name: "Toyota Crown Royal Saloon 2015", price: "1,830,000 KSh (neg)", desc: "2500cc non-hybrid, petrol, auto, leather seats, push start, keyless entry, low mileage", image: "images/autos/crown-royal.jpg", msg: "Hi, I'm interested in the Toyota Crown Royal Saloon 2015 (1.83M)." },
+            { name: "Toyota Noah Valvematic 2012", price: "1,270,000 KSh", desc: "8-seater, both powered rear doors, push to start", image: "images/autos/noah-2012.jpg", msg: "Hi, I'm interested in the Toyota Noah Valvematic 2012 (1.27M)." },
+            { name: "Toyota Fielder 2013 (1500cc)", price: "1,190,000 KSh (negotiable)", desc: "1500cc 2wd, ready documents", image: "images/autos/fielder-2015.jpg", msg: "Hi, I'm interested in the Toyota Fielder 2013 (1.19M)." },
+            { name: "Nissan Navara D40 2012", price: "1,380,000 KSh", desc: "2450cc diesel, manual 4wd, very clean", image: "images/autos/navara-d40.jpg", msg: "Hi, I'm interested in the Nissan Navara D40 2012 (1.38M)." },
+            { name: "Toyota Auris 2015", price: "1,390,000 KSh (negotiable)", desc: "1500cc, wine red, half leather interior, 111k km, automatic, android screen, wooden finish, paddle shifters, cruise control, heated seats, sports rims", image: "images/autos/auris-2015.jpg", msg: "Hi, I'm interested in the Toyota Auris 2015 (1.39M)." },
+            { name: "Toyota Auris 2017", price: "1,699,000 KSh (negotiable)", desc: "1500cc 2wd, original paint, ready documents", image: "images/autos/auris-2017.jpg", msg: "Hi, I'm interested in the Toyota Auris 2017 (1.699M)." },
+            { name: "Toyota Land Cruiser Prado J150 VXL 2016", price: "5,300,000 KSh (slightly negotiable)", desc: "2800cc diesel, auto, 7 seater, sunroof, cooler box, height controls", image: "images/autos/prado-j150.jpg", msg: "Hi, I'm interested in the Toyota Land Cruiser Prado J150 VXL 2016 (5.3M)." },
+            { name: "Mazda Bongo 2016", price: "1,180,000 KSh (slightly negotiable)", desc: "1800cc petrol, accident free, automatic, new tyres, leaf springs, buy and drive", image: "images/autos/bongo-2016.jpg", msg: "Hi, I'm interested in the Mazda Bongo 2016 (1.18M)." },
+            { name: "Toyota Ractis New Shape 2014", price: "920,000 KSh", desc: "1300cc 2wd, push start, super clean", image: "images/autos/ractis-2014.jpg", msg: "Hi, I'm interested in the Toyota Ractis 2014 (920,000 KSh)." },
+            { name: "Toyota Mark II", price: "565,000 KSh", desc: "Extremely clean, original paint, beige fabric interior, electric seats, working AC, cool music system, alloy rims", image: "images/autos/mark11.jpg", msg: "Hi, I'm interested in the Toyota Mark II (565,000 KSh)." },
+            { name: "Toyota Fielder Newshape 2020", price: "1,890,000 KSh", desc: "1500cc 4wd, low genuine mileage, new arrival, fully loaded, Nairobi area", image: "images/autos/fielder-2020.jpg", msg: "Hi, I'm interested in the Toyota Fielder Newshape 2020 (1.89M)." },
+            { name: "Toyota Raum", price: "680,000 KSh (negotiable)", desc: "1500cc 2wd, viewing Thika Road", image: "images/autos/raum.jpg", msg: "Hi, I'm interested in the Toyota Raum (680,000 KSh)." },
+            { name: "Honda Fit 2009", price: "695,000 KSh (slightly negotiable)", desc: "1300cc 2wd, accident free, original paint, alloy rims, new tyres, upgraded headlights, location Kahawa Sukari Thika Road", image: "images/autos/fit-2009.jpg", msg: "Hi, I'm interested in the Honda Fit 2009 (695,000 KSh)." },
+            { name: "Honda Vezel Hybrid 2018", price: "2,250,000 KSh", desc: "1500cc 2wd, low genuine mileage, original paint, accident free, Nairobi area", image: "images/autos/vezel-2018.jpg", msg: "Hi, I'm interested in the Honda Vezel Hybrid 2018 (2.25M)." },
+            { name: "Toyota Crown 2012", price: "1,280,000 KSh", desc: "2500cc, neat interior, well maintained, original paint, accident free, Nairobi area", image: "images/autos/crown-2012.jpg", msg: "Hi, I'm interested in the Toyota Crown 2012 (1.28M)." },
+            { name: "Mazda Atenza Sedan 2017", price: "1,750,000 KSh", desc: "2200cc diesel, low genuine mileage, original paint, accident free, Nairobi area", image: "images/autos/atenza-2017.jpg", msg: "Hi, I'm interested in the Mazda Atenza 2017 (1.75M)." },
+            { name: "Honda Fit Newshape 2015", price: "1,050,000 KSh", desc: "1300cc 2wd, original paint, accident free, Nairobi area", image: "images/autos/fit-2015.jpg", msg: "Hi, I'm interested in the Honda Fit Newshape 2015 (1.05M)." },
+            { name: "Toyota Hiace 7l 2014", price: "2,150,000 KSh (neg)", desc: "1kd-2wheel, auto-diesel", image: "images/autos/hiace-7l.jpg", msg: "Hi, I'm interested in the Toyota Hiace 7l 2014 (2.15M)." },
+            { name: "Toyota Hiace 7l 2012", price: "1,580,000 KSh (neg)", desc: "1kd-2wheel, auto-diesel", image: "images/autos/hiace2012-7l.jpg", msg: "Hi, I'm interested in the Toyota Hiace 7l 2012 (1.58M)." },
+            { name: "Toyota Passo 2017", price: "850,000 KSh (negotiable)", desc: "1000cc petrol, automatic transmission", image: "images/autos/passo-2017.jpg", msg: "Hi, I'm interested in the Toyota Passo 2017 (850,000 KSh)." },
+            { name: "Toyota Fielder 2013 (1800cc)", price: "1,370,000 KSh", desc: "1800cc Valvematic, automatic, 2wd, dark interior, perfect suspension", image: "images/autos/fieler2-2013.jpg", msg: "Hi, I'm interested in the Toyota Fielder 2013 (1.37M)." }
         ];
 
-        // KITCHENWARE DATA (8 items - unchanged)
+        // KITCHENWARE DATA (unchanged)
         const kitchenware = [
             { name: "Bosch 11pc Cookware", price: "8,600 KSh (Promotion)", desc: "Made in Germany, small diamond texture, black colour, includes silicone lid covers", image: "images/kitchenware/bosch-11pcs.jpg", msg: "Hi, I'm interested in the Bosch 11pc Cookware set (8,600 KSh promotion price)." },
             { name: "3-in-1 Chaffing Dish", price: "6,800 KSh", desc: "Dark green & gold chaffing dishes with glass lid – elegant for catering", image: "images/kitchenware/goldchaffing.jpg", msg: "Hi, I'm interested in the 3-in-1 gold chaffing dish (6,800 KSh)." },
