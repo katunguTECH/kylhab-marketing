@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
-        /* Same styles as before – unchanged */
+        /* ========== STYLES (same as previous) ========== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #ffffff; color: #1a2530; line-height: 1.5; scroll-behavior: smooth; }
         .container { width: 90%; max-width: 1280px; margin: 0 auto; }
@@ -98,7 +98,7 @@
             <a href="#" class="nav-logo">Kylhab <span>Marketing</span></a>
             <div class="nav-contact">
                 <a href="tel:+254723652430" class="nav-phone"><i class="fas fa-phone-alt"></i> <span class="hide-mobile">Call Us</span></a>
-                <a href="https://wa.me/254723652430" class="nav-wa" target="_blank"><i class="fab fa-whatsapp"></i> <span class="hide-mobile">Order on WhatsApp</span></a>
+                <a href="https://api.whatsapp.com/send?phone=254723652430&text=Hello%2C%20I%20would%20like%20to%20order" class="nav-wa" target="_blank"><i class="fab fa-whatsapp"></i> <span class="hide-mobile">Order on WhatsApp</span></a>
             </div>
         </div>
     </nav>
@@ -286,7 +286,7 @@
             { name: "iPhone 15 Pro", price: "88,000 KSh", desc: "256GB, 84% battery, physical SIM, clean unit", image: "images/electronics-phones/iphone-15pro.jpg", msg: "Hi, I'm interested in the iPhone 15 Pro (88,000 KSh)." }
         ];
 
-        // ========== VEHICLES (complete list including missing ones) ==========
+        // ========== VEHICLES (complete list) ==========
         const vehicles = [
             { name: "Suzuki Spacia", price: "750,000 KSh", desc: "164,000km, 660cc Petrol, Automatic, Clean interior, HD stereo", image: "images/autos/suzuki-spacio.jpg", msg: "Hi, I'm interested in the Suzuki Spacia (750,000 KSh)." },
             { name: "Toyota Fielder 2009 (980k)", price: "980,000 KSh", desc: "Year 2009, Accident Free, 1500CC", image: "images/autos/fielder2-2009.jpg", msg: "Hi, I'm interested in the Toyota Fielder 2009 (980k)." },
@@ -385,7 +385,7 @@
             { name: "Toyota Fielder 2013 (1800cc)", price: "1,370,000 KSh", desc: "1800cc Valvematic, automatic, 2wd, dark interior, perfect suspension", image: "images/autos/fieler2-2013.jpg", msg: "Hi, I'm interested in the Toyota Fielder 2013 (1.37M)." }
         ];
 
-        // ========== HOUSEHOLD (including new items) ==========
+        // ========== HOUSEHOLD ==========
         const household = [
             { name: "Pregnancy Pillow", price: "2,900 KSh", desc: "Comfortable support", image: "images/household/pregnancy-pillow.jpg", msg: "Hi, I'm interested in the Pregnancy Pillow." },
             { name: "Printed Bedsheets (6x6)", price: "1,800 KSh", desc: "2 bedsheets + 2 pillow cases", image: "images/household/printed-bedsheets.jpg", msg: "Hi, I'm interested in the Printed Bedsheets." },
@@ -401,7 +401,7 @@
             { name: "Ladybird Bike 26\"", price: "11,500 KSh", desc: "Above 13 yrs", image: "images/household/ladybird-bikes.jpg", msg: "Hi, I'm interested in the Ladybird Bike 26\"." }
         ];
 
-        // ========== SHOES & CLOTHING (including Arsenal jersey) ==========
+        // ========== SHOES & CLOTHING ==========
         const shoesClothing = [
             { name: "Chunky Peep Toe Heels", price: "2,800 KSh", desc: "Sizes 36-43", image: "images/shoes-clothing-textiles/chunky-peeptoe.jpg", msg: "Hi, I'm interested in the Chunky Heels." },
             { name: "Breathable Sneakers", price: "3,500 KSh", desc: "Sizes 36-44", image: "images/shoes-clothing-textiles/breathable-sneakers.jpg", msg: "Hi, I'm interested in the Breathable Sneakers." },
@@ -422,7 +422,7 @@
             { name: "Arsenal Retro Jersey", price: "3,000 KSh", desc: "Classic Arsenal jersey", image: "images/shoes-clothing-textiles/arsenal-throwback.jpg", msg: "Hi, I'm interested in the Arsenal Retro Jersey." }
         ];
 
-        // ========== KITCHENWARE (complete list including missing items) ==========
+        // ========== KITCHENWARE ==========
         const kitchenware = [
             { name: "27pc Dinner Set", price: "5,700 KSh", desc: "Complete dinner set", image: "images/kitchenware/27pcs.jpg", msg: "Hi, I'm interested in the 27pc Dinner Set." },
             { name: "8pc Milton Pearl Combo", price: "4,800 KSh", desc: "3 hotpots, 4 tumblers, 1L flask", image: "images/kitchenware/8pcs-milton.jpg", msg: "Hi, I'm interested in the Milton Pearl Combo." },
@@ -477,7 +477,7 @@
             { name: "Foldable Laptop Stand", price: "1,950 KSh", desc: "Aluminum, ergonomic", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Laptop+Stand", msg: "I want the Laptop Stand." }
         ];
 
-        // Helper functions
+        // ========== HELPER FUNCTIONS with CORRECTED WHATSAPP LINKS ==========
         function renderGrid(containerId, items, whatsappNumber) {
             const grid = document.getElementById(containerId);
             if (!grid) return;
@@ -499,7 +499,8 @@
             document.querySelectorAll(`#${containerId} .whatsapp-btn`).forEach(btn => {
                 btn.addEventListener('click', () => {
                     const msg = btn.getAttribute('data-msg');
-                    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank');
+                    // Use api.whatsapp.com for better compatibility
+                    window.open(`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(msg)}`, '_blank');
                 });
             });
         }
@@ -514,7 +515,7 @@
                 const product = document.getElementById('inquiryProduct').value;
                 const message = document.getElementById('inquiryMessage').value;
                 const fullMsg = `*Inquiry from Kylhab Marketing*%0A%0AName: ${name}%0AEmail: ${email}%0AProduct/Vehicle: ${product}%0AMessage: ${message}`;
-                window.open(`https://wa.me/${whatsappNumber}?text=${fullMsg}`, '_blank');
+                window.open(`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${fullMsg}`, '_blank');
             });
         }
 
@@ -528,11 +529,12 @@
             renderGrid('kitchenwareGrid', kitchenware, MY_WHATSAPP);
             renderGrid('productsGrid', products, MY_WHATSAPP);
             setupInquiryForm(MY_WHATSAPP);
-            // Attach hot sale buttons (two separate)
+
+            // Hot sale buttons
             document.querySelectorAll('.hot-sale-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
+                btn.addEventListener('click', () => {
                     const product = btn.getAttribute('data-product');
-                    window.open(`https://wa.me/${MY_WHATSAPP}?text=${encodeURIComponent(`Hi, I'm interested in the ${product}.`)}`, '_blank');
+                    window.open(`https://api.whatsapp.com/send?phone=${MY_WHATSAPP}&text=${encodeURIComponent(`Hi, I'm interested in the ${product}.`)}`, '_blank');
                 });
             });
         });
