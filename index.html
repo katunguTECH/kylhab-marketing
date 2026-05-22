@@ -132,9 +132,10 @@
         </div>
     </div>
 
-    <!-- Quick Navigation Links -->
+    <!-- Quick Navigation -->
     <div class="quick-nav">
         <div class="container">
+            <a href="#electronics"><i class="fas fa-mobile-alt"></i> Electronics</a>
             <a href="#shoes-clothing"><i class="fas fa-tshirt"></i> Shoes & Clothing</a>
             <a href="#household"><i class="fas fa-home"></i> Household</a>
             <a href="#kitchenware"><i class="fas fa-utensils"></i> Kitchenware</a>
@@ -142,21 +143,32 @@
         </div>
     </div>
 
-    <!-- Brand New Hot Sale Item -->
+    <!-- Brand New Hot Sale: iPhone 15 Pro -->
     <div class="hot-sale-section">
         <div class="hot-sale-card">
-            <img src="images/shoes-clothing-textiles/arsenal-throwback.jpg" alt="Arsenal Retro Jersey" onerror="this.src='https://placehold.co/600x400/eef2f7/1a2a36?text=Arsenal+Jersey'">
+            <img src="images/electronics-phones/iphone-15pro.jpg" alt="iPhone 15 Pro" onerror="this.src='https://placehold.co/600x400/eef2f7/1a2a36?text=iPhone+15+Pro'">
             <div class="hot-sale-info">
                 <span class="hot-sale-badge">🔥 BRAND NEW HOT SALE 🔥</span>
-                <h3>Arsenal Retro Jersey</h3>
-                <p class="hot-sale-price">3,000 KSh</p>
-                <p>Authentic retro design, high-quality fabric, perfect for fans and collectors. Limited stock – grab yours now!</p>
+                <h3>iPhone 15 Pro</h3>
+                <p class="hot-sale-price">88,000 KSh</p>
+                <p>256GB, 84% battery, physical SIM, clean unit. Limited stock – grab yours now!</p>
                 <button class="whatsapp-btn" id="hotSaleWhatsapp">Order on WhatsApp <i class="fab fa-whatsapp"></i></button>
             </div>
         </div>
     </div>
 
     <main>
+        <!-- Electronics & Phones -->
+        <section class="products-section" id="electronics" style="background-color: #f0f7ff;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>📱 Electronics & Phones</h2>
+                    <p>Latest smartphones and gadgets – quality assured.</p>
+                </div>
+                <div class="products-grid" id="electronicsGrid"></div>
+            </div>
+        </section>
+
         <!-- Featured Autos -->
         <section class="products-section" id="vehicles">
             <div class="container">
@@ -168,7 +180,7 @@
             </div>
         </section>
 
-        <!-- Household Items -->
+        <!-- Household -->
         <section class="products-section" id="household" style="background-color: #f9fafc;">
             <div class="container">
                 <div class="section-header">
@@ -212,7 +224,7 @@
             </div>
         </section>
 
-        <!-- Inquiry Section -->
+        <!-- Inquiry -->
         <section id="inquiry" class="inquiry">
             <div class="container inquiry-container">
                 <div class="inquiry-content">
@@ -243,7 +255,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand"><h3>Kylhab <span>Marketing</span></h3><p>Your trusted dropshipping partner, delivering quality products & vehicles across Kenya.</p></div>
-                <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="#">Home</a></li><li><a href="#vehicles">Vehicles</a></li><li><a href="#household">Household</a></li><li><a href="#shoes-clothing">Clothing</a></li><li><a href="#kitchenware">Kitchenware</a></li><li><a href="#products">Products</a></li><li><a href="#inquiry">Bulk Orders</a></li><li><a href="#">Terms & Conditions</a></li></ul></div>
+                <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="#">Home</a></li><li><a href="#electronics">Electronics</a></li><li><a href="#vehicles">Vehicles</a></li><li><a href="#household">Household</a></li><li><a href="#shoes-clothing">Clothing</a></li><li><a href="#kitchenware">Kitchenware</a></li><li><a href="#products">Products</a></li><li><a href="#inquiry">Bulk Orders</a></li><li><a href="#">Terms & Conditions</a></li></ul></div>
                 <div class="footer-contact"><h4>Contact Us</h4><p><i class="fab fa-whatsapp"></i> +254 723 652 430</p><p><i class="fas fa-envelope"></i> alice.mweru@dukaapp.online</p></div>
             </div>
             <div class="footer-bottom"><p>&copy; 2026 Kylhab Marketing – Nairobi, Kenya. All rights reserved.</p><p class="payment-methods">We accept: M-PESA | Airtel Money | Bank Transfer</p></div>
@@ -251,9 +263,14 @@
     </footer>
 
     <script>
-        // ==================== VEHICLES (all 80+ entries) ====================
+        // ========== ELECTRONICS ==========
+        const electronics = [
+            { name: "iPhone 15 Pro", price: "88,000 KSh", desc: "256GB, 84% battery, physical SIM, clean unit", image: "images/electronics-phones/iphone-15pro.jpg", msg: "Hi, I'm interested in the iPhone 15 Pro (88,000 KSh)." }
+        ];
+
+        // ========== VEHICLES (all 80+ entries) ==========
         const vehicles = [
-            // New vehicles (from latest batch)
+            { name: "Suzuki Spacia", price: "750,000 KSh", desc: "164,000km, 660cc Petrol, Automatic, Clean interior, HD stereo", image: "images/autos/suzuki-spacio.jpg", msg: "Hi, I'm interested in the Suzuki Spacia (750,000 KSh)." },
             { name: "Toyota Fielder 2009 (980k)", price: "980,000 KSh", desc: "Year 2009, Accident Free, 1500CC", image: "images/autos/fielder2-2009.jpg", msg: "Hi, I'm interested in the Toyota Fielder 2009 (980k)." },
             { name: "Toyota Vitz 2014", price: "770,000 KSh (negotiable)", desc: "1000cc petrol engine", image: "images/autos/vitz-2014.jpg", msg: "Hi, I'm interested in the Toyota Vitz 2014 (770,000 KSh)." },
             { name: "Mitsubishi RVR Roadest 2012", price: "1,280,000 KSh", desc: "1800cc, original paint, alloy wheels, push start, steering controls, paddle shifters, fog lights, Kiambu road", image: "images/autos/roadfest-2012.jpg", msg: "Hi, I'm interested in the Mitsubishi RVR Roadest 2012 (1.28M)." },
@@ -286,7 +303,6 @@
             { name: "Subaru Impreza GH2 2010", price: "890,000 KSh", desc: "1500cc, automatic, extremely clean", image: "images/autos/impreza-2010.jpg", msg: "Hi, I'm interested in the Subaru Impreza GH2 2010 (890,000 KSh)." },
             { name: "Toyota Hiace 2006", price: "1,390,000 KSh (neg)", desc: "2500cc 2KD diesel, auto, well maintained, original paint", image: "images/autos/hiace-2006.jpg", msg: "Hi, I'm interested in the Toyota Hiace 2006 (1.39M)." },
             { name: "VW Jetta 2011", price: "990,000 KSh", desc: "Petrol, automatic, leather interior, mileage 203839 km", image: "images/autos/jetta-2011.jpg", msg: "Hi, I'm interested in the VW Jetta 2011 (990,000 KSh)." },
-            // Older vehicles (previous inventory)
             { name: "Mazda Axela 2014", price: "1,420,000 KSh (negotiable)", desc: "1500cc Petrol, well maintained, clean dark fabric interior", image: "images/autos/mazda-2014.jpg", msg: "Hi, I'm interested in the Mazda Axela 2014 (1,420,000 KSh negotiable)." },
             { name: "Mazda Axela 2015", price: "Call for price", desc: "1500cc 2WD, accident free, low mileage (125k kms), HUD, front & rear camera", image: "images/autos/mazda-2015.jpg", msg: "Hi, I'm interested in the Mazda Axela 2015 with HUD & cameras." },
             { name: "Nissan Nismo 2016", price: "1,090,000 KSh", desc: "1200cc Petrol, new tyres, original paint, accident free, fabric interior", image: "images/autos/nissan-nismo.jpg", msg: "Hi, I'm interested in the Nissan Nismo 2016 (1.09M)." },
@@ -351,74 +367,96 @@
             { name: "Toyota Fielder 2013 (1800cc)", price: "1,370,000 KSh", desc: "1800cc Valvematic, automatic, 2wd, dark interior, perfect suspension", image: "images/autos/fieler2-2013.jpg", msg: "Hi, I'm interested in the Toyota Fielder 2013 (1.37M)." }
         ];
 
-        // ==================== HOUSEHOLD ITEMS ====================
+        // ========== HOUSEHOLD (including new items) ==========
         const household = [
-            { name: "Single Woolen Duvet", price: "1,950 KSh", desc: "5x6, 1 pc duvet (no bedsheet, no pillow cases)", image: "images/household/single-duvet.jpg", msg: "Hi, I'm interested in the Single Woolen Duvet (1,950 KSh)." },
-            { name: "Velvet Duvet Set", price: "3,500 KSh", desc: "6x7, includes 1 duvet + 1 bedsheet + 2 pillow cases", image: "images/household/velvet-duvets.jpg", msg: "Hi, I'm interested in the Velvet Duvet Set (3,500 KSh)." },
-            { name: "Kid's Foldable Scooter", price: "1,650 KSh", desc: "Ages 3-12, height adjustable, flashing lights, colours: blue, red, pink, green", image: "images/household/kids-scooter.jpg", msg: "Hi, I'm interested in the Kid's Scooter (1,650 KSh)." },
-            { name: "Fsx MTB Bike (26 with gear disk)", price: "11,500 KSh", desc: "Size 26, gear disk", image: "images/household/fsx-bike.jpg", msg: "Hi, I'm interested in the Fsx MTB Bike (11,500 KSh)." },
-            { name: "Ladybird Bike 12\"", price: "6,000 KSh", desc: "With trainer wheels (2-3 yrs)", image: "images/household/ladybird-bikes.jpg", msg: "Hi, I'm interested in the Ladybird Bike 12\" (6,000 KSh)." },
-            { name: "Ladybird Bike 16\"", price: "6,500 KSh", desc: "With trainer wheels (4-7 yrs)", image: "images/household/ladybird-bikes.jpg", msg: "Hi, I'm interested in the Ladybird Bike 16\" (6,500 KSh)." },
-            { name: "Ladybird Bike 20\"", price: "7,000 KSh", desc: "Without trainer wheels (7-12 yrs)", image: "images/household/ladybird-bikes.jpg", msg: "Hi, I'm interested in the Ladybird Bike 20\" (7,000 KSh)." },
-            { name: "Ladybird Bike 26\"", price: "11,500 KSh", desc: "Above 13 yrs", image: "images/household/ladybird-bikes.jpg", msg: "Hi, I'm interested in the Ladybird Bike 26\" (11,500 KSh)." }
+            { name: "Pregnancy Pillow", price: "2,900 KSh", desc: "Comfortable support", image: "images/household/pregnancy-pillow.jpg", msg: "Hi, I'm interested in the Pregnancy Pillow." },
+            { name: "Printed Bedsheets (6x6)", price: "1,800 KSh", desc: "2 bedsheets + 2 pillow cases", image: "images/household/printed-bedsheets.jpg", msg: "Hi, I'm interested in the Printed Bedsheets." },
+            { name: "Beige 2-Seater Seat Covers", price: "2,500 KSh", desc: "Bubbles design", image: "images/household/seat-covers.jpg", msg: "Hi, I'm interested in the Seat Covers." },
+            { name: "Sewing Kit", price: "500 KSh", desc: "Essential sewing accessories", image: "images/household/sewing-kit.jpg", msg: "Hi, I'm interested in the Sewing Kit." },
+            { name: "Single Woolen Duvet", price: "1,950 KSh", desc: "5x6, 1 pc duvet", image: "images/household/single-duvet.jpg", msg: "Hi, I'm interested in the Single Woolen Duvet." },
+            { name: "Velvet Duvet Set", price: "3,500 KSh", desc: "6x7, includes 1 duvet + 1 bedsheet + 2 pillow cases", image: "images/household/velvet-duvets.jpg", msg: "Hi, I'm interested in the Velvet Duvet Set." },
+            { name: "Kid's Foldable Scooter", price: "1,650 KSh", desc: "Ages 3-12, flashing lights", image: "images/household/kids-scooter.jpg", msg: "Hi, I'm interested in the Kid's Scooter." },
+            { name: "Fsx MTB Bike (26 with gear disk)", price: "11,500 KSh", desc: "Size 26, gear disk", image: "images/household/fsx-bike.jpg", msg: "Hi, I'm interested in the Fsx MTB Bike." },
+            { name: "Ladybird Bike 12\"", price: "6,000 KSh", desc: "With trainer wheels (2-3 yrs)", image: "images/household/ladybird-bikes.jpg", msg: "Hi, I'm interested in the Ladybird Bike 12\"." },
+            { name: "Ladybird Bike 16\"", price: "6,500 KSh", desc: "With trainer wheels (4-7 yrs)", image: "images/household/ladybird-bikes.jpg", msg: "Hi, I'm interested in the Ladybird Bike 16\"." },
+            { name: "Ladybird Bike 20\"", price: "7,000 KSh", desc: "Without trainer wheels (7-12 yrs)", image: "images/household/ladybird-bikes.jpg", msg: "Hi, I'm interested in the Ladybird Bike 20\"." },
+            { name: "Ladybird Bike 26\"", price: "11,500 KSh", desc: "Above 13 yrs", image: "images/household/ladybird-bikes.jpg", msg: "Hi, I'm interested in the Ladybird Bike 26\"." }
         ];
 
-        // ==================== SHOES, CLOTHING & TEXTILES ====================
+        // ========== SHOES & CLOTHING (including new items) ==========
         const shoesClothing = [
-            { name: "Soft Step Leather Loafers", price: "2,800 KSh", desc: "Sizes 37-43", image: "images/shoes-clothing-textiles/leather-loafers.jpg", msg: "Hi, I'm interested in the Leather Loafers (2,800 KSh)." },
-            { name: "Breathable Men's Shoes", price: "3,000 KSh", desc: "Sizes 39-44", image: "images/shoes-clothing-textiles/breathable-mensshoes.jpg", msg: "Hi, I'm interested in the Breathable Men's Shoes (3,000 KSh)." },
-            { name: "Ladies Cute Jelly Sandals", price: "1,900 KSh", desc: "Multiple colours and sizes (white, black, green, orange)", image: "images/shoes-clothing-textiles/jelly-sandals.jpg", msg: "Hi, I'm interested in the Jelly Sandals (1,900 KSh)." },
-            { name: "Lovely Tracksuit (3-piece set)", price: "2,700 KSh", desc: "Sizes Large, XL, 2XL, cotton material", image: "images/shoes-clothing-textiles/tracksuit1.jpg", msg: "Hi, I'm interested in the Tracksuit (2,700 KSh)." },
-            { name: "Lovely Tracksuit (2-piece set)", price: "2,700 KSh", desc: "Sizes Large, XL, 2XL, cotton material", image: "images/shoes-clothing-textiles/tracksuit2.jpg", msg: "Hi, I'm interested in the Tracksuit (2,700 KSh)." },
-            { name: "Lovely Tracksuit (3rd design)", price: "2,700 KSh", desc: "Sizes Large, XL, 2XL, cotton material", image: "images/shoes-clothing-textiles/tracksuit3.jpg", msg: "Hi, I'm interested in the Tracksuit (2,700 KSh)." },
-            { name: "Lovely Tracksuit (4th design)", price: "2,700 KSh", desc: "Sizes Large, XL, 2XL, cotton material", image: "images/shoes-clothing-textiles/tracksuit4.jpg", msg: "Hi, I'm interested in the Tracksuit (2,700 KSh)." },
-            { name: "Lovely Tracksuit (5th design)", price: "2,700 KSh", desc: "Sizes Large, XL, 2XL, cotton material", image: "images/shoes-clothing-textiles/tracksuit5.jpg", msg: "Hi, I'm interested in the Tracksuit (2,700 KSh)." },
-            { name: "Lovely Tracksuit (6th design)", price: "2,700 KSh", desc: "Sizes Large, XL, 2XL, cotton material", image: "images/shoes-clothing-textiles/tracksuit6.jpg", msg: "Hi, I'm interested in the Tracksuit (2,700 KSh)." },
-            { name: "Lovely Tracksuit (7th design)", price: "2,700 KSh", desc: "Sizes Large, XL, 2XL, cotton material", image: "images/shoes-clothing-textiles/tracksuit7.jpg", msg: "Hi, I'm interested in the Tracksuit (2,700 KSh)." },
-            { name: "Adidas Casuals", price: "3,000 KSh", desc: "Sizes 40-45", image: "images/shoes-clothing-textiles/adidas-casuals.jpg", msg: "Hi, I'm interested in Adidas Casuals (3,000 KSh)." },
-            { name: "Arsenal Retro Jersey", price: "3,000 KSh", desc: "Classic Arsenal jersey", image: "images/shoes-clothing-textiles/arsenal-throwback.jpg", msg: "Hi, I'm interested in the Arsenal Retro Jersey (3,000 KSh)." }
+            { name: "Chunky Peep Toe Heels", price: "2,800 KSh", desc: "Sizes 36-43", image: "images/shoes-clothing-textiles/chunky-peeptoe.jpg", msg: "Hi, I'm interested in the Chunky Heels." },
+            { name: "Breathable Sneakers", price: "3,500 KSh", desc: "Sizes 36-44", image: "images/shoes-clothing-textiles/breathable-sneakers.jpg", msg: "Hi, I'm interested in the Breathable Sneakers." },
+            { name: "Rubbers (Assorted)", price: "2,200 KSh", desc: "Sizes 36-40", image: "images/shoes-clothing-textiles/rubbers.jpg", msg: "Hi, I'm interested in the Rubbers." },
+            { name: "Orthopaedic Mesh Rubber", price: "2,800 KSh", desc: "Sizes 37-42", image: "images/shoes-clothing-textiles/mesh-rubber.jpg", msg: "Hi, I'm interested in the Mesh Rubber." },
+            { name: "Boys Leather School Shoes", price: "2,000 KSh", desc: "Sizes 26-32", image: "images/shoes-clothing-textiles/school-shoes.jpg", msg: "Hi, I'm interested in the School Shoes." },
+            { name: "Soft Step Leather Loafers", price: "2,800 KSh", desc: "Sizes 37-43", image: "images/shoes-clothing-textiles/leather-loafers.jpg", msg: "Hi, I'm interested in the Leather Loafers." },
+            { name: "Breathable Men's Shoes", price: "3,000 KSh", desc: "Sizes 39-44", image: "images/shoes-clothing-textiles/breathable-mensshoes.jpg", msg: "Hi, I'm interested in the Breathable Men's Shoes." },
+            { name: "Ladies Cute Jelly Sandals", price: "1,900 KSh", desc: "Multiple colours", image: "images/shoes-clothing-textiles/jelly-sandals.jpg", msg: "Hi, I'm interested in the Jelly Sandals." },
+            { name: "Lovely Tracksuit (3-piece set)", price: "2,700 KSh", desc: "Sizes L, XL, 2XL", image: "images/shoes-clothing-textiles/tracksuit1.jpg", msg: "Hi, I'm interested in the Tracksuit." },
+            { name: "Lovely Tracksuit (2-piece set)", price: "2,700 KSh", desc: "Sizes L, XL, 2XL", image: "images/shoes-clothing-textiles/tracksuit2.jpg", msg: "Hi, I'm interested in the Tracksuit." },
+            { name: "Lovely Tracksuit (3rd design)", price: "2,700 KSh", desc: "Sizes L, XL, 2XL", image: "images/shoes-clothing-textiles/tracksuit3.jpg", msg: "Hi, I'm interested in the Tracksuit." },
+            { name: "Lovely Tracksuit (4th design)", price: "2,700 KSh", desc: "Sizes L, XL, 2XL", image: "images/shoes-clothing-textiles/tracksuit4.jpg", msg: "Hi, I'm interested in the Tracksuit." },
+            { name: "Lovely Tracksuit (5th design)", price: "2,700 KSh", desc: "Sizes L, XL, 2XL", image: "images/shoes-clothing-textiles/tracksuit5.jpg", msg: "Hi, I'm interested in the Tracksuit." },
+            { name: "Lovely Tracksuit (6th design)", price: "2,700 KSh", desc: "Sizes L, XL, 2XL", image: "images/shoes-clothing-textiles/tracksuit6.jpg", msg: "Hi, I'm interested in the Tracksuit." },
+            { name: "Lovely Tracksuit (7th design)", price: "2,700 KSh", desc: "Sizes L, XL, 2XL", image: "images/shoes-clothing-textiles/tracksuit7.jpg", msg: "Hi, I'm interested in the Tracksuit." },
+            { name: "Adidas Casuals", price: "3,000 KSh", desc: "Sizes 40-45", image: "images/shoes-clothing-textiles/adidas-casuals.jpg", msg: "Hi, I'm interested in Adidas Casuals." },
+            { name: "Arsenal Retro Jersey", price: "3,000 KSh", desc: "Classic Arsenal jersey", image: "images/shoes-clothing-textiles/arsenal-throwback.jpg", msg: "Hi, I'm interested in the Arsenal Retro Jersey." }
         ];
 
-        // ==================== KITCHENWARE (all items) ====================
+        // ========== KITCHENWARE (all new + existing) ==========
         const kitchenware = [
-            { name: "Eurochef Ec-K06 2.3L", price: "1,200 KSh", desc: "Restocked", image: "images/kitchenware/eurochef.jpg", msg: "Hi, I'm interested in Eurochef." },
-            { name: "Signature Spark Hotpot Set", price: "4,999 KSh", desc: "Capacities: 5000ml, 3500ml, 2500ml, 1500ml", image: "images/kitchenware/signature-spark.jpg", msg: "Hi, I'm interested in Signature Spark Hotpot Set." },
-            { name: "24pc Dinner Set", price: "9,500 KSh", desc: "6 dinner plates, 6 side plates, 6 bowls, 6 cups", image: "images/kitchenware/24pcs-dinnerset.jpg", msg: "Hi, I'm interested in the 24pc Dinner Set." },
-            { name: "12pc Borosilicate Airtight Jars (Round)", price: "3,000 KSh", desc: "250ml, with bamboo lids, spoons, labels + pen", image: "images/kitchenware/airtight-jars.jpg", msg: "Hi, I'm interested in the 12pc Spice Jars." },
-            { name: "12pc Airtight Jars (Second listing)", price: "3,000 KSh", desc: "Same as above", image: "images/kitchenware/airtight2-jars.jpg", msg: "Hi, I'm interested in the 12pc Spice Jars." },
-            { name: "Glass Pitcher / Juice Fridge Jug", price: "700 KSh each", desc: "Beautiful pitcher", image: "images/kitchenware/pitcher.jpg", msg: "Hi, I'm interested in the Glass Pitcher." },
-            { name: "3pc Ceramic Jars with Bamboo Stand", price: "2,200 KSh", desc: "Large ceramic jars", image: "images/kitchenware/ceramic-jars.jpg", msg: "Hi, I'm interested in the 3pc Ceramic Jars." },
-            { name: "12pc Quality Silicone Set", price: "2,000 KSh", desc: "Grey silicone kitchen set", image: "images/kitchenware/silicone-set.jpg", msg: "Hi, I'm interested in the Silicone Set." },
-            { name: "Glass Juice Dispenser 8L", price: "4,500 KSh", desc: "Glass dispenser with metallic stand", image: "images/kitchenware/glass-dispenser.jpg", msg: "Hi, I'm interested in the Glass Juice Dispenser." },
-            { name: "Japanese Mugs", price: "Inquire", desc: "Please contact for price", image: "images/kitchenware/japanese-mugs.jpg", msg: "Hi, I'm interested in the Japanese Mugs." },
-            { name: "Set of 4 Leatherite Hotpots", price: "4,300 KSh", desc: "Capacities: 1000ml, 1500ml, 2500ml, 3500ml", image: "images/kitchenware/hotpots.jpg", msg: "Hi, I'm interested in the Leatherite Hotpots." },
-            { name: "Ramtons 2-Burner Cooker RG518", price: "6,000 KSh", desc: "Ramtons gas cooker", image: "images/kitchenware/ramtons-2burner.jpg", msg: "Hi, I'm interested in Ramtons 2-Burner." },
-            { name: "72pc Cookware Set", price: "11,000 KSh", desc: "Complete cookware set", image: "images/kitchenware/72pcs-kitchenware.jpg", msg: "Hi, I'm interested in the 72pc Cookware Set." },
-            { name: "Glass Nesting Coffee Table", price: "5,000 KSh", desc: "White marble effect, comes unassembled", image: "images/kitchenware/glass-coffeetable.jpg", msg: "Hi, I'm interested in the Glass Coffee Table." },
-            { name: "Bosch 11pc Cookware", price: "8,600 KSh (Promotion)", desc: "Made in Germany, small diamond texture, black colour, includes silicone lid covers", image: "images/kitchenware/bosch-11pcs.jpg", msg: "Hi, I'm interested in the Bosch 11pc Cookware set." },
-            { name: "3-in-1 Chaffing Dish", price: "6,800 KSh", desc: "Dark green & gold chaffing dishes with glass lid – elegant for catering", image: "images/kitchenware/goldchaffing.jpg", msg: "Hi, I'm interested in the 3-in-1 gold chaffing dish." },
-            { name: "Ecomax 3+1 Standing Cooker", price: "20,000 KSh", desc: "50*55cm, comes with free gas pipe, spatula, gloves, 13Kg regulator & clips", image: "images/kitchenware/ecomax-cooker.jpg", msg: "Hi, I'm interested in the Ecomax standing cooker." },
-            { name: "6 Space Gold Glass Holder", price: "2,500 KSh", desc: "Elegant 6-space gold finish glass holder – perfect for kitchen or bar", image: "images/kitchenware/sixspace-glasshoder.jpg", msg: "Hi, I'm interested in the 6-space gold glass holder." },
-            { name: "Nunix Water Dispenser (12,500)", price: "12,500 KSh", desc: "Black Nunix A1C-X2 Bottom Load Hot & Cold Water Dispenser with music system", image: "images/kitchenware/nunix-dispenser.jpg", msg: "Hi, I'm interested in the Nunix water dispenser." },
-            { name: "Donnor Berry 16pcs Cookware Set", price: "16,500 KSh", desc: "Granite nonstick, Germany technology, 6-layer protection, includes 7 pots + utensils. Colours: brown, ivory, black, grey", image: "images/kitchenware/donnerberry-cookware.jpg", msg: "Hi, I'm interested in the Donnor Berry 16-piece cookware set." },
-            { name: "Single Gold Fruit Rack", price: "1,200 KSh", desc: "Elegant single gold fruit rack – perfect for kitchen counter", image: "images/kitchenware/gold-fruitrack.jpg", msg: "Hi, I'm interested in the Single Gold Fruit Rack." },
-            { name: "Phisma 9pc Cookware Set", price: "13,000 KSh", desc: "Phisma cookware set 9 pieces – quality nonstick cookware", image: "images/kitchenware/phisma-cookware.jpg", msg: "Hi, I'm interested in the Phisma 9pc Cookware Set." },
-            { name: "Milton Oyster 8pc Combo", price: "4,600 KSh", desc: "3 hotpots (1000ml,1500ml,2500ml), 4 tumblers, 1 litre flask", image: "images/kitchenware/milton-oyster.jpg", msg: "Hi, I'm interested in the Milton Oyster 8pc Combo." },
-            { name: "Telaisi Juicer", price: "6,999 KSh", desc: "1000 Watts, high performance juicer", image: "images/kitchenware/telaisi-juicer.jpg", msg: "Hi, I'm interested in the Telaisi Juicer." },
-            { name: "Dessini Electric Pressure Cooker", price: "6,200 KSh", desc: "6 Litre capacity, electric pressure cooker", image: "images/kitchenware/dessini-cooker.jpg", msg: "Hi, I'm interested in the Dessini Electric Pressure Cooker." },
-            { name: "Double Juice Dispenser", price: "12,000 KSh", desc: "Double juice dispenser for commercial or home use", image: "images/kitchenware/juice-dispenser.jpg", msg: "Hi, I'm interested in the Double Juice Dispenser." },
-            { name: "Redberry Stello Hotpot Set", price: "6,500 KSh", desc: "Premium stainless steel hotpot – sizes 1200/3000/6000/10000ml", image: "images/kitchenware/redberry-stello.jpg", msg: "Hi, I'm interested in the Redberry Stello Hotpot Set." },
-            { name: "Pearl Platina Hotpot Set (4pc)", price: "4,800 KSh", desc: "Sizes: 0.7L, 1.0L, 1.7L, 2.5L", image: "images/kitchenware/pearl-platina.jpg", msg: "Hi, I'm interested in the Pearl Platina Hotpot Set." },
-            { name: "Copper Deep Frying Pan", price: "3,000 KSh", desc: "Copper pan for deep frying", image: "images/kitchenware/cooper-pan.jpg", msg: "Hi, I'm interested in the Copper Deep Frying Pan." },
-            { name: "Nunix A1C Water Dispenser (10,400)", price: "10,400 KSh", desc: "Black and silver, hot & cold water dispenser", image: "images/kitchenware/nunix-a1c.jpg", msg: "Hi, I'm interested in the Nunix A1C Water Dispenser." }
+            { name: "27pc Dinner Set", price: "5,700 KSh", desc: "Complete dinner set", image: "images/kitchenware/27pcs.jpg", msg: "Hi, I'm interested in the 27pc Dinner Set." },
+            { name: "8pc Milton Pearl Combo", price: "4,800 KSh", desc: "3 hotpots, 4 tumblers, 1L flask", image: "images/kitchenware/8pcs-milton.jpg", msg: "Hi, I'm interested in the Milton Pearl Combo." },
+            { name: "13pc Breakfast Set", price: "5,800 KSh", desc: "6 plates, 6 mugs, 1 tea urn, 1 flask", image: "images/kitchenware/13pcs-breakfastset.jpg", msg: "Hi, I'm interested in the Breakfast Set." },
+            { name: "7pc Breakfast Set (Marble)", price: "3,900 KSh", desc: "Tea urn + mugs", image: "images/kitchenware/7pcs-breakfastset.jpg", msg: "Hi, I'm interested in the 7pc Breakfast Set." },
+            { name: "3pc Gold Ceramic Casserole", price: "3,500 KSh", desc: "3L, 2L, 1L with glass covers", image: "images/kitchenware/3pcsgold-casserole.jpg", msg: "Hi, I'm interested in the Gold Casserole Set." },
+            { name: "Nunix A2C-X2 Water Dispenser", price: "13,000 KSh", desc: "Black, bottom load, hot/cold, music system", image: "images/kitchenware/black-nunix.jpg", msg: "Hi, I'm interested in the Nunix Dispenser." },
+            { name: "Eurochef 3Gas+1 Electric Cooker", price: "7,800 KSh", desc: "With shelves", image: "images/kitchenware/eurochef-3gas.jpg", msg: "Hi, I'm interested in the Eurochef Cooker." },
+            { name: "Bosch & Dessini Pressure Cooker", price: "5,800 KSh", desc: "6L, 1000W", image: "images/kitchenware/bosch-dessini.jpg", msg: "Hi, I'm interested in the Pressure Cooker." },
+            { name: "Cast Iron Sizzling Plate", price: "1,500 KSh", desc: "On wooden tray, oval/round", image: "images/kitchenware/castiron-plate.jpg", msg: "Hi, I'm interested in the Sizzling Plate." },
+            { name: "Silvercrest 2-in-1 Blender", price: "2,900 KSh", desc: "Commercial", image: "images/kitchenware/silver-crest.jpg", msg: "Hi, I'm interested in the Blender." },
+            { name: "Von Standing Cooker (3G+1E)", price: "33,500 KSh", desc: "50x60cm, electric oven, rotisserie", image: "images/kitchenware/von-cooker.jpg", msg: "Hi, I'm interested in the Von Cooker." },
+            { name: "3-in-1 Water Bottle", price: "1,200 KSh", desc: "Multipurpose", image: "images/kitchenware/3in1.jpg", msg: "Hi, I'm interested in the 3-in-1 Bottle." },
+            { name: "3-in-1 Bottle (second listing)", price: "1,200 KSh", desc: "Assorted colors", image: "images/kitchenware/3in12.jpg", msg: "Hi, I'm interested in the 3-in-1 Bottle." },
+            { name: "Heavy Grip Rubber Floor Mat", price: "1,600 KSh", desc: "2pcs set, 40x60/40x120cm", image: "images/kitchenware/grip-rubber.jpg", msg: "Hi, I'm interested in the Floor Mat." },
+            { name: "Plain White Plates (6pcs)", price: "2,000 KSh", desc: "10.5\"", image: "images/kitchenware/plain-white.jpg", msg: "Hi, I'm interested in the White Plates." },
+            { name: "Smart Pro Digital Microwave", price: "8,400 KSh", desc: "20L, black, defrost", image: "images/kitchenware/smart-pro.jpg", msg: "Hi, I'm interested in the Microwave." },
+            { name: "Black Opal Dinner Plate Set", price: "2,000 KSh", desc: "6 dinner plates", image: "images/kitchenware/black-opal.jpg", msg: "Hi, I'm interested in the Black Opal Plates." },
+            { name: "7pc Tea Set", price: "6,000 KSh", desc: "Elegant", image: "images/kitchenware/7piece-teaset.jpg", msg: "Hi, I'm interested in the Tea Set." },
+            { name: "Coffee Mugs (6pcs)", price: "1,100 KSh", desc: "Golden touch, 370ml", image: "images/kitchenware/coffee.mugs.jpg", msg: "Hi, I'm interested in the Coffee Mugs." },
+            { name: "12pc Glass Dinner Set", price: "2,300 KSh", desc: "6 cups, 6 plates", image: "images/kitchenware/12pcs-dinnerset.jpg", msg: "Hi, I'm interested in the Glass Dinner Set." },
+            { name: "6pc Ceramic Cups", price: "750 KSh", desc: "350ml", image: "images/kitchenware/ceramic-cups.jpg", msg: "Hi, I'm interested in the Ceramic Cups." },
+            { name: "Green Long Cups (400ml)", price: "1,050 KSh", desc: "Set of ?", image: "images/kitchenware/long-cups.jpg", msg: "Hi, I'm interested in the Long Cups." },
+            { name: "Unique Ceramic Mugs (6pcs)", price: "950 KSh", desc: "400ml", image: "images/kitchenware/unique-mugs.jpg", msg: "Hi, I'm interested in the Unique Mugs." },
+            { name: "Black Ceramic Mugs (6pcs)", price: "750 KSh", desc: "350ml", image: "images/kitchenware/blackwhite-cups.jpg", msg: "Hi, I'm interested in the Black Mugs." },
+            { name: "12pc Glass Dinner Set (2nd)", price: "2,150 KSh", desc: "6 cups, 6 plates", image: "images/kitchenware/12pc-set.jpg", msg: "Hi, I'm interested in the Glass Dinner Set." },
+            { name: "Clear Food Covers (100pc)", price: "300 KSh", desc: "Stretch covers", image: "images/kitchenware/food-covers.jpg", msg: "Hi, I'm interested in the Food Covers." },
+            // Existing kitchenware (Bosch, chaffing, etc.)
+            { name: "Bosch 11pc Cookware", price: "8,600 KSh (Promotion)", desc: "Made in Germany, small diamond texture", image: "images/kitchenware/bosch-11pcs.jpg", msg: "Hi, I'm interested in the Bosch 11pc Cookware set." },
+            { name: "3-in-1 Chaffing Dish", price: "6,800 KSh", desc: "Dark green & gold with glass lid", image: "images/kitchenware/goldchaffing.jpg", msg: "Hi, I'm interested in the 3-in-1 gold chaffing dish." },
+            { name: "Ecomax 3+1 Standing Cooker", price: "20,000 KSh", desc: "50*55cm, free accessories", image: "images/kitchenware/ecomax-cooker.jpg", msg: "Hi, I'm interested in the Ecomax standing cooker." },
+            { name: "6 Space Gold Glass Holder", price: "2,500 KSh", desc: "Elegant gold finish", image: "images/kitchenware/sixspace-glasshoder.jpg", msg: "Hi, I'm interested in the glass holder." },
+            { name: "Nunix Water Dispenser (12,500)", price: "12,500 KSh", desc: "Black, bottom load, music system", image: "images/kitchenware/nunix-dispenser.jpg", msg: "Hi, I'm interested in the Nunix dispenser." },
+            { name: "Donnor Berry 16pcs Cookware Set", price: "16,500 KSh", desc: "Granite nonstick, Germany technology", image: "images/kitchenware/donnerberry-cookware.jpg", msg: "Hi, I'm interested in the Donnor Berry set." },
+            { name: "Single Gold Fruit Rack", price: "1,200 KSh", desc: "Elegant gold fruit rack", image: "images/kitchenware/gold-fruitrack.jpg", msg: "Hi, I'm interested in the Fruit Rack." },
+            { name: "Phisma 9pc Cookware Set", price: "13,000 KSh", desc: "Nonstick cookware set", image: "images/kitchenware/phisma-cookware.jpg", msg: "Hi, I'm interested in the Phisma set." },
+            { name: "Milton Oyster 8pc Combo", price: "4,600 KSh", desc: "3 hotpots, 4 tumblers, 1L flask", image: "images/kitchenware/milton-oyster.jpg", msg: "Hi, I'm interested in the Milton Oyster combo." },
+            { name: "Telaisi Juicer", price: "6,999 KSh", desc: "1000W juicer", image: "images/kitchenware/telaisi-juicer.jpg", msg: "Hi, I'm interested in the Telaisi Juicer." },
+            { name: "Dessini Electric Pressure Cooker", price: "6,200 KSh", desc: "6L electric pressure cooker", image: "images/kitchenware/dessini-cooker.jpg", msg: "Hi, I'm interested in the Dessini cooker." },
+            { name: "Double Juice Dispenser", price: "12,000 KSh", desc: "Commercial juice dispenser", image: "images/kitchenware/juice-dispenser.jpg", msg: "Hi, I'm interested in the Juice Dispenser." },
+            { name: "Redberry Stello Hotpot Set", price: "6,500 KSh", desc: "Premium stainless steel hotpot", image: "images/kitchenware/redberry-stello.jpg", msg: "Hi, I'm interested in the Redberry set." },
+            { name: "Pearl Platina Hotpot Set (4pc)", price: "4,800 KSh", desc: "0.7L,1.0L,1.7L,2.5L", image: "images/kitchenware/pearl-platina.jpg", msg: "Hi, I'm interested in the Pearl Platina set." },
+            { name: "Copper Deep Frying Pan", price: "3,000 KSh", desc: "Copper pan", image: "images/kitchenware/cooper-pan.jpg", msg: "Hi, I'm interested in the Copper Pan." },
+            { name: "Nunix A1C Water Dispenser (10,400)", price: "10,400 KSh", desc: "Black/silver, hot & cold", image: "images/kitchenware/nunix-a1c.jpg", msg: "Hi, I'm interested in the Nunix A1C." }
         ];
 
-        // ==================== PRODUCTS (original) ====================
+        // ========== PRODUCTS ==========
         const products = [
-            { name: "Wireless Bluetooth Earbuds", price: "1,850 KSh", desc: "HD sound, 20h battery, fast pairing", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Earbuds", msg: "Hi! I'm interested in Wireless Bluetooth Earbuds (1,850 KSh)" },
-            { name: "Smart LED Desk Lamp", price: "2,450 KSh", desc: "Touch control, 3 colors, USB charging port", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=LED+Lamp", msg: "Hi, I'd like to buy the Smart LED Desk Lamp (2,450 KSh)" },
-            { name: "Men's Casual Wristwatch", price: "1,250 KSh", desc: "Water resistant, leather strap, analog", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Watch", msg: "Hello, order for Men's Casual Watch (1,250 KSh)" },
-            { name: "Foldable Laptop Stand", price: "1,950 KSh", desc: "Aluminum, ergonomic, portable", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Laptop+Stand", msg: "I want the Foldable Laptop Stand (1,950 KSh)" }
+            { name: "Wireless Bluetooth Earbuds", price: "1,850 KSh", desc: "HD sound", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Earbuds", msg: "Hi! I'm interested in Earbuds." },
+            { name: "Smart LED Desk Lamp", price: "2,450 KSh", desc: "Touch control", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Lamp", msg: "Hi, I'd like the Lamp." },
+            { name: "Men's Casual Wristwatch", price: "1,250 KSh", desc: "Water resistant", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Watch", msg: "Hello, order for Watch." },
+            { name: "Foldable Laptop Stand", price: "1,950 KSh", desc: "Aluminum, ergonomic", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Laptop+Stand", msg: "I want the Laptop Stand." }
         ];
 
         // Helper functions
@@ -465,15 +503,15 @@
         const MY_WHATSAPP = "254723652430";
 
         document.addEventListener('DOMContentLoaded', () => {
+            renderGrid('electronicsGrid', electronics, MY_WHATSAPP);
             renderGrid('vehiclesGrid', vehicles, MY_WHATSAPP);
             renderGrid('householdGrid', household, MY_WHATSAPP);
             renderGrid('shoesGrid', shoesClothing, MY_WHATSAPP);
             renderGrid('kitchenwareGrid', kitchenware, MY_WHATSAPP);
             renderGrid('productsGrid', products, MY_WHATSAPP);
             setupInquiryForm(MY_WHATSAPP);
-            // Hot sale button
             document.getElementById('hotSaleWhatsapp').addEventListener('click', () => {
-                window.open(`https://wa.me/${MY_WHATSAPP}?text=${encodeURIComponent("Hi, I'm interested in the Arsenal Retro Jersey (3,000 KSh).")}`, '_blank');
+                window.open(`https://wa.me/${MY_WHATSAPP}?text=${encodeURIComponent("Hi, I'm interested in the iPhone 15 Pro (88,000 KSh).")}`, '_blank');
             });
         });
     </script>
