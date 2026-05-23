@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
-        /* ========== STYLES (same as before) ========== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #ffffff; color: #1a2530; line-height: 1.5; scroll-behavior: smooth; }
         .container { width: 90%; max-width: 1280px; margin: 0 auto; }
@@ -46,6 +45,8 @@
         .quick-nav { background: #ffffff; padding: 1rem 0; border-bottom: 1px solid #eef2f5; text-align: center; }
         .quick-nav a { display: inline-block; margin: 0 0.75rem; padding: 0.5rem 1.2rem; background: #f5f7fa; border-radius: 40px; text-decoration: none; color: #1e2f3f; font-weight: 500; transition: 0.2s; }
         .quick-nav a:hover { background: #e67e22; color: white; transform: translateY(-2px); }
+        .bidhaa-section { background: linear-gradient(135deg, #f5e6d3, #ffd5a4); padding: 2rem 0; margin: 1rem auto; border-radius: 48px; width: 90%; max-width: 1280px; }
+        .bidhaa-section h2 { text-align: center; font-size: 2.5rem; font-weight: 800; color: #b33a0e; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
         .hot-sale-section { background: linear-gradient(145deg, #fff4e8, #ffe6d5); padding: 2rem 0; margin-bottom: 2rem; border-radius: 32px; width: 90%; max-width: 1280px; margin-left: auto; margin-right: auto; }
         .hot-sale-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; justify-items: center; }
         .hot-sale-card { background: white; border-radius: 32px; overflow: hidden; box-shadow: 0 12px 28px -8px rgba(0,0,0,0.1); display: flex; flex-direction: column; width: 100%; max-width: 350px; }
@@ -54,8 +55,6 @@
         .hot-sale-badge { background: #e67e22; color: white; display: inline-block; padding: 0.2rem 1rem; border-radius: 40px; font-size: 0.8rem; margin-bottom: 0.5rem; }
         .hot-sale-info h3 { font-size: 1.6rem; font-weight: 700; color: #e67e22; margin-bottom: 0.5rem; }
         .hot-sale-price { font-size: 1.4rem; font-weight: 700; color: #1a2a36; margin: 0.5rem 0; }
-        .bidhaa-kali { background: linear-gradient(135deg, #f5e6d3, #ffd5a4); padding: 2rem 0; margin: 2rem auto; border-radius: 48px; }
-        .bidhaa-kali h2 { text-align: center; font-size: 2.5rem; font-weight: 800; color: #b33a0e; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
         .products-section { padding: 5rem 0; background: #ffffff; }
         .section-header { text-align: center; margin-bottom: 3rem; }
         .section-header h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; }
@@ -136,7 +135,7 @@
         </div>
     </div>
 
-    <!-- Quick Navigation -->
+    <!-- Quick Navigation Links -->
     <div class="quick-nav">
         <div class="container">
             <a href="#electronics"><i class="fas fa-mobile-alt"></i> Electronics</a>
@@ -147,14 +146,13 @@
         </div>
     </div>
 
-    <!-- ========== NEW SECTION: BIDHAA KALI KALI!!!!!! ========== -->
-    <div class="bidhaa-kali">
+    <!-- BIDHAA KALI KALI!!!!!! Section -->
+    <div class="bidhaa-section">
         <div class="container">
             <h2>🔥 BIDHAA KALI KALI!!!!!! 🔥</h2>
             <div class="hot-sale-grid">
-                <!-- Manchester United Jersey -->
                 <div class="hot-sale-card">
-                    <img src="images/shoes-clothing-textiles/manchester-hoodies.jpg" alt="Manchester United Jersey" onerror="this.src='https://placehold.co/600x400/eef2f7/1a2a36?text=Man+United+Jersey'">
+                    <img src="images/shoes-clothing-textiles/manchester-hoodies.jpg" alt="Manchester United Jersey" onerror="this.src='https://placehold.co/600x400/eef2f7/1a2a36?text=Manchester+United'">
                     <div class="hot-sale-info">
                         <span class="hot-sale-badge">HOT DEAL</span>
                         <h3>Manchester United Jersey</h3>
@@ -163,7 +161,6 @@
                         <button class="whatsapp-btn hot-sale-btn" data-product="Manchester United Jersey (3,000 KSh)">Order on WhatsApp <i class="fab fa-whatsapp"></i></button>
                     </div>
                 </div>
-                <!-- iPhone 16 Pro Max -->
                 <div class="hot-sale-card">
                     <img src="images/electronics-phones/iphone-16pro.jpg" alt="iPhone 16 Pro Max" onerror="this.src='https://placehold.co/600x400/eef2f7/1a2a36?text=iPhone+16+Pro+Max'">
                     <div class="hot-sale-info">
@@ -174,7 +171,6 @@
                         <button class="whatsapp-btn hot-sale-btn" data-product="iPhone 16 Pro Max (128,000 KSh)">Order on WhatsApp <i class="fab fa-whatsapp"></i></button>
                     </div>
                 </div>
-                <!-- MacBook Pro 2020 -->
                 <div class="hot-sale-card">
                     <img src="images/electronics-phones/macbook-pro.jpg" alt="MacBook Pro 2020" onerror="this.src='https://placehold.co/600x400/eef2f7/1a2a36?text=MacBook+Pro'">
                     <div class="hot-sale-info">
@@ -189,11 +185,10 @@
         </div>
     </div>
 
-    <!-- Brand New Hot Sale – Two items side by side (iPhone 15 Pro + Arsenal Jersey) -->
+    <!-- Brand New Hot Sale (iPhone 15 Pro + Arsenal Jersey) -->
     <div class="hot-sale-section">
         <div class="container">
             <div class="hot-sale-grid">
-                <!-- iPhone 15 Pro -->
                 <div class="hot-sale-card">
                     <img src="images/electronics-phones/iphone-15pro.jpg" alt="iPhone 15 Pro" onerror="this.src='https://placehold.co/600x400/eef2f7/1a2a36?text=iPhone+15+Pro'">
                     <div class="hot-sale-info">
@@ -204,7 +199,6 @@
                         <button class="whatsapp-btn hot-sale-btn" data-product="iPhone 15 Pro (88,000 KSh)">Order on WhatsApp <i class="fab fa-whatsapp"></i></button>
                     </div>
                 </div>
-                <!-- Arsenal Retro Jersey -->
                 <div class="hot-sale-card">
                     <img src="images/shoes-clothing-textiles/arsenal-throwback.jpg" alt="Arsenal Retro Jersey" onerror="this.src='https://placehold.co/600x400/eef2f7/1a2a36?text=Arsenal+Jersey'">
                     <div class="hot-sale-info">
@@ -231,7 +225,7 @@
             </div>
         </section>
 
-        <!-- Featured Autos -->
+        <!-- Featured Autos (full 80+ list) -->
         <section class="products-section" id="vehicles">
             <div class="container">
                 <div class="section-header">
@@ -325,35 +319,154 @@
     </footer>
 
     <script>
-        // ========== ELECTRONICS (including new items) ==========
+        // ========== ELECTRONICS ==========
         const electronics = [
             { name: "iPhone 15 Pro", price: "88,000 KSh", desc: "256GB, 84% battery, physical SIM, clean unit", image: "images/electronics-phones/iphone-15pro.jpg", msg: "Hi, I'm interested in the iPhone 15 Pro (88,000 KSh)." },
             { name: "iPhone 16 Pro Max", price: "128,000 KSh", desc: "256GB, 100%🔋, E‑Sim, Cycle Count 2", image: "images/electronics-phones/iphone-16pro.jpg", msg: "Hi, I'm interested in the iPhone 16 Pro Max (128,000 KSh)." },
             { name: "MacBook Pro (2020)", price: "70,000 KSh", desc: "Intel Core i7, 32GB RAM, 512GB SSD", image: "images/electronics-phones/macbook-pro.jpg", msg: "Hi, I'm interested in the MacBook Pro 2020 (70,000 KSh)." }
         ];
 
-        // ========== VEHICLES (added new Harrier) ==========
+        // ========== VEHICLES (complete – 80+ entries) ==========
         const vehicles = [
             { name: "Suzuki Spacia", price: "750,000 KSh", desc: "164,000km, 660cc Petrol, Automatic, Clean interior, HD stereo", image: "images/autos/suzuki-spacio.jpg", msg: "Hi, I'm interested in the Suzuki Spacia (750,000 KSh)." },
-            { name: "Toyota Harrier 240 (2010)", price: "1,100,000 KSh", desc: "Accident‑Free, Super Clean, Fine Seats, Steering Controls, Reverse Camera", image: "images/autos/harrier-240.jpg", msg: "Hi, I'm interested in the Toyota Harrier 240 (1.1M)." },
-            // ... (all previously listed vehicles remain – omitted here for brevity but must be present in final file)
+            { name: "Toyota Fielder 2009 (980k)", price: "980,000 KSh", desc: "Year 2009, Accident Free, 1500CC", image: "images/autos/fielder2-2009.jpg", msg: "Hi, I'm interested in the Toyota Fielder 2009 (980k)." },
+            { name: "Toyota Vitz 2014", price: "770,000 KSh (negotiable)", desc: "1000cc petrol engine", image: "images/autos/vitz-2014.jpg", msg: "Hi, I'm interested in the Toyota Vitz 2014 (770,000 KSh)." },
+            { name: "Mitsubishi RVR Roadest 2012", price: "1,280,000 KSh", desc: "1800cc, original paint, alloy wheels, push start, steering controls, paddle shifters, fog lights, Kiambu road", image: "images/autos/roadfest-2012.jpg", msg: "Hi, I'm interested in the Mitsubishi RVR Roadest 2012 (1.28M)." },
+            { name: "Toyota Land Cruiser 2007 (1KZ)", price: "2,150,000 KSh (slightly negotiable)", desc: "3000cc 1KZ diesel, manual, local, low mileage, 4wd optional, accident free, original paint", image: "images/autos/landcruiser-2007.jpg", msg: "Hi, I'm interested in the Toyota Land Cruiser 2007 (2.15M)." },
+            { name: "Toyota Land Cruiser Prado J120 2006", price: "2,550,000 KSh (negotiable)", desc: "3000cc diesel (1KD), auto, optional 4wd, 7 seater, working sunroof", image: "images/autos/landcruiser-2006.jpg", msg: "Hi, I'm interested in the Toyota Land Cruiser Prado J120 2006 (2.55M)." },
+            { name: "Toyota Premio 2009 (1800cc)", price: "1,200,000 KSh", desc: "1800cc, fully loaded", image: "images/autos/premio-2009.jpg", msg: "Hi, I'm interested in the Toyota Premio 2009 (1.2M)." },
+            { name: "Toyota Prado J120 2006 (2nd listing)", price: "2,550,000 KSh (negotiable)", desc: "3000cc diesel, auto, 4wd, 7 seater, sunroof", image: "images/autos/prado-2006.jpg", msg: "Hi, I'm interested in the Toyota Land Cruiser Prado J120 2006 (2.55M)." },
+            { name: "Toyota Noah 2013 (2000cc)", price: "1,330,000 KSh (slightly negotiable)", desc: "2000cc, super clean interior & exterior, buy & drive condition", image: "images/autos/noah-2000.jpg", msg: "Hi, I'm interested in the Toyota Noah 2013 (1.33M)." },
+            { name: "Toyota Noah Valvematic 2012", price: "1,330,000 KSh", desc: "2000cc, accident free, 7 seater", image: "images/autos/noah2-2012.jpg", msg: "Hi, I'm interested in the Toyota Noah Valvematic 2012 (1.33M)." },
+            { name: "Toyota Hiace 9L 2013", price: "3,400,000 KSh (slightly negotiable)", desc: "3000cc 1KD diesel, superb suspension, new tyres, ready documents, bank/SACCO finance accepted", image: "images/autos/hiace9l-2013.jpg", msg: "Hi, I'm interested in the Toyota Hiace 9L 2013 (3.4M)." },
+            { name: "Toyota Auris 2014", price: "1,280,000 KSh", desc: "1500cc 2wd, well maintained, no mechanical fault, accident free, Nairobi area", image: "images/autos/auris-2014.jpg", msg: "Hi, I'm interested in the Toyota Auris 2014 (1.28M)." },
+            { name: "Toyota Premio 2009 (2nd listing)", price: "1,200,000 KSh", desc: "1800cc, fully loaded", image: "images/autos/premio2-2009.jpg", msg: "Hi, I'm interested in the Toyota Premio 2009 (1.2M)." },
+            { name: "Nissan Note 2013", price: "Negotiable", desc: "1300cc 2wd, 131k km, ready documents", image: "images/autos/note-2013.jpg", msg: "Hi, I'm interested in the Nissan Note 2013. Please share price." },
+            { name: "Toyota Axio 2013 (1500cc)", price: "999,000 KSh", desc: "1500cc, very clean, privately used, trade-in accepted", image: "images/autos/axio2-2013.jpg", msg: "Hi, I'm interested in the Toyota Axio 2013 (999,000 KSh)." },
+            { name: "Subaru Forester SH5 2008", price: "1,320,000 KSh", desc: "2000cc non turbo, AWD, original paint, working sunroof", image: "images/autos/forester2-2008.jpg", msg: "Hi, I'm interested in the Subaru Forester SH5 2008 (1.32M)." },
+            { name: "Toyota RAV4 UK Spec 2010", price: "1,450,000 KSh (negotiable)", desc: "2000cc petrol, auto, optional 4wd", image: "images/autos/rav4-2010.jpg", msg: "Hi, I'm interested in the Toyota RAV4 2010 (1.45M)." },
+            { name: "Toyota Axio 2011 (1500cc)", price: "1,080,000 KSh (slightly negotiable)", desc: "1500cc, auto, 2wd, original paint, new tyres, beige interior, trade-in accepted", image: "images/autos/axio2-2011.jpg", msg: "Hi, I'm interested in the Toyota Axio 2011 (1.08M)." },
+            { name: "Nissan Advan 2014", price: "690,000 KSh", desc: "1500cc, accident free, ready documents, buy & drive condition", image: "images/autos/nissan-advan.jpg", msg: "Hi, I'm interested in the Nissan Advan 2014 (690,000 KSh)." },
+            { name: "Mark X GRX135 2013", price: "1,450,000 KSh (negotiable)", desc: "2500cc, 4wd, heated half leather seats, cruise control, sport/eco modes", image: "images/autos/markx-2013.jpg", msg: "Hi, I'm interested in the Mark X 2013 (1.45M)." },
+            { name: "Toyota Alphard 2007", price: "950,000 KSh (slightly negotiable)", desc: "2400cc, super clean interior/exterior, working double sunroof", image: "images/autos/alphard-2007.jpg", msg: "Hi, I'm interested in the Toyota Alphard 2007 (950,000 KSh)." },
+            { name: "Toyota Crown 2012 (1390k)", price: "1,390,000 KSh (neg)", desc: "Original factory paint, new tyres, electric seats, cool music system", image: "images/autos/crown2-2012.jpg", msg: "Hi, I'm interested in the Toyota Crown 2012 (1.39M)." },
+            { name: "Toyota Hilux Revolution 2016", price: "4,650,000 KSh", desc: "2500cc, dark cloth interior, new tyres, alloy rims, reverse camera, cool music system, Parklands", image: "images/autos/hilux-2016.jpg", msg: "Hi, I'm interested in the Toyota Hilux Revolution 2016 (4.65M)." },
+            { name: "Nissan Sylphy 2016", price: "1,150,000 KSh (neg)", desc: "1800cc, auto, 2wd, 57k km, original paint, accident free, new tyres, alloy rims", image: "images/autos/sylphy-2016.jpg", msg: "Hi, I'm interested in the Nissan Sylphy 2016 (1.15M)." },
+            { name: "Mazda CX-5 2014", price: "2,100,000 KSh", desc: "2000cc petrol, low mileage, original paint, accident free, full specs", image: "images/autos/cx5-2014.jpg", msg: "Hi, I'm interested in the Mazda CX-5 2014 (2.1M)." },
+            { name: "Suzuki Solio 2017", price: "930,000 KSh", desc: "1240cc petrol/hybrid, fabric interior, automatic, 5 seater, low mileage", image: "images/autos/solio-2017.jpg", msg: "Hi, I'm interested in the Suzuki Solio 2017 (930,000 KSh)." },
+            { name: "Toyota Hilux Double Cab 2010", price: "Call for price", desc: "3000cc diesel, auto, optional 4wd, well maintained", image: "images/autos/doublecabin-2010.jpg", msg: "Hi, I'm interested in the Toyota Hilux Double Cab 2010." },
+            { name: "Volkswagen Tiguan 2015", price: "1,900,000 KSh (negotiable)", desc: "1400cc turbo petrol, auto, low mileage, fabric seats, reverse camera, dual-zone climate, front/rear AC", image: "images/autos/tiguan-2015.jpg", msg: "Hi, I'm interested in the Volkswagen Tiguan 2015 (1.9M)." },
+            { name: "Toyota Axio 2012", price: "1,080,000 KSh", desc: "1500cc 2wd, alloy wheels, push to start, very neat, Kiambu road", image: "images/autos/axio2-2010.jpg", msg: "Hi, I'm interested in the Toyota Axio 2012 (1.08M)." },
+            { name: "Toyota Land Cruiser Prado J150 2016", price: "4,350,000 KSh", desc: "2700cc petrol, 5 seater, sunroof, no mechanical fault", image: "images/autos/landcruiser-2016.jpg", msg: "Hi, I'm interested in the Toyota Land Cruiser Prado J150 2016 (4.35M)." },
+            { name: "Subaru Impreza GH2 2010", price: "890,000 KSh", desc: "1500cc, automatic, extremely clean", image: "images/autos/impreza-2010.jpg", msg: "Hi, I'm interested in the Subaru Impreza GH2 2010 (890,000 KSh)." },
+            { name: "Toyota Hiace 2006", price: "1,390,000 KSh (neg)", desc: "2500cc 2KD diesel, auto, well maintained, original paint", image: "images/autos/hiace-2006.jpg", msg: "Hi, I'm interested in the Toyota Hiace 2006 (1.39M)." },
+            { name: "VW Jetta 2011", price: "990,000 KSh", desc: "Petrol, automatic, leather interior, mileage 203839 km", image: "images/autos/jetta-2011.jpg", msg: "Hi, I'm interested in the VW Jetta 2011 (990,000 KSh)." },
+            { name: "Mazda Axela 2014", price: "1,420,000 KSh (negotiable)", desc: "1500cc Petrol, well maintained, clean dark fabric interior", image: "images/autos/mazda-2014.jpg", msg: "Hi, I'm interested in the Mazda Axela 2014 (1,420,000 KSh negotiable)." },
+            { name: "Mazda Axela 2015", price: "Call for price", desc: "1500cc 2WD, accident free, low mileage (125k kms), HUD, front & rear camera", image: "images/autos/mazda-2015.jpg", msg: "Hi, I'm interested in the Mazda Axela 2015 with HUD & cameras." },
+            { name: "Nissan Nismo 2016", price: "1,090,000 KSh", desc: "1200cc Petrol, new tyres, original paint, accident free, fabric interior", image: "images/autos/nissan-nismo.jpg", msg: "Hi, I'm interested in the Nissan Nismo 2016 (1.09M)." },
+            { name: "Toyota Axio 2013", price: "1,250,000 KSh", desc: "1500cc 2WD, accident free", image: "images/autos/axio-2013.jpg", msg: "Hi, I'm interested in the Toyota Axio 2013 (1.25M)." },
+            { name: "Toyota Harrier 240", price: "Call for price", desc: "2400cc Petrol, original paint, dark leather interior, automatic transmission", image: "images/autos/harrier.jpg", msg: "Hi, I'm interested in the Toyota Harrier 240 with leather interior." },
+            { name: "Toyota Harrier 240 (2010)", price: "1,100,000 KSh", desc: "Accident‑Free, Super Clean, Reverse Camera", image: "images/autos/harrier-240.jpg", msg: "Hi, I'm interested in the Toyota Harrier 240 (1.1M)." },
+            { name: "Toyota Axio 2007", price: "799,000 KSh", desc: "1500cc, trade-in accepted, bank/SACCO finance available", image: "images/autos/axio-2007.jpg", msg: "Hi, I'm interested in the Toyota Axio 2007 (799,000 KSh)." },
+            { name: "Toyota Axio 2010", price: "920,000 KSh", desc: "1500cc 2WD, KCL year 2010", image: "images/autos/axio-2010.jpg", msg: "Hi, I'm interested in the Toyota Axio 2010 (920,000 KSh)." },
+            { name: "Toyota Fielder 2013", price: "1,250,000 KSh (slightly negotiable)", desc: "1500cc, auto, 2WD, original paint, new tyres & alloy rims, ready documents, trade-in accepted", image: "images/autos/fielder-2013.jpg", msg: "Hi, I'm interested in the Toyota Fielder 2013 (1.25M negotiable)." },
+            { name: "Subaru Forester 2009", price: "1,430,000 KSh", desc: "2000cc non-turbo, dark leather seats, sunroof, accident free, low mileage", image: "images/autos/forester.jpg", msg: "Hi, I'm interested in the Subaru Forester 2009 (1.43M)." },
+            { name: "Toyota Land Cruiser Tour Van 2018", price: "6,900,000 KSh", desc: "Extremely clean, well maintained", image: "images/autos/landcruiser-2018.jpg", msg: "Hi, I'm interested in the Toyota Land Cruiser Tour Van 2018 (6.9M)." },
+            { name: "Toyota Land Cruiser 100 Series 2007", price: "3,950,000 KSh", desc: "4200cc 1HD diesel, auto, original paint, grey fabric interior, bullbar", image: "images/autos/landcruiser-100.jpg", msg: "Hi, I'm interested in the Toyota Land Cruiser 100 Series (3.95M)." },
+            { name: "Toyota Wish 2013", price: "1,290,000 KSh", desc: "1800cc 2WD, accident free, buy and drive", image: "images/autos/wish-2013.jpg", msg: "Hi, I'm interested in the Toyota Wish 2013 (1.29M)." },
+            { name: "Honda Fit 2012", price: "770,000 KSh", desc: "1300cc, well maintained", image: "images/autos/honda-fit2012.jpg", msg: "Hi, I'm interested in the Honda Fit 2012 (770,000 KSh)." },
+            { name: "Toyota Runx 2006", price: "770,000 KSh", desc: "1500cc petrol, extremely clean, grey fabric interior, alloy rims, ready documents", image: "images/autos/toyota-runx2006.jpg", msg: "Hi, I'm interested in the Toyota Runx 2006 (770,000 KSh)." },
+            { name: "Subaru Forester SG5", price: "690,000 KSh", desc: "2000cc non turbo, alloys, clean, Kiambu road", image: "images/autos/forester-sg5.jpg", msg: "Hi, I'm interested in the Subaru Forester SG5 (690,000 KSh)." },
+            { name: "Volkswagen Golf TSI 2015", price: "1,390,000 KSh", desc: "1400cc, alloys, steering controls, cruise control, Kiambu road", image: "images/autos/golf-tsi2005.jpg", msg: "Hi, I'm interested in the Volkswagen Golf TSI 2015 (1.39M)." },
+            { name: "Subaru Forester SH5 2010", price: "1,400,000 KSh (negotiable)", desc: "Non turbo, original paint", image: "images/autos/forester-sh52010.jpg", msg: "Hi, I'm interested in the Subaru Forester SH5 2010 (1.4M negotiable)." },
+            { name: "Mercedes Benz A180 2013", price: "1,490,000 KSh (ONO)", desc: "Low mileage 49k kms, 1600cc turbo, keyless entry, original paint", image: "images/autos/benz-a1802010.jpg", msg: "Hi, I'm interested in the Mercedes Benz A180 2013 (1.49M)." },
+            { name: "Subaru Forester SH5 2011", price: "1,470,000 KSh (slightly negotiable)", desc: "2000cc petrol, accident free, original paint, automatic, fabric interior", image: "images/autos/forester-sh52011.jpg", msg: "Hi, I'm interested in the Subaru Forester SH5 2011 (1.47M)." },
+            { name: "Toyota Noah 2015", price: "1,800,000 KSh", desc: "2000cc, rating valve Matic engine, accident free, original paint", image: "images/autos/noah-20155.jpg", msg: "Hi, I'm interested in the Toyota Noah 2015 (1.8M)." },
+            { name: "Toyota Fielder WXB 2014", price: "1,280,000 KSh (negotiable)", desc: "Fully loaded, half leather seats, 1500cc 2wd", image: "images/autos/fielder-2014.jpg", msg: "Hi, I'm interested in the Toyota Fielder WXB 2014 (1.28M negotiable)." },
+            { name: "Honda Vezel Hybrid 2014", price: "1,700,000 KSh (negotiable)", desc: "1500cc hybrid, ready documents", image: "images/autos/vezel-2014.jpg", msg: "Hi, I'm interested in the Honda Vezel Hybrid 2014 (1.7M)." },
+            { name: "Toyota Fielder 2009 (old)", price: "980,000 KSh", desc: "1500cc 2WD, original paint, extremely clean", image: "images/autos/fielder-2009.jpg", msg: "Hi, I'm interested in the Toyota Fielder 2009 (980,000 KSh)." },
+            { name: "Toyota Land Cruiser LC200 2010", price: "4,700,000 KSh", desc: "4600cc V8 petrol, full leather, sunroof, 7-seater, cooled seats, cruise control", image: "images/autos/landcruiser-2010.jpg", msg: "Hi, I'm interested in the Toyota Land Cruiser LC200 2010 (4.7M)." },
+            { name: "Toyota Harrier KDE 2014", price: "2,550,000 KSh (negotiable)", desc: "2000cc Valvematic, leather seats, electric seats, powered boot, cruise control, auto start-stop, panoramic sunroof", image: "images/autos/harrier-2014.jpg", msg: "Hi, I'm interested in the Toyota Harrier KDE 2014 (2.55M)." },
+            { name: "Nissan Note 2010", price: "560,000 KSh (negotiable)", desc: "1500cc 2wd, purely clean, low genuine mileage", image: "images/autos/note-2010.jpg", msg: "Hi, I'm interested in the Nissan Note 2010 (560,000 KSh)." },
+            { name: "Toyota Alphard 2010", price: "1,100,000 KSh", desc: "2400cc, accident free, 7 seater, well maintained, Kiambu Road", image: "images/autos/alphard-2010.jpg", msg: "Hi, I'm interested in the Toyota Alphard 2010 (1.1M)." },
+            { name: "Toyota Hilux 2015 (Local)", price: "2,400,000 KSh (slightly negotiable)", desc: "Original paint, accident free, 2KD engine, well maintained", image: "images/autos/hilux-2015.jpg", msg: "Hi, I'm interested in the Toyota Hilux 2015 (2.4M)." },
+            { name: "Toyota Mark X 2009", price: "850,000 KSh (slightly negotiable)", desc: "V6 2500cc petrol, extremely clean, original paint, beige fabric interior, electric seats, reverse camera, alloy rims", image: "images/autos/markx-2009.jpg", msg: "Hi, I'm interested in the Toyota Mark X 2009 (850K)." },
+            { name: "Honda Odyssey 2015", price: "1,095,000 KSh", desc: "7 seater, original paint, Nairobi location", image: "images/autos/odyssey.jpg", msg: "Hi, I'm interested in the Honda Odyssey 2015 (1.095M)." },
+            { name: "Mazda Verisa 2009", price: "595,000 KSh", desc: "1490cc, leather seats, 186,000kms", image: "images/autos/verisa-2009.jpg", msg: "Hi, I'm interested in the Mazda Verisa 2009 (595,000 KSh)." },
+            { name: "Isuzu NKR 2020", price: "2,600,000 KSh", desc: "4300cc diesel, local assembled, chassis engine intact, cabin original paint, extremely clean", image: "images/autos/isuzu-nkr.jpg", msg: "Hi, I'm interested in the Isuzu NKR 2020 (2.6M)." },
+            { name: "Toyota Hilux Double Cab 2012", price: "1,950,000 KSh (neg)", desc: "2500cc, local, manual transmission", image: "images/autos/hilux-2012.jpg", msg: "Hi, I'm interested in the Toyota Hilux Double Cab 2012 (1.95M)." },
+            { name: "Toyota Axio 2011 (900k)", price: "900,000 KSh", desc: "1800cc 2wd, accident free", image: "images/autos/axio-2011.jpg", msg: "Hi, I'm interested in the Toyota Axio 2011 (900,000 KSh)." },
+            { name: "Toyota Noah Valmatic 2015", price: "1,900,000 KSh", desc: "2000cc, mileage 161,420", image: "images/autos/valmatic-2015.jpg", msg: "Hi, I'm interested in the Toyota Noah Valmatic 2015 (1.9M)." },
+            { name: "Subaru Forester SJ5 2014", price: "2,150,000 KSh", desc: "2000cc non turbo, Eyesight, lane assist, idle stop, X-mode, Si-Drive, seat warmers, paddle shifters", image: "images/autos/forester-sj5.jpg", msg: "Hi, I'm interested in the Subaru Forester SJ5 2014 (2.15M)." },
+            { name: "Toyota Hilux Double Cab 2010 (old)", price: "2,650,000 KSh (slightly negotiable)", desc: "3000cc, super clean interior and exterior", image: "images/autos/hilux-doublecab.jpg", msg: "Hi, I'm interested in the Toyota Hilux Double Cab 2010 (2.65M)." },
+            { name: "Subaru Forester SH5 Turbo 2008", price: "1,350,000 KSh", desc: "2000cc turbo, accident free, zero dents, original paint, low mileage, fully loaded, dark fabric seats, AWD, cruise control", image: "images/autos/forester-2008.jpg", msg: "Hi, I'm interested in the Subaru Forester SH5 Turbo 2008 (1.35M)." },
+            { name: "Toyota Hilux Single Cab 2012", price: "1,990,000 KSh", desc: "2500cc, accident free, ready documents, buy and drive", image: "images/autos/hilux2-2012.jpg", msg: "Hi, I'm interested in the Toyota Hilux Single Cab 2012 (1.99M)." },
+            { name: "Subaru Impreza GG3 2007", price: "680,000 KSh (neg)", desc: "1500cc, accident free, well maintained", image: "images/autos/impreza-gg3.jpg", msg: "Hi, I'm interested in the Subaru Impreza GG3 2007 (680K)." },
+            { name: "Toyota Crown Athlete 2009", price: "950,000 KSh", desc: "2500cc petrol, automatic, beige leather interior, new tyres, push start, cool music system", image: "images/autos/crown-athlete.jpg", msg: "Hi, I'm interested in the Toyota Crown Athlete 2009 (950,000 KSh)." },
+            { name: "Toyota Crown Royal Saloon 2015", price: "1,830,000 KSh (neg)", desc: "2500cc non-hybrid, petrol, auto, leather seats, push start, keyless entry, low mileage", image: "images/autos/crown-royal.jpg", msg: "Hi, I'm interested in the Toyota Crown Royal Saloon 2015 (1.83M)." },
+            { name: "Toyota Noah Valvematic 2012 (old)", price: "1,270,000 KSh", desc: "8-seater, both powered rear doors, push to start", image: "images/autos/noah-2012.jpg", msg: "Hi, I'm interested in the Toyota Noah Valvematic 2012 (1.27M)." },
+            { name: "Toyota Fielder 2013 (1500cc)", price: "1,190,000 KSh (negotiable)", desc: "1500cc 2wd, ready documents", image: "images/autos/fielder-2015.jpg", msg: "Hi, I'm interested in the Toyota Fielder 2013 (1.19M)." },
+            { name: "Nissan Navara D40 2012", price: "1,380,000 KSh", desc: "2450cc diesel, manual 4wd, very clean", image: "images/autos/navara-d40.jpg", msg: "Hi, I'm interested in the Nissan Navara D40 2012 (1.38M)." },
+            { name: "Toyota Auris 2015", price: "1,390,000 KSh (negotiable)", desc: "1500cc, wine red, half leather interior, 111k km, automatic, android screen, wooden finish, paddle shifters, cruise control, heated seats, sports rims", image: "images/autos/auris-2015.jpg", msg: "Hi, I'm interested in the Toyota Auris 2015 (1.39M)." },
+            { name: "Toyota Auris 2017", price: "1,699,000 KSh (negotiable)", desc: "1500cc 2wd, original paint, ready documents", image: "images/autos/auris-2017.jpg", msg: "Hi, I'm interested in the Toyota Auris 2017 (1.699M)." },
+            { name: "Toyota Land Cruiser Prado J150 VXL 2016", price: "5,300,000 KSh (slightly negotiable)", desc: "2800cc diesel, auto, 7 seater, sunroof, cooler box, height controls", image: "images/autos/prado-j150.jpg", msg: "Hi, I'm interested in the Toyota Land Cruiser Prado J150 VXL 2016 (5.3M)." },
+            { name: "Mazda Bongo 2016", price: "1,180,000 KSh (slightly negotiable)", desc: "1800cc petrol, accident free, automatic, new tyres, leaf springs, buy and drive", image: "images/autos/bongo-2016.jpg", msg: "Hi, I'm interested in the Mazda Bongo 2016 (1.18M)." },
+            { name: "Toyota Ractis New Shape 2014", price: "920,000 KSh", desc: "1300cc 2wd, push start, super clean", image: "images/autos/ractis-2014.jpg", msg: "Hi, I'm interested in the Toyota Ractis 2014 (920,000 KSh)." },
+            { name: "Toyota Mark II", price: "565,000 KSh", desc: "Extremely clean, original paint, beige fabric interior, electric seats, working AC, cool music system, alloy rims", image: "images/autos/mark11.jpg", msg: "Hi, I'm interested in the Toyota Mark II (565,000 KSh)." },
+            { name: "Toyota Fielder Newshape 2020", price: "1,890,000 KSh", desc: "1500cc 4wd, low genuine mileage, new arrival, fully loaded, Nairobi area", image: "images/autos/fielder-2020.jpg", msg: "Hi, I'm interested in the Toyota Fielder Newshape 2020 (1.89M)." },
+            { name: "Toyota Raum", price: "680,000 KSh (negotiable)", desc: "1500cc 2wd, viewing Thika Road", image: "images/autos/raum.jpg", msg: "Hi, I'm interested in the Toyota Raum (680,000 KSh)." },
+            { name: "Honda Fit 2009", price: "695,000 KSh (slightly negotiable)", desc: "1300cc 2wd, accident free, original paint, alloy rims, new tyres, upgraded headlights, location Kahawa Sukari Thika Road", image: "images/autos/fit-2009.jpg", msg: "Hi, I'm interested in the Honda Fit 2009 (695,000 KSh)." },
+            { name: "Honda Vezel Hybrid 2018", price: "2,250,000 KSh", desc: "1500cc 2wd, low genuine mileage, original paint, accident free, Nairobi area", image: "images/autos/vezel-2018.jpg", msg: "Hi, I'm interested in the Honda Vezel Hybrid 2018 (2.25M)." },
+            { name: "Toyota Crown 2012", price: "1,280,000 KSh", desc: "2500cc, neat interior, well maintained, original paint, accident free, Nairobi area", image: "images/autos/crown-2012.jpg", msg: "Hi, I'm interested in the Toyota Crown 2012 (1.28M)." },
+            { name: "Mazda Atenza Sedan 2017", price: "1,750,000 KSh", desc: "2200cc diesel, low genuine mileage, original paint, accident free, Nairobi area", image: "images/autos/atenza-2017.jpg", msg: "Hi, I'm interested in the Mazda Atenza 2017 (1.75M)." },
+            { name: "Honda Fit Newshape 2015", price: "1,050,000 KSh", desc: "1300cc 2wd, original paint, accident free, Nairobi area", image: "images/autos/fit-2015.jpg", msg: "Hi, I'm interested in the Honda Fit Newshape 2015 (1.05M)." },
+            { name: "Toyota Hiace 7l 2014", price: "2,150,000 KSh (neg)", desc: "1kd-2wheel, auto-diesel", image: "images/autos/hiace-7l.jpg", msg: "Hi, I'm interested in the Toyota Hiace 7l 2014 (2.15M)." },
+            { name: "Toyota Hiace 7l 2012", price: "1,580,000 KSh (neg)", desc: "1kd-2wheel, auto-diesel", image: "images/autos/hiace2012-7l.jpg", msg: "Hi, I'm interested in the Toyota Hiace 7l 2012 (1.58M)." },
+            { name: "Toyota Passo 2017", price: "850,000 KSh (negotiable)", desc: "1000cc petrol, automatic transmission", image: "images/autos/passo-2017.jpg", msg: "Hi, I'm interested in the Toyota Passo 2017 (850,000 KSh)." },
+            { name: "Toyota Fielder 2013 (1800cc)", price: "1,370,000 KSh", desc: "1800cc Valvematic, automatic, 2wd, dark interior, perfect suspension", image: "images/autos/fieler2-2013.jpg", msg: "Hi, I'm interested in the Toyota Fielder 2013 (1.37M)." }
         ];
-        // Note: For the final HTML, all 80+ vehicles from previous version are included.
-        // I will add a placeholder comment; in the actual file you must copy the full array from earlier.
-        // For this response, I assume you will merge the full array. I will provide the complete vehicles array in the final downloadable code.
 
-        // ========== HOUSEHOLD (added new items) ==========
+        // ========== HOUSEHOLD (full list) ==========
         const household = [
+            { name: "Pregnancy Pillow", price: "2,900 KSh", desc: "Comfortable support", image: "images/household/pregnancy-pillow.jpg", msg: "Hi, I'm interested in the Pregnancy Pillow." },
+            { name: "Printed Bedsheets (6x6)", price: "1,800 KSh", desc: "2 bedsheets + 2 pillow cases", image: "images/household/printed-bedsheets.jpg", msg: "Hi, I'm interested in the Printed Bedsheets." },
+            { name: "Beige 2-Seater Seat Covers", price: "2,500 KSh", desc: "Bubbles design", image: "images/household/seat-covers.jpg", msg: "Hi, I'm interested in the Seat Covers." },
+            { name: "Sewing Kit", price: "500 KSh", desc: "Essential sewing accessories", image: "images/household/sewing-kit.jpg", msg: "Hi, I'm interested in the Sewing Kit." },
+            { name: "Single Woolen Duvet", price: "1,950 KSh", desc: "5x6, 1 pc duvet", image: "images/household/single-duvet.jpg", msg: "Hi, I'm interested in the Single Woolen Duvet." },
+            { name: "Velvet Duvet Set", price: "3,500 KSh", desc: "6x7, includes 1 duvet + 1 bedsheet + 2 pillow cases", image: "images/household/velvet-duvets.jpg", msg: "Hi, I'm interested in the Velvet Duvet Set." },
+            { name: "Kid's Foldable Scooter", price: "1,650 KSh", desc: "Ages 3-12, flashing lights", image: "images/household/kids-scooter.jpg", msg: "Hi, I'm interested in the Kid's Scooter." },
+            { name: "Fsx MTB Bike (26 with gear disk)", price: "11,500 KSh", desc: "Size 26, gear disk", image: "images/household/fsx-bike.jpg", msg: "Hi, I'm interested in the Fsx MTB Bike." },
+            { name: "Ladybird Bike 12\"", price: "6,000 KSh", desc: "With trainer wheels (2-3 yrs)", image: "images/household/ladybird-bikes.jpg", msg: "Hi, I'm interested in the Ladybird Bike 12\"." },
+            { name: "Ladybird Bike 16\"", price: "6,500 KSh", desc: "With trainer wheels (4-7 yrs)", image: "images/household/ladybird-bikes.jpg", msg: "Hi, I'm interested in the Ladybird Bike 16\"." },
+            { name: "Ladybird Bike 20\"", price: "7,000 KSh", desc: "Without trainer wheels (7-12 yrs)", image: "images/household/ladybird-bikes.jpg", msg: "Hi, I'm interested in the Ladybird Bike 20\"." },
+            { name: "Ladybird Bike 26\"", price: "11,500 KSh", desc: "Above 13 yrs", image: "images/household/ladybird-bikes.jpg", msg: "Hi, I'm interested in the Ladybird Bike 26\"." },
             { name: "Duvet Cover 6x7", price: "800 KSh", desc: "Pick up at Amani stage", image: "images/household/duvet-covers.jpg", msg: "Hi, I'm interested in the Duvet Cover." },
             { name: "Mattress Protector (4x6)", price: "2,500 KSh", desc: "1 PC with bands", image: "images/household/matres-protector.jpg", msg: "Hi, I'm interested in the Mattress Protector." },
             { name: "White Pin Striped Binded Duvet Set", price: "3,500 KSh (6x7)", desc: "1 bedsheet + 2 pillow cases", image: "images/household/binded-duvet.jpg", msg: "Hi, I'm interested in the Binded Duvet Set." },
-            { name: "Bedrunner with 2 Pillowcases", price: "2,000 KSh", desc: "Runner 40x220 cm, throw pillowcase 45x45 cm", image: "images/household/bedrunner.jpg", msg: "Hi, I'm interested in the Bedrunner." },
-            { name: "1PC Mattress Protector (4x6)", price: "2,500 KSh", desc: "With bands", image: "images/household/1pc-protector.jpg", msg: "Hi, I'm interested in the Mattress Protector." },
-            // ... previous household items (pregnancy pillow, bedsheets, etc.) remain
+            { name: "Bedrunner with 2 Pillowcases", price: "2,000 KSh", desc: "Runner 40x220 cm", image: "images/household/bedrunner.jpg", msg: "Hi, I'm interested in the Bedrunner." },
+            { name: "1PC Mattress Protector (4x6)", price: "2,500 KSh", desc: "With bands", image: "images/household/1pc-protector.jpg", msg: "Hi, I'm interested in the Mattress Protector." }
         ];
 
-        // ========== SHOES & CLOTHING (added many new items) ==========
+        // ========== SHOES & CLOTHING (full list) ==========
         const shoesClothing = [
+            { name: "Chunky Peep Toe Heels", price: "2,800 KSh", desc: "Sizes 36-43", image: "images/shoes-clothing-textiles/chunky-peeptoe.jpg", msg: "Hi, I'm interested in the Chunky Heels." },
+            { name: "Breathable Sneakers", price: "3,500 KSh", desc: "Sizes 36-44", image: "images/shoes-clothing-textiles/breathable-sneakers.jpg", msg: "Hi, I'm interested in the Breathable Sneakers." },
+            { name: "Rubbers (Assorted)", price: "2,200 KSh", desc: "Sizes 36-40", image: "images/shoes-clothing-textiles/rubbers.jpg", msg: "Hi, I'm interested in the Rubbers." },
+            { name: "Orthopaedic Mesh Rubber", price: "2,800 KSh", desc: "Sizes 37-42", image: "images/shoes-clothing-textiles/mesh-rubber.jpg", msg: "Hi, I'm interested in the Mesh Rubber." },
+            { name: "Boys Leather School Shoes", price: "2,000 KSh", desc: "Sizes 26-32", image: "images/shoes-clothing-textiles/school-shoes.jpg", msg: "Hi, I'm interested in the School Shoes." },
+            { name: "Soft Step Leather Loafers", price: "2,800 KSh", desc: "Sizes 37-43", image: "images/shoes-clothing-textiles/leather-loafers.jpg", msg: "Hi, I'm interested in the Leather Loafers." },
+            { name: "Breathable Men's Shoes", price: "3,000 KSh", desc: "Sizes 39-44", image: "images/shoes-clothing-textiles/breathable-mensshoes.jpg", msg: "Hi, I'm interested in the Breathable Men's Shoes." },
+            { name: "Ladies Cute Jelly Sandals", price: "1,900 KSh", desc: "Multiple colours", image: "images/shoes-clothing-textiles/jelly-sandals.jpg", msg: "Hi, I'm interested in the Jelly Sandals." },
+            { name: "Lovely Tracksuit (3-piece set)", price: "2,700 KSh", desc: "Sizes L, XL, 2XL", image: "images/shoes-clothing-textiles/tracksuit1.jpg", msg: "Hi, I'm interested in the Tracksuit." },
+            { name: "Lovely Tracksuit (2-piece set)", price: "2,700 KSh", desc: "Sizes L, XL, 2XL", image: "images/shoes-clothing-textiles/tracksuit2.jpg", msg: "Hi, I'm interested in the Tracksuit." },
+            { name: "Lovely Tracksuit (3rd design)", price: "2,700 KSh", desc: "Sizes L, XL, 2XL", image: "images/shoes-clothing-textiles/tracksuit3.jpg", msg: "Hi, I'm interested in the Tracksuit." },
+            { name: "Lovely Tracksuit (4th design)", price: "2,700 KSh", desc: "Sizes L, XL, 2XL", image: "images/shoes-clothing-textiles/tracksuit4.jpg", msg: "Hi, I'm interested in the Tracksuit." },
+            { name: "Lovely Tracksuit (5th design)", price: "2,700 KSh", desc: "Sizes L, XL, 2XL", image: "images/shoes-clothing-textiles/tracksuit5.jpg", msg: "Hi, I'm interested in the Tracksuit." },
+            { name: "Lovely Tracksuit (6th design)", price: "2,700 KSh", desc: "Sizes L, XL, 2XL", image: "images/shoes-clothing-textiles/tracksuit6.jpg", msg: "Hi, I'm interested in the Tracksuit." },
+            { name: "Lovely Tracksuit (7th design)", price: "2,700 KSh", desc: "Sizes L, XL, 2XL", image: "images/shoes-clothing-textiles/tracksuit7.jpg", msg: "Hi, I'm interested in the Tracksuit." },
+            { name: "Adidas Casuals", price: "3,000 KSh", desc: "Sizes 40-45", image: "images/shoes-clothing-textiles/adidas-casuals.jpg", msg: "Hi, I'm interested in Adidas Casuals." },
+            { name: "Arsenal Retro Jersey", price: "3,000 KSh", desc: "Classic Arsenal jersey", image: "images/shoes-clothing-textiles/arsenal-throwback.jpg", msg: "Hi, I'm interested in the Arsenal Retro Jersey." },
+            { name: "Manchester United Jersey", price: "3,000 KSh", desc: "Hot manchester united jerseys", image: "images/shoes-clothing-textiles/manchester-hoodies.jpg", msg: "Hi, I'm interested in the Manchester United Jersey." },
             { name: "Chic Open Sandals", price: "2,500 KSh", desc: "Sizes 36-43", image: "images/shoes-clothing-textiles/chic-sandals.jpg", msg: "Hi, I'm interested in the Chic Sandals." },
             { name: "New Style Wedges", price: "2,500 KSh", desc: "Sizes 36-43", image: "images/shoes-clothing-textiles/newstyle-wedge.jpg", msg: "Hi, I'm interested in the New Style Wedges." },
             { name: "Classy Heels", price: "3,200 KSh", desc: "Sizes 36-41", image: "images/shoes-clothing-textiles/classy-heels.jpg", msg: "Hi, I'm interested in the Classy Heels." },
@@ -371,23 +484,63 @@
             { name: "Orthopedic Rubbers", price: "2,800 KSh", desc: "Breathable, soft sole, sizes 37-41", image: "images/shoes-clothing-textiles/orthopedic-rubbers.jpg", msg: "Hi, I'm interested in the Orthopedic Rubbers." },
             { name: "Mocha Brogues", price: "2,950 KSh", desc: "Sizes 36-43", image: "images/shoes-clothing-textiles/mocha-brogues.jpg", msg: "Hi, I'm interested in the Mocha Brogues." },
             { name: "Hermes Cypher", price: "3,600 KSh", desc: "Authentic, boxed, detailed", image: "images/shoes-clothing-textiles/hermes-cypher.jpg", msg: "Hi, I'm interested in the Hermes Cypher." },
-            { name: "Soft Sole Orthopedic Rubbers", price: "1,300 KSh", desc: "Sizes 43-1, limited stock", image: "images/shoes-clothing-textiles/soft-orthopedic.jpg", msg: "Hi, I'm interested in the Soft Orthopedic Rubbers." },
-            { name: "Manchester United Jersey", price: "3,000 KSh", desc: "Hot manchester united jerseys", image: "images/shoes-clothing-textiles/manchester-hoodies.jpg", msg: "Hi, I'm interested in the Manchester United Jersey." },
-            // ... previous shoes/clothing items (loafers, sneakers, tracksuits, etc.) remain
+            { name: "Soft Sole Orthopedic Rubbers", price: "1,300 KSh", desc: "Sizes 43-1, limited stock", image: "images/shoes-clothing-textiles/soft-orthopedic.jpg", msg: "Hi, I'm interested in the Soft Orthopedic Rubbers." }
         ];
 
-        // ========== KITCHENWARE (added new items) ==========
+        // ========== KITCHENWARE (full list) ==========
         const kitchenware = [
+            { name: "27pc Dinner Set", price: "5,700 KSh", desc: "Complete dinner set", image: "images/kitchenware/27pcs.jpg", msg: "Hi, I'm interested in the 27pc Dinner Set." },
+            { name: "8pc Milton Pearl Combo", price: "4,800 KSh", desc: "3 hotpots, 4 tumblers, 1L flask", image: "images/kitchenware/8pcs-milton.jpg", msg: "Hi, I'm interested in the Milton Pearl Combo." },
+            { name: "13pc Breakfast Set", price: "5,800 KSh", desc: "6 plates, 6 mugs, 1 tea urn, 1 flask", image: "images/kitchenware/13pcs-breakfastset.jpg", msg: "Hi, I'm interested in the Breakfast Set." },
+            { name: "7pc Breakfast Set (Marble)", price: "3,900 KSh", desc: "Tea urn + mugs", image: "images/kitchenware/7pcs-breakfastset.jpg", msg: "Hi, I'm interested in the 7pc Breakfast Set." },
+            { name: "3pc Gold Ceramic Casserole", price: "3,500 KSh", desc: "3L, 2L, 1L with glass covers", image: "images/kitchenware/3pcsgold-casserole.jpg", msg: "Hi, I'm interested in the Gold Casserole Set." },
+            { name: "Nunix A2C-X2 Water Dispenser", price: "13,000 KSh", desc: "Black, bottom load, hot/cold, music system", image: "images/kitchenware/black-nunix.jpg", msg: "Hi, I'm interested in the Nunix Dispenser." },
+            { name: "Eurochef 3Gas+1 Electric Cooker", price: "7,800 KSh", desc: "With shelves", image: "images/kitchenware/eurochef-3gas.jpg", msg: "Hi, I'm interested in the Eurochef Cooker." },
+            { name: "Bosch & Dessini Pressure Cooker", price: "5,800 KSh", desc: "6L, 1000W", image: "images/kitchenware/bosch-dessini.jpg", msg: "Hi, I'm interested in the Pressure Cooker." },
+            { name: "Cast Iron Sizzling Plate", price: "1,500 KSh", desc: "On wooden tray, oval/round", image: "images/kitchenware/castiron-plate.jpg", msg: "Hi, I'm interested in the Sizzling Plate." },
+            { name: "Silvercrest 2-in-1 Blender", price: "2,900 KSh", desc: "Commercial", image: "images/kitchenware/silver-crest.jpg", msg: "Hi, I'm interested in the Blender." },
+            { name: "Von Standing Cooker (3G+1E)", price: "33,500 KSh", desc: "50x60cm, electric oven, rotisserie", image: "images/kitchenware/von-cooker.jpg", msg: "Hi, I'm interested in the Von Cooker." },
+            { name: "3-in-1 Water Bottle", price: "1,200 KSh", desc: "Multipurpose", image: "images/kitchenware/3in1.jpg", msg: "Hi, I'm interested in the 3-in-1 Bottle." },
+            { name: "3-in-1 Bottle (second listing)", price: "1,200 KSh", desc: "Assorted colors", image: "images/kitchenware/3in12.jpg", msg: "Hi, I'm interested in the 3-in-1 Bottle." },
+            { name: "Heavy Grip Rubber Floor Mat", price: "1,600 KSh", desc: "2pcs set, 40x60/40x120cm", image: "images/kitchenware/grip-rubber.jpg", msg: "Hi, I'm interested in the Floor Mat." },
+            { name: "Plain White Plates (6pcs)", price: "2,000 KSh", desc: "10.5\"", image: "images/kitchenware/plain-white.jpg", msg: "Hi, I'm interested in the White Plates." },
+            { name: "Smart Pro Digital Microwave", price: "8,400 KSh", desc: "20L, black, defrost", image: "images/kitchenware/smart-pro.jpg", msg: "Hi, I'm interested in the Microwave." },
+            { name: "Black Opal Dinner Plate Set", price: "2,000 KSh", desc: "6 dinner plates", image: "images/kitchenware/black-opal.jpg", msg: "Hi, I'm interested in the Black Opal Plates." },
+            { name: "7pc Tea Set", price: "6,000 KSh", desc: "Elegant", image: "images/kitchenware/7piece-teaset.jpg", msg: "Hi, I'm interested in the Tea Set." },
+            { name: "Coffee Mugs (6pcs)", price: "1,100 KSh", desc: "Golden touch, 370ml", image: "images/kitchenware/coffee.mugs.jpg", msg: "Hi, I'm interested in the Coffee Mugs." },
+            { name: "12pc Glass Dinner Set", price: "2,300 KSh", desc: "6 cups, 6 plates", image: "images/kitchenware/12pcs-dinnerset.jpg", msg: "Hi, I'm interested in the Glass Dinner Set." },
+            { name: "6pc Ceramic Cups", price: "750 KSh", desc: "350ml", image: "images/kitchenware/ceramic-cups.jpg", msg: "Hi, I'm interested in the Ceramic Cups." },
+            { name: "Green Long Cups (400ml)", price: "1,050 KSh", desc: "Set of ?", image: "images/kitchenware/long-cups.jpg", msg: "Hi, I'm interested in the Long Cups." },
+            { name: "Unique Ceramic Mugs (6pcs)", price: "950 KSh", desc: "400ml", image: "images/kitchenware/unique-mugs.jpg", msg: "Hi, I'm interested in the Unique Mugs." },
+            { name: "Black Ceramic Mugs (6pcs)", price: "750 KSh", desc: "350ml", image: "images/kitchenware/blackwhite-cups.jpg", msg: "Hi, I'm interested in the Black Mugs." },
+            { name: "12pc Glass Dinner Set (2nd)", price: "2,150 KSh", desc: "6 cups, 6 plates", image: "images/kitchenware/12pc-set.jpg", msg: "Hi, I'm interested in the Glass Dinner Set." },
+            { name: "Clear Food Covers (100pc)", price: "300 KSh", desc: "Stretch covers", image: "images/kitchenware/food-covers.jpg", msg: "Hi, I'm interested in the Food Covers." },
+            { name: "72pc Cookware Set", price: "11,000 KSh", desc: "Complete cookware set", image: "images/kitchenware/72pcs-kitchenware.jpg", msg: "Hi, I'm interested in the 72pc Cookware Set." },
+            { name: "6 Space Gold Glass Holder", price: "2,500 KSh", desc: "Elegant 6-space gold finish glass holder", image: "images/kitchenware/sixspace-glasshoder.jpg", msg: "Hi, I'm interested in the 6 Space Gold Glass Holder." },
+            { name: "Bosch 11pc Cookware", price: "8,600 KSh (Promotion)", desc: "Made in Germany", image: "images/kitchenware/bosch-11pcs.jpg", msg: "Hi, I'm interested in the Bosch 11pc Cookware set." },
+            { name: "3-in-1 Chaffing Dish", price: "6,800 KSh", desc: "Dark green & gold", image: "images/kitchenware/goldchaffing.jpg", msg: "Hi, I'm interested in the 3-in-1 gold chaffing dish." },
+            { name: "Ecomax 3+1 Standing Cooker", price: "20,000 KSh", desc: "50*55cm, free accessories", image: "images/kitchenware/ecomax-cooker.jpg", msg: "Hi, I'm interested in the Ecomax standing cooker." },
+            { name: "Nunix Water Dispenser (12,500)", price: "12,500 KSh", desc: "Black, bottom load", image: "images/kitchenware/nunix-dispenser.jpg", msg: "Hi, I'm interested in the Nunix dispenser." },
+            { name: "Donnor Berry 16pcs Cookware Set", price: "16,500 KSh", desc: "Granite nonstick", image: "images/kitchenware/donnerberry-cookware.jpg", msg: "Hi, I'm interested in the Donnor Berry set." },
+            { name: "Single Gold Fruit Rack", price: "1,200 KSh", desc: "Elegant gold fruit rack", image: "images/kitchenware/gold-fruitrack.jpg", msg: "Hi, I'm interested in the Fruit Rack." },
+            { name: "Phisma 9pc Cookware Set", price: "13,000 KSh", desc: "Nonstick cookware set", image: "images/kitchenware/phisma-cookware.jpg", msg: "Hi, I'm interested in the Phisma set." },
+            { name: "Milton Oyster 8pc Combo", price: "4,600 KSh", desc: "3 hotpots, 4 tumblers, 1L flask", image: "images/kitchenware/milton-oyster.jpg", msg: "Hi, I'm interested in the Milton Oyster combo." },
+            { name: "Telaisi Juicer", price: "6,999 KSh", desc: "1000W juicer", image: "images/kitchenware/telaisi-juicer.jpg", msg: "Hi, I'm interested in the Telaisi Juicer." },
+            { name: "Dessini Electric Pressure Cooker", price: "6,200 KSh", desc: "6L electric pressure cooker", image: "images/kitchenware/dessini-cooker.jpg", msg: "Hi, I'm interested in the Dessini cooker." },
+            { name: "Double Juice Dispenser", price: "12,000 KSh", desc: "Commercial juice dispenser", image: "images/kitchenware/juice-dispenser.jpg", msg: "Hi, I'm interested in the Juice Dispenser." },
+            { name: "Redberry Stello Hotpot Set", price: "6,500 KSh", desc: "Premium stainless steel hotpot", image: "images/kitchenware/redberry-stello.jpg", msg: "Hi, I'm interested in the Redberry set." },
+            { name: "Pearl Platina Hotpot Set (4pc)", price: "4,800 KSh", desc: "0.7L,1.0L,1.7L,2.5L", image: "images/kitchenware/pearl-platina.jpg", msg: "Hi, I'm interested in the Pearl Platina set." },
+            { name: "Copper Deep Frying Pan", price: "3,000 KSh", desc: "Copper pan", image: "images/kitchenware/cooper-pan.jpg", msg: "Hi, I'm interested in the Copper Pan." },
+            { name: "Nunix A1C Water Dispenser (10,400)", price: "10,400 KSh", desc: "Black/silver, hot & cold", image: "images/kitchenware/nunix-a1c.jpg", msg: "Hi, I'm interested in the Nunix A1C." },
             { name: "8pc Aluminium Steel Cookware (no lids)", price: "4,200 KSh", desc: "Heavy quality", image: "images/kitchenware/8pcs-alluminium.jpg", msg: "Hi, I'm interested in the 8pc Aluminium Cookware." },
             { name: "7pcs Enamel Cast Iron Cooking Pots", price: "9,200 KSh", desc: "Milk pot, soup pot, casserole, frying pan", image: "images/kitchenware/7pcs-enamel.jpg", msg: "Hi, I'm interested in the 7pcs Enamel Pots." },
             { name: "11pcs Raw Cast Iron Cookware", price: "17,500 KSh", desc: "Black, good quality", image: "images/kitchenware/11pcs-ironcast.jpg", msg: "Hi, I'm interested in the 11pcs Cast Iron Cookware." },
             { name: "Meat Butchery Cuts (Utaala Benedicta)", price: "1,000 KSh", desc: "meat and butchery cuts", image: "images/kitchenware/meat-box.jpg", msg: "Hi, I'm interested in the Meat Cuts." },
-            { name: "Borosilicate Glass Cookware", price: "2,500 KSh (2.5L) / 2,800 KSh (3.5L)", desc: "Wooden handle, heavy", image: "images/kitchenware/glass-cookware.jpg", msg: "Hi, I'm interested in the Glass Cookware." },
-            { name: "Japanese Dinner Set", price: "3,500 KSh", desc: "6 dinner plates, 6 side plates, 6 bowls, 6 cups", image: "images/kitchenware/japanese-set.jpg", msg: "Hi, I'm interested in the Japanese Dinner Set." },
-            // ... all previous kitchenware items remain
+            { name: "Borosilicate Glass Cookware", price: "2,500 KSh (2.5L)", desc: "Wooden handle, heavy", image: "images/kitchenware/glass-cookware.jpg", msg: "Hi, I'm interested in the Glass Cookware." },
+            { name: "Japanese Dinner Set", price: "3,500 KSh", desc: "6 dinner plates, 6 side plates, 6 bowls, 6 cups", image: "images/kitchenware/japanese-set.jpg", msg: "Hi, I'm interested in the Japanese Dinner Set." }
         ];
 
-        // ========== PRODUCTS (unchanged) ==========
+        // ========== BESTSELLING PRODUCTS ==========
         const products = [
             { name: "Wireless Bluetooth Earbuds", price: "1,850 KSh", desc: "HD sound", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Earbuds", msg: "Hi! I'm interested in Earbuds." },
             { name: "Smart LED Desk Lamp", price: "2,450 KSh", desc: "Touch control", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Lamp", msg: "Hi, I'd like the Lamp." },
@@ -395,7 +548,7 @@
             { name: "Foldable Laptop Stand", price: "1,950 KSh", desc: "Aluminum, ergonomic", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Laptop+Stand", msg: "I want the Laptop Stand." }
         ];
 
-        // ========== HELPER FUNCTIONS ==========
+        // Helper functions
         function renderGrid(containerId, items, whatsappNumber) {
             const grid = document.getElementById(containerId);
             if (!grid) return;
@@ -446,8 +599,6 @@
             renderGrid('kitchenwareGrid', kitchenware, MY_WHATSAPP);
             renderGrid('productsGrid', products, MY_WHATSAPP);
             setupInquiryForm(MY_WHATSAPP);
-
-            // For all hot sale buttons (including those in the new BIDHAA section)
             document.querySelectorAll('.hot-sale-btn').forEach(btn => {
                 btn.addEventListener('click', () => {
                     const product = btn.getAttribute('data-product');
