@@ -165,6 +165,61 @@
             </div>
         </section>
 
+        <!-- Electronics & Phones -->
+        <section class="products-section" id="electronics" style="background-color: #f0f7ff;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>📱 Electronics & Phones</h2>
+                    <p>Latest smartphones and gadgets – quality assured.</p>
+                </div>
+                <div class="products-grid" id="electronicsGrid"></div>
+            </div>
+        </section>
+
+        <!-- Household Items -->
+        <section class="products-section" id="household" style="background-color: #f9fafc;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>🏠 Household Items</h2>
+                    <p>Comfort and style for your home – duvets, bikes, scooters & more.</p>
+                </div>
+                <div class="products-grid" id="householdGrid"></div>
+            </div>
+        </section>
+
+        <!-- Shoes, Clothing & Textiles -->
+        <section class="products-section" id="shoes-clothing" style="background-color: #fff9f5;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>👟 Shoes, Clothing & Textiles</h2>
+                    <p>Trendy fashion, comfy footwear, and premium tracksuits.</p>
+                </div>
+                <div class="products-grid" id="shoesGrid"></div>
+            </div>
+        </section>
+
+        <!-- Premium Kitchenware -->
+        <section class="products-section" id="kitchenware" style="background-color: #fefaf5;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>🍳 Premium Kitchenware</h2>
+                    <p>Upgrade your cooking with the latest cookware, appliances & serving essentials.</p>
+                </div>
+                <div class="products-grid" id="kitchenwareGrid"></div>
+            </div>
+        </section>
+
+        <!-- Bestselling Products -->
+        <section class="products-section" id="products">
+            <div class="container">
+                <div class="section-header">
+                    <h2>🔥 Bestselling Products</h2>
+                    <p>Curated just for you. High-quality, in-demand items at unbeatable prices.</p>
+                </div>
+                <div class="products-grid" id="productsGrid"></div>
+            </div>
+        </section>
+
         <!-- BIDHAA KALI KALI!!!!!! Section -->
         <div class="bidhaa-section">
             <div class="container">
@@ -251,61 +306,6 @@
             </div>
         </div>
 
-        <!-- Electronics & Phones -->
-        <section class="products-section" id="electronics" style="background-color: #f0f7ff;">
-            <div class="container">
-                <div class="section-header">
-                    <h2>📱 Electronics & Phones</h2>
-                    <p>Latest smartphones and gadgets – quality assured.</p>
-                </div>
-                <div class="products-grid" id="electronicsGrid"></div>
-            </div>
-        </section>
-
-        <!-- Household Items -->
-        <section class="products-section" id="household" style="background-color: #f9fafc;">
-            <div class="container">
-                <div class="section-header">
-                    <h2>🏠 Household Items</h2>
-                    <p>Comfort and style for your home – duvets, bikes, scooters & more.</p>
-                </div>
-                <div class="products-grid" id="householdGrid"></div>
-            </div>
-        </section>
-
-        <!-- Shoes, Clothing & Textiles -->
-        <section class="products-section" id="shoes-clothing" style="background-color: #fff9f5;">
-            <div class="container">
-                <div class="section-header">
-                    <h2>👟 Shoes, Clothing & Textiles</h2>
-                    <p>Trendy fashion, comfy footwear, and premium tracksuits.</p>
-                </div>
-                <div class="products-grid" id="shoesGrid"></div>
-            </div>
-        </section>
-
-        <!-- Premium Kitchenware -->
-        <section class="products-section" id="kitchenware" style="background-color: #fefaf5;">
-            <div class="container">
-                <div class="section-header">
-                    <h2>🍳 Premium Kitchenware</h2>
-                    <p>Upgrade your cooking with the latest cookware, appliances & serving essentials.</p>
-                </div>
-                <div class="products-grid" id="kitchenwareGrid"></div>
-            </div>
-        </section>
-
-        <!-- Bestselling Products -->
-        <section class="products-section" id="products">
-            <div class="container">
-                <div class="section-header">
-                    <h2>🔥 Bestselling Products</h2>
-                    <p>Curated just for you. High-quality, in-demand items at unbeatable prices.</p>
-                </div>
-                <div class="products-grid" id="productsGrid"></div>
-            </div>
-        </section>
-
         <!-- Inquiry Section -->
         <section id="inquiry" class="inquiry">
             <div class="container inquiry-container">
@@ -344,227 +344,6 @@
         </div>
     </footer>
 
-    <script>
-        // ==================== ELECTRONICS ====================
-        const electronics = [
-            { name: "iPhone 15 Pro", price: "88,000 KSh", desc: "256GB, 84% battery, physical SIM, clean unit", image: "images/electronics-phones/iphone-15pro.jpg", msg: `*Product:* iPhone 15 Pro\n*Price:* 88,000 KSh\n*Description:* 256GB, 84% battery, physical SIM, clean unit\n\nI would like to order this.` },
-            { name: "iPhone 16 Pro Max", price: "128,000 KSh", desc: "256GB, 100%🔋, E‑Sim, Cycle Count 2", image: "images/electronics-phones/iphone-16pro.jpg", msg: `*Product:* iPhone 16 Pro Max\n*Price:* 128,000 KSh\n*Description:* 256GB, 100%🔋, E‑Sim, Cycle Count 2\n\nI would like to order this.` },
-            { name: "MacBook Pro (2020)", price: "70,000 KSh", desc: "Intel Core i7, 32GB RAM, 512GB SSD", image: "images/electronics-phones/macbook-pro.jpg", msg: `*Product:* MacBook Pro 2020\n*Price:* 70,000 KSh\n*Description:* Intel Core i7, 32GB RAM, 512GB SSD\n\nI would like to order this.` },
-            { name: "Jeep Laptop Bag", price: "3,300 KSh", desc: "Size 38*27, fits laptop up to 15 inch", image: "images/electronics-phones/jeep-laptop.jpg", msg: `*Product:* Jeep Laptop Bag\n*Price:* 3,300 KSh\n*Description:* Size 38*27, fits laptop up to 15 inch\n\nI would like to order this.` }
-        ];
-
-        // ==================== VEHICLES ====================
-        const vehicles = [
-            // 9th August 2026 - First Batch
-            { name: "Honda Insight", price: "430,000 KSh", desc: "1330cc Petrol, auto", image: "images/autos/honda-insight.jpg", msg: `*Product:* Honda Insight\n*Price:* 430,000 KSh\n*Description:* 1330cc Petrol, auto\n\nI would like to order this.` },
-            { name: "Subaru Forester 2.0xs (sg5)", price: "499,000 KSh (now)", desc: "2000cc auto, KBZ", image: "images/autos/forester-20xs.jpg", msg: `*Product:* Subaru Forester 2.0xs (sg5)\n*Price:* 499,000 KSh\n*Description:* 2000cc auto, KBZ\n\nI would like to order this.` },
-            { name: "Toyota Noah Azr60", price: "210,000 KSh (now)", desc: "1990cc, KBU", image: "images/autos/noah-azr60.jpg", msg: `*Product:* Toyota Noah Azr60\n*Price:* 210,000 KSh\n*Description:* 1990cc, KBU\n\nI would like to order this.` },
-            { name: "Volkswagen Up", price: "310,000 KSh (now)", desc: "1000cc, KDE, viewing Jogoo Rd", image: "images/autos/volkswagen-u.jpg", msg: `*Product:* Volkswagen Up\n*Price:* 310,000 KSh\n*Description:* 1000cc, KDE, viewing Jogoo Rd\n\nI would like to order this.` },
-            { name: "Toyota Land Cruiser Prado Tx 2017", price: "5,200,000 KSh", desc: "KDT, diesel, automatic, sunroof", image: "images/autos/prado-kdt.jpg", msg: `*Product:* Toyota Land Cruiser Prado Tx 2017\n*Price:* 5,200,000 KSh\n*Description:* KDT, diesel, automatic, sunroof\n\nI would like to order this.` },
-            { name: "Lexus Nx 200t 2015", price: "2,500,000 KSh", desc: "2000cc, KDE, viewing Jogoo Rd", image: "images/autos/lexus-nx.jpg", msg: `*Product:* Lexus Nx 200t 2015\n*Price:* 2,500,000 KSh\n*Description:* 2000cc, KDE, viewing Jogoo Rd\n\nI would like to order this.` },
-            { name: "BMW (Price Drop)", price: "480,000 KSh", desc: "Price drop", image: "images/autos/bmw.jpg", msg: `*Product:* BMW\n*Price:* 480,000 KSh\n*Description:* Price drop\n\nI would like to order this.` },
-            { name: "Toyota Harrier KDP 2016", price: "2,450,000 KSh", desc: "KDP", image: "images/autos/harrier-kdp.jpg", msg: `*Product:* Toyota Harrier KDP 2016\n*Price:* 2,450,000 KSh\n*Description:* KDP\n\nI would like to order this.` },
-            { name: "Nissan X-Trail 2010", price: "970,000 KSh", desc: "2000cc auto", image: "images/autos/xtrail-2010.jpg", msg: `*Product:* Nissan X-Trail 2010\n*Price:* 970,000 KSh\n*Description:* 2000cc auto\n\nI would like to order this.` },
-            { name: "Volkswagen Golf Variant 2012", price: "750,000 KSh", desc: "1200cc, automatic", image: "images/autos/volkswagen-golf.jpg", msg: `*Product:* Volkswagen Golf Variant 2012\n*Price:* 750,000 KSh\n*Description:* 1200cc, automatic\n\nI would like to order this.` },
-            { name: "Toyota Harrier 2016", price: "2,499,000 KSh", desc: "133K km, leather interior, Nairobi", image: "images/autos/harrier-2016.jpg", msg: `*Product:* Toyota Harrier 2016\n*Price:* 2,499,000 KSh\n*Description:* 133K km, leather interior, Nairobi\n\nI would like to order this.` },
-            { name: "Isuzu Dmax-tfs 86 2019", price: "1,900,000 KSh", desc: "2500cc manual diesel, KCW local", image: "images/autos/dmax-tfs.jpg", msg: `*Product:* Isuzu Dmax-tfs 86 2019\n*Price:* 1,900,000 KSh\n*Description:* 2500cc manual diesel, KCW local\n\nI would like to order this.` },
-            { name: "Toyota Vitz Jewela 2012", price: "695,000 KSh", desc: "1000cc, alloy wheels, original paint, Kiambu road", image: "images/autos/vitz-jewela.jpg", msg: `*Product:* Toyota Vitz Jewela 2012\n*Price:* 695,000 KSh\n*Description:* 1000cc, alloy wheels, original paint, Kiambu road\n\nI would like to order this.` },
-            { name: "Toyota Rush Executive 2011", price: "1,360,000 KSh (slightly negotiable)", desc: "1500cc, accident free, original paint, Kahawa Sukari", image: "images/autos/rush-executive.jpg", msg: `*Product:* Toyota Rush Executive 2011\n*Price:* 1,360,000 KSh\n*Description:* 1500cc, accident free, original paint, Kahawa Sukari\n\nI would like to order this.` },
-            { name: "Mercedes Benz C200-Kompresser 2007", price: "1,100,000 KSh (very slightly negotiable)", desc: "1800cc petrol, dark leather, Kahawa Sukari", image: "images/autos/benz-c200.jpg", msg: `*Product:* Mercedes Benz C200-Kompresser 2007\n*Price:* 1,100,000 KSh\n*Description:* 1800cc petrol, dark leather, Kahawa Sukari\n\nI would like to order this.` },
-            { name: "Nissan Note Nismo E-power 2017", price: "870,000 KSh", desc: "1200cc auto", image: "images/autos/note-nismo.jpg", msg: `*Product:* Nissan Note Nismo E-power 2017\n*Price:* 870,000 KSh\n*Description:* 1200cc auto\n\nI would like to order this.` },
-            { name: "Nissan XTRAIL NT32 2015", price: "1,200,000 KSh", desc: "@all", image: "images/autos/xtrail-nt32.jpg", msg: `*Product:* Nissan XTRAIL NT32 2015\n*Price:* 1,200,000 KSh\n*Description:* @all\n\nI would like to order this.` },
-            { name: "Outlander 2012", price: "840,000 KSh", desc: "@all", image: "images/autos/outlander-2013.jpg", msg: `*Product:* Outlander 2012\n*Price:* 840,000 KSh\n*Description:* @all\n\nI would like to order this.` },
-            { name: "Volkswagen Jetta 2008", price: "380,000 KSh", desc: "Petrol auto 2000cc", image: "images/autos/jetta-2008.jpg", msg: `*Product:* Volkswagen Jetta 2008\n*Price:* 380,000 KSh\n*Description:* Petrol auto 2000cc\n\nI would like to order this.` },
-            { name: "Mazda CX-5 2018", price: "2,600,000 KSh", desc: "2000cc petrol, auto, nearest offer", image: "images/autos/cx5-2018.jpg", msg: `*Product:* Mazda CX-5 2018\n*Price:* 2,600,000 KSh\n*Description:* 2000cc petrol, auto, nearest offer\n\nI would like to order this.` },
-            { name: "Toyota Hiace 7L 2012", price: "1,420,000 KSh (neg)", desc: "1kd-2wheel, auto-diesel", image: "images/autos/hiace7l2-2012.jpg", msg: `*Product:* Toyota Hiace 7L 2012\n*Price:* 1,420,000 KSh\n*Description:* 1kd-2wheel, auto-diesel\n\nI would like to order this.` },
-            { name: "Nissan Tiida 2010", price: "585,000 KSh (slightly negotiable)", desc: "1500cc, accident free, ready documents", image: "images/autos/tiida2-2010.jpg", msg: `*Product:* Nissan Tiida 2010\n*Price:* 585,000 KSh\n*Description:* 1500cc, accident free, ready documents\n\nI would like to order this.` },
-            { name: "Toyota Hilux Double Cab 2009", price: "2,280,000 KSh (slightly negotiable)", desc: "3000cc diesel, automatic, optional 4WD, original paint", image: "images/autos/hiluxdoublecab-2009.jpg", msg: `*Product:* Toyota Hilux Double Cab 2009\n*Price:* 2,280,000 KSh\n*Description:* 3000cc diesel, automatic, optional 4WD, original paint\n\nI would like to order this.` },
-            { name: "Toyota Fielder Hybrid G Grade 2019", price: "1,800,000 KSh", desc: "1500cc hybrid, 2WD, silver, push start, reverse camera", image: "images/autos/fieler-hybrid3.jpg", msg: `*Product:* Toyota Fielder Hybrid G Grade 2019\n*Price:* 1,800,000 KSh\n*Description:* 1500cc hybrid, 2WD, silver, push start, reverse camera\n\nI would like to order this.` },
-            { name: "Toyota Ractis 2017", price: "1,120,000 KSh (negotiable)", desc: "1300cc, original paint", image: "images/autos/ractis2-2017.jpg", msg: `*Product:* Toyota Ractis 2017\n*Price:* 1,120,000 KSh\n*Description:* 1300cc, original paint\n\nI would like to order this.` },
-            { name: "Isuzu Dmax 3.0TD V-Cross 2015", price: "3,150,000 KSh", desc: "Diesel, automatic, leather interior, Parklands", image: "images/autos/dmax-2015.jpg", msg: `*Product:* Isuzu Dmax 3.0TD V-Cross 2015\n*Price:* 3,150,000 KSh\n*Description:* Diesel, automatic, leather interior, Parklands\n\nI would like to order this.` },
-            { name: "Ford Ranger 2200cc Diesel", price: "1,750,000 KSh (slightly neg)", desc: "4WD optional, locally manufactured, original paint", image: "images/autos/ford-ranger.jpg", msg: `*Product:* Ford Ranger 2200cc Diesel\n*Price:* 1,750,000 KSh\n*Description:* 4WD optional, locally manufactured, original paint\n\nI would like to order this.` },
-            { name: "Toyota Hilux Single Locally Assembled 2017", price: "2,450,000 KSh", desc: "2500cc, 2WD, extremely clean", image: "images/autos/hilux-single.jpg", msg: `*Product:* Toyota Hilux Single Locally Assembled 2017\n*Price:* 2,450,000 KSh\n*Description:* 2500cc, 2WD, extremely clean\n\nI would like to order this.` },
-            { name: "Mazda Bongo 2014", price: "800,000 KSh (negotiable)", desc: "1800cc", image: "images/autos/bongo-2014.jpg", msg: `*Product:* Mazda Bongo 2014\n*Price:* 800,000 KSh\n*Description:* 1800cc\n\nI would like to order this.` },
-            { name: "Toyota Ist 1300cc", price: "580,000 KSh", desc: "Clean unit", image: "images/autos/toyota-ist.jpg", msg: `*Product:* Toyota Ist 1300cc\n*Price:* 580,000 KSh\n*Description:* Clean unit\n\nI would like to order this.` },
-            { name: "Toyota RAV4 2008", price: "1,350,000 KSh (Neg)", desc: "2400cc, 4WD, accident free, well maintained", image: "images/autos/rav4-2008.jpg", msg: `*Product:* Toyota RAV4 2008\n*Price:* 1,350,000 KSh\n*Description:* 2400cc, 4WD, accident free, well maintained\n\nI would like to order this.` },
-            { name: "Toyota Prado J95 2002", price: "1,480,000 KSh", desc: "3000cc diesel, automatic, 7 seater, accident free", image: "images/autos/j95-2002.jpg", msg: `*Product:* Toyota Prado J95 2002\n*Price:* 1,480,000 KSh\n*Description:* 3000cc diesel, automatic, 7 seater, accident free\n\nI would like to order this.` },
-            { name: "Subaru Outback 2008", price: "995,000 KSh", desc: "2500cc petrol, automatic, original paint, dark interior", image: "images/autos/subaru.jpg", msg: `*Product:* Subaru Outback 2008\n*Price:* 995,000 KSh\n*Description:* 2500cc petrol, automatic, original paint, dark interior\n\nI would like to order this.` },
-            { name: "Ford Ranger 2012", price: "2,440,000 KSh", desc: "3.2 diesel turbo, 4x4, leather interior, fully serviced", image: "images/autos/ford-ranger2.jpg", msg: `*Product:* Ford Ranger 2012\n*Price:* 2,440,000 KSh\n*Description:* 3.2 diesel turbo, 4x4, leather interior, fully serviced\n\nI would like to order this.` },
-            { name: "Toyota Wish 2012", price: "1,100,000 KSh", desc: "1800cc Valvematic, well maintained", image: "images/autos/wish4-2012.jpg", msg: `*Product:* Toyota Wish 2012\n*Price:* 1,100,000 KSh\n*Description:* 1800cc Valvematic, well maintained\n\nI would like to order this.` },
-            { name: "Nissan NV200 2014", price: "1,080,000 KSh (negotiable)", desc: "1600cc, original paint, well maintained, Kiambu road", image: "images/autos/nissan-nv200.jpg", msg: `*Product:* Nissan NV200 2014\n*Price:* 1,080,000 KSh\n*Description:* 1600cc, original paint, well maintained, Kiambu road\n\nI would like to order this.` },
-            { name: "Toyota Hilux Surf 2007", price: "1,800,000 KSh (negotiable)", desc: "2700cc petrol, auto, optional 4WD, sunroof", image: "images/autos/hilux-surf.jpg", msg: `*Product:* Toyota Hilux Surf 2007\n*Price:* 1,800,000 KSh\n*Description:* 2700cc petrol, auto, optional 4WD, sunroof\n\nI would like to order this.` },
-            { name: "Mercedes Benz C200 2010", price: "1,400,000 KSh", desc: "1800cc, original paint, accident free", image: "images/autos/benz2-c200.jpg", msg: `*Product:* Mercedes Benz C200 2010\n*Price:* 1,400,000 KSh\n*Description:* 1800cc, original paint, accident free\n\nI would like to order this.` },
-            { name: "Mercedes Benz C200 2010", price: "1,450,000 KSh (negotiable)", desc: "1800cc petrol, auto, electric seats, trade-in accepted", image: "images/autos/2010-c200.jpg", msg: `*Product:* Mercedes Benz C200 2010\n*Price:* 1,450,000 KSh\n*Description:* 1800cc petrol, auto, electric seats, trade-in accepted\n\nI would like to order this.` },
-            { name: "Subaru Forester SJ5 2014", price: "2,100,000 KSh (negotiable)", desc: "2000cc, keyless entry, X-mode, seat warmers, smart stop, fog lights, DRL", image: "images/autos/sj5.jpg", msg: `*Product:* Subaru Forester SJ5 2014\n*Price:* 2,100,000 KSh\n*Description:* 2000cc, keyless entry, X-mode, seat warmers, smart stop, fog lights, DRL\n\nI would like to order this.` },
-            { name: "Honda CR-V 2014", price: "2,200,000 KSh (negotiable)", desc: "2000cc, 2WD, original paint, ready documents", image: "images/autos/crv.jpg", msg: `*Product:* Honda CR-V 2014\n*Price:* 2,200,000 KSh\n*Description:* 2000cc, 2WD, original paint, ready documents\n\nI would like to order this.` },
-            { name: "Toyota Corolla Axio 2016", price: "1,450,000 KSh (negotiable)", desc: "1500cc petrol, auto, 2WD", image: "images/autos/axio4-2014.jpg", msg: `*Product:* Toyota Corolla Axio 2016\n*Price:* 1,450,000 KSh\n*Description:* 1500cc petrol, auto, 2WD\n\nI would like to order this.` },
-            { name: "Toyota Vitz Jewela 2015", price: "890,000 KSh (negotiable)", desc: "1320cc petrol, automatic", image: "images/autos/jewela.jpg", msg: `*Product:* Toyota Vitz Jewela 2015\n*Price:* 890,000 KSh\n*Description:* 1320cc petrol, automatic\n\nI would like to order this.` },
-            { name: "Toyota Belta 2012", price: "740,000 KSh", desc: "1300cc, 2WD, clean, buy and drive", image: "images/autos/belta-2014.jpg", msg: `*Product:* Toyota Belta 2012\n*Price:* 740,000 KSh\n*Description:* 1300cc, 2WD, clean, buy and drive\n\nI would like to order this.` },
-            { name: "Nissan Juke 2014", price: "1,060,000 KSh (slightly negotiable)", desc: "1500cc, 2WD, extremely clean, musically armed, Parklands", image: "images/autos/juke.jpg", msg: `*Product:* Nissan Juke 2014\n*Price:* 1,060,000 KSh\n*Description:* 1500cc, 2WD, extremely clean, musically armed, Parklands\n\nI would like to order this.` },
-            { name: "Toyota RAV4 2014", price: "1,850,000 KSh (negotiable)", desc: "2400cc, 4WD, push start, fabric seats, 133k km", image: "images/autos/rav4.jpg", msg: `*Product:* Toyota RAV4 2014\n*Price:* 1,850,000 KSh\n*Description:* 2400cc, 4WD, push start, fabric seats, 133k km\n\nI would like to order this.` },
-            { name: "Nissan X-Trail NT31 2009", price: "1,080,000 KSh", desc: "2000cc petrol, black leather, seat warmers, alloy rims, buy and drive", image: "images/autos/nt31.jpg", msg: `*Product:* Nissan X-Trail NT31 2009\n*Price:* 1,080,000 KSh\n*Description:* 2000cc petrol, black leather, seat warmers, alloy rims, buy and drive\n\nI would like to order this.` },
-            { name: "Toyota Hiace Staff Van 2012", price: "1,780,000 KSh (slightly neg)", desc: "1KD diesel, 3000cc, automatic, very clean, new tyres", image: "images/autos/hiace-staffvan.jpg", msg: `*Product:* Toyota Hiace Staff Van 2012\n*Price:* 1,780,000 KSh\n*Description:* 1KD diesel, 3000cc, automatic, very clean, new tyres\n\nI would like to order this.` },
-            { name: "Toyota Hilux Single 2009", price: "2,650,000 KSh (Neg)", desc: "2500cc 2KD, 4WD, ex-UN, accident free, bank/SACCO finance accepted", image: "images/autos/single-2009.jpg", msg: `*Product:* Toyota Hilux Single 2009\n*Price:* 2,650,000 KSh\n*Description:* 2500cc 2KD, 4WD, ex-UN, accident free, bank/SACCO finance accepted\n\nI would like to order this.` },
-            { name: "Mitsubishi Pajero Shogun 2010", price: "2,200,000 KSh (negotiable)", desc: "4M40 engine, 2800cc diesel turbo, 7 seater, 134k km", image: "images/autos/shogun.jpg", msg: `*Product:* Mitsubishi Pajero Shogun 2010\n*Price:* 2,200,000 KSh\n*Description:* 4M40 engine, 2800cc diesel turbo, 7 seater, 134k km\n\nI would like to order this.` },
-            { name: "Land Cruiser Prado 2013", price: "3,450,000 KSh", desc: "2700cc, 5 seater, petrol, fabric beige interior, original paint", image: "images/autos/prado-2013.jpg", msg: `*Product:* Land Cruiser Prado 2013\n*Price:* 3,450,000 KSh\n*Description:* 2700cc, 5 seater, petrol, fabric beige interior, original paint\n\nI would like to order this.` },
-            { name: "Honda Shuttle Hybrid 2016", price: "1,300,000 KSh", desc: "1500cc, fully loaded, half leather interior", image: "images/autos/shuttle.jpg", msg: `*Product:* Honda Shuttle Hybrid 2016\n*Price:* 1,300,000 KSh\n*Description:* 1500cc, fully loaded, half leather interior\n\nI would like to order this.` },
-            { name: "Toyota Harrier 240G 2007", price: "1,270,000 KSh", desc: "2400cc, extremely clean", image: "images/autos/240g.jpg", msg: `*Product:* Toyota Harrier 240G 2007\n*Price:* 1,270,000 KSh\n*Description:* 2400cc, extremely clean\n\nI would like to order this.` },
-            { name: "Toyota Land Cruiser Prado J150 2012", price: "4,850,000 KSh", desc: "3000cc, auto, 4wd, diff lock, dark leather, 7 seater, double fuel tank", image: "images/autos/j150.jpg", msg: `*Product:* Toyota Land Cruiser Prado J150 2012\n*Price:* 4,850,000 KSh\n*Description:* 3000cc, auto, 4wd, diff lock, dark leather, 7 seater, double fuel tank\n\nI would like to order this.` },
-            { name: "Toyota Prado J150 2016", price: "4,850,000 KSh", desc: "2700cc petrol, sunroof, 7 seater, leather seats, trade-in allowed, finance accepted", image: "images/autos/j1502.jpg", msg: `*Product:* Toyota Prado J150 2016\n*Price:* 4,850,000 KSh\n*Description:* 2700cc petrol, sunroof, 7 seater, leather seats, trade-in allowed, finance accepted\n\nI would like to order this.` },
-            { name: "Honda CRV 2008", price: "1,150,000 KSh", desc: "2400cc, new tyres, alloy rims, suspension 100%", image: "images/autos/crv2.jpg", msg: `*Product:* Honda CRV 2008\n*Price:* 1,150,000 KSh\n*Description:* 2400cc, new tyres, alloy rims, suspension 100%\n\nI would like to order this.` },
-            { name: "Honda CRV UK Model 2011", price: "1,380,000 KSh", desc: "2000cc, moonroof, leather seats", image: "images/autos/crv-uk.jpg", msg: `*Product:* Honda CRV UK Model 2011\n*Price:* 1,380,000 KSh\n*Description:* 2000cc, moonroof, leather seats\n\nI would like to order this.` },
-            { name: "Toyota Fielder Non-Hybrid", price: "1,550,000 KSh", desc: "1500cc, 2wd, sidemirror indicators, xenon headlights", image: "images/autos/non-hybrid.jpg", msg: `*Product:* Toyota Fielder Non-Hybrid\n*Price:* 1,550,000 KSh\n*Description:* 1500cc, 2wd, sidemirror indicators, xenon headlights\n\nI would like to order this.` },
-            { name: "Nissan Sylphy 2017", price: "1,250,000 KSh", desc: "1800cc, automatic, 2wd, excellently clean, mint condition", image: "images/autos/sylphy2.jpg", msg: `*Product:* Nissan Sylphy 2017\n*Price:* 1,250,000 KSh\n*Description:* 1800cc, automatic, 2wd, excellently clean, mint condition\n\nI would like to order this.` },
-            { name: "Toyota Auris 2009", price: "890,000 KSh", desc: "1490cc", image: "images/autos/auris.jpg", msg: `*Product:* Toyota Auris 2009\n*Price:* 890,000 KSh\n*Description:* 1490cc\n\nI would like to order this.` },
-            { name: "Isuzu Dmax LS Double Cab 2023", price: "4,500,000 KSh (slightly negotiable)", desc: "2500cc diesel, 4WD, manual, leather seats, brand new tyres, ready documents", image: "images/autos/dmax2-2023.jpg", msg: `*Product:* Isuzu Dmax LS Double Cab 2023\n*Price:* 4,500,000 KSh\n*Description:* 2500cc diesel, 4WD, manual, leather seats, brand new tyres, ready documents\n\nI would like to order this.` },
-            { name: "Toyota Passo 2016", price: "820,000 KSh (neg)", desc: "1000cc, original paint, touch screen, keyless, reverse camera, roof rack", image: "images/autos/passo2-2016.jpg", msg: `*Product:* Toyota Passo 2016\n*Price:* 820,000 KSh\n*Description:* 1000cc, original paint, touch screen, keyless, reverse camera, roof rack\n\nI would like to order this.` },
-            { name: "Mercedes Benz C200 2008", price: "1,300,000 KSh", desc: "1800cc, leather seats, original paint, Kiambu road", image: "images/autos/benz-2008.jpg", msg: `*Product:* Mercedes Benz C200 2008\n*Price:* 1,300,000 KSh\n*Description:* 1800cc, leather seats, original paint, Kiambu road\n\nI would like to order this.` },
-            { name: "Toyota Noah 2007", price: "870,000 KSh (slightly neg)", desc: "2000cc auto petrol, Location CBD", image: "images/autos/noah-2007.jpg", msg: `*Product:* Toyota Noah 2007\n*Price:* 870,000 KSh\n*Description:* 2000cc auto petrol, Location CBD\n\nI would like to order this.` },
-            { name: "Toyota Voxy 2018", price: "1,800,000 KSh", desc: "2000cc, 8 seater, Karen", image: "images/autos/voxy-2006.jpg", msg: `*Product:* Toyota Voxy 2018\n*Price:* 1,800,000 KSh\n*Description:* 2000cc, 8 seater, Karen\n\nI would like to order this.` },
-            { name: "Mazda CX3 2017", price: "1,700,000 KSh", desc: "KDT, diesel, auto, Nairobi", image: "images/autos/mazda-kdt.jpg", msg: `*Product:* Mazda CX3 2017\n*Price:* 1,700,000 KSh\n*Description:* KDT, diesel, auto, Nairobi\n\nI would like to order this.` },
-            { name: "Toyota Land Cruiser Prado 2005", price: "2,200,000 KSh", desc: "3000cc, sunroof, 7 seater, diesel", image: "images/autos/prado-2005.jpg", msg: `*Product:* Toyota Land Cruiser Prado 2005\n*Price:* 2,200,000 KSh\n*Description:* 3000cc, sunroof, 7 seater, diesel\n\nI would like to order this.` },
-            { name: "Volkswagen Golf TSI 2015", price: "1,350,000 KSh", desc: "1400cc, automatic, blue motion, alloy rims", image: "images/autos/golf-tsi.jpg", msg: `*Product:* Volkswagen Golf TSI 2015\n*Price:* 1,350,000 KSh\n*Description:* 1400cc, automatic, blue motion, alloy rims\n\nI would like to order this.` },
-            { name: "Volkswagen Golf TSI 2015", price: "1,350,000 KSh", desc: "1400cc, automatic, blue motion, alloy rims", image: "images/autos/golf-2015.jpg", msg: `*Product:* Volkswagen Golf TSI 2015\n*Price:* 1,350,000 KSh\n*Description:* 1400cc, automatic, blue motion, alloy rims\n\nI would like to order this.` },
-            { name: "Toyota Hilux Double Cab 2009", price: "2,500,000 KSh", desc: "3000cc diesel, original paint, fully loaded, clean unit", image: "images/autos/hilux-2009.jpg", msg: `*Product:* Toyota Hilux Double Cab 2009\n*Price:* 2,500,000 KSh\n*Description:* 3000cc diesel, original paint, fully loaded, clean unit\n\nI would like to order this.` },
-            { name: "Toyota Harrier GR", price: "Call for price", desc: "Toyota Harrier GR", image: "images/autos/harrier-gr.jpg", msg: `*Product:* Toyota Harrier GR\n*Price:* Call for price\n*Description:* Toyota Harrier GR\n\nI would like to order this.` },
-            { name: "Toyota Mark X 2wd", price: "650,000 KSh", desc: "2500cc auto, KCH, viewing Westlands", image: "images/autos/markx2.jpg", msg: `*Product:* Toyota Mark X 2wd\n*Price:* 650,000 KSh\n*Description:* 2500cc auto, KCH, viewing Westlands\n\nI would like to order this.` },
-            { name: "Mercedes-Benz GLC 250 4MATIC 2016", price: "4,750,000 KSh (negotiable upon viewing)", desc: "2000cc petrol turbo, 9-speed auto, AWD, panoramic sunroof, 100k km, many features", image: "images/autos/glc.jpg", msg: `*Product:* Mercedes-Benz GLC 250 4MATIC 2016\n*Price:* 4,750,000 KSh\n*Description:* 2000cc petrol turbo, 9-speed auto, AWD, panoramic sunroof, 100k km, many features\n\nI would like to order this.` },
-            { name: "Land Cruiser 100 Series Cygnus 2007", price: "3,200,000 KSh (negotiable)", desc: "4700cc petrol, auto, low mileage, Kiambu Road", image: "images/autos/cruiser-100.jpg", msg: `*Product:* Land Cruiser 100 Series Cygnus 2007\n*Price:* 3,200,000 KSh\n*Description:* 4700cc petrol, auto, low mileage, Kiambu Road\n\nI would like to order this.` },
-            { name: "Toyota Rush Executive 2011", price: "1,360,000 KSh (slightly negotiable)", desc: "1500cc, accident free, original paint, Kahawa Sukari", image: "images/autos/rush-executive2.jpg", msg: `*Product:* Toyota Rush Executive 2011\n*Price:* 1,360,000 KSh\n*Description:* 1500cc, accident free, original paint, Kahawa Sukari\n\nI would like to order this.` },
-            { name: "Honda Airwave 2007", price: "580,000 KSh", desc: "1500cc, working moonroof, alloy rims, android music, mint condition, Kahawa Sukari", image: "images/autos/airwave.jpg", msg: `*Product:* Honda Airwave 2007\n*Price:* 580,000 KSh\n*Description:* 1500cc, working moonroof, alloy rims, android music, mint condition, Kahawa Sukari\n\nI would like to order this.` },
-            { name: "Toyota Axio 1500cc", price: "790,000 KSh", desc: "2wd, super clean, accident free, fully loaded, Kahawa Sukari", image: "images/autos/axio-toyota.jpg", msg: `*Product:* Toyota Axio 1500cc\n*Price:* 790,000 KSh\n*Description:* 2wd, super clean, accident free, fully loaded, Kahawa Sukari\n\nI would like to order this.` },
-            { name: "Toyota Voxy 2011", price: "1,100,000 KSh (very slightly negotiable)", desc: "2000cc 2WD, accident free, power doors, Kahawa Sukari", image: "images/autos/voxy-toyota.jpg", msg: `*Product:* Toyota Voxy 2011\n*Price:* 1,100,000 KSh\n*Description:* 2000cc 2WD, accident free, power doors, Kahawa Sukari\n\nI would like to order this.` },
-            { name: "Nissan Note 2014", price: "685,000 KSh", desc: "1500cc petrol, 2WD, 137000 km, new tyres, android music, reverse camera, fog lights", image: "images/autos/note-nissan.jpg", msg: `*Product:* Nissan Note 2014\n*Price:* 685,000 KSh\n*Description:* 1500cc petrol, 2WD, 137000 km, new tyres, android music, reverse camera, fog lights\n\nI would like to order this.` },
-            { name: "Mercedes Benz C200 Avant-Garde 2012", price: "1,690,000 KSh", desc: "1800cc petrol, half leather, electric seats, reverse camera, Kiambu Road", image: "images/autos/avant-garde.jpg", msg: `*Product:* Mercedes Benz C200 Avant-Garde 2012\n*Price:* 1,690,000 KSh\n*Description:* 1800cc petrol, half leather, electric seats, reverse camera, Kiambu Road\n\nI would like to order this.` },
-            { name: "BMW 325i MM Sport 2004", price: "750,000 KSh", desc: "2200cc petrol, auto, dark leather, daylight headlights, alloy rims", image: "images/autos/bmw-325i.jpg", msg: `*Product:* BMW 325i MM Sport 2004\n*Price:* 750,000 KSh\n*Description:* 2200cc petrol, auto, dark leather, daylight headlights, alloy rims\n\nI would like to order this.` },
-            { name: "Nissan Elgrand", price: "1,490,000 KSh", desc: "2400cc petrol, 7 seater, electric sliding door, push start, recliner seats, alloy rims", image: "images/autos/elgrande.jpg", msg: `*Product:* Nissan Elgrand\n*Price:* 1,490,000 KSh\n*Description:* 2400cc petrol, 7 seater, electric sliding door, push start, recliner seats, alloy rims\n\nI would like to order this.` },
-            { name: "Toyota Prado J120 2005", price: "2,550,000 KSh (slightly negotiable)", desc: "3000cc diesel, auto, 7 seater, leather seats, sunroof, trade-in accepted", image: "images/autos/j120.jpg", msg: `*Product:* Toyota Prado J120 2005\n*Price:* 2,550,000 KSh\n*Description:* 3000cc diesel, auto, 7 seater, leather seats, sunroof, trade-in accepted\n\nI would like to order this.` },
-            { name: "Toyota Passo 2014", price: "670,000 KSh (slightly negotiable)", desc: "1000cc petrol, auto, 5 seater, keyless entry, alloy rims, bank/SACCO finance accepted", image: "images/autos/toyotapasso.jpg", msg: `*Product:* Toyota Passo 2014\n*Price:* 670,000 KSh\n*Description:* 1000cc petrol, auto, 5 seater, keyless entry, alloy rims, bank/SACCO finance accepted\n\nI would like to order this.` },
-            { name: "Subaru Forester XT 2008", price: "1,300,000 KSh (negotiable)", desc: "2500cc turbo charged, accident free, well maintained", image: "images/autos/foresterxt.jpg", msg: `*Product:* Subaru Forester XT 2008\n*Price:* 1,300,000 KSh\n*Description:* 2500cc turbo charged, accident free, well maintained\n\nI would like to order this.` },
-            { name: "Subaru Forester 2002", price: "790,000 KSh", desc: "2000cc petrol, manual 5-speed, original paint, extremely clean, heavy music system", image: "images/autos/forester-subaru.jpg", msg: `*Product:* Subaru Forester 2002\n*Price:* 790,000 KSh\n*Description:* 2000cc petrol, manual 5-speed, original paint, extremely clean, heavy music system\n\nI would like to order this.` },
-            { name: "Toyota Fielder 2006", price: "790,000 KSh", desc: "1500cc, 2WD", image: "images/autos/fieldertoyota.jpg", msg: `*Product:* Toyota Fielder 2006\n*Price:* 790,000 KSh\n*Description:* 1500cc, 2WD\n\nI would like to order this.` },
-            { name: "Land Cruiser Prado J150 TXL 2011", price: "3,980,000 KSh (asking)", desc: "3000cc diesel, 1KD, sunroof, ex-embassy, Nairobi west", image: "images/autos/xembassy.jpg", msg: `*Product:* Land Cruiser Prado J150 TXL 2011\n*Price:* 3,980,000 KSh\n*Description:* 3000cc diesel, 1KD, sunroof, ex-embassy, Nairobi west\n\nI would like to order this.` },
-            { name: "Honda Fit Hybrid 2017", price: "1,300,000 KSh", desc: "1500cc, original paint", image: "images/autos/fithybrid.jpg", msg: `*Product:* Honda Fit Hybrid 2017\n*Price:* 1,300,000 KSh\n*Description:* 1500cc, original paint\n\nI would like to order this.` },
-            { name: "Toyota Vanguard 2010", price: "1,550,000 KSh (slightly negotiable)", desc: "2400cc, 7 seater, auto, dark interior, original paint", image: "images/autos/vanguard.jpg", msg: `*Product:* Toyota Vanguard 2010\n*Price:* 1,550,000 KSh\n*Description:* 2400cc, 7 seater, auto, dark interior, original paint\n\nI would like to order this.` },
-            { name: "Toyota Land Cruiser V8 2015", price: "6,890,000 KSh (asking)", desc: "4500cc diesel, sunroof, auto, cooler box, leather seats, 7 seater, fully loaded", image: "images/autos/toyotav8.jpg", msg: `*Product:* Toyota Land Cruiser V8 2015\n*Price:* 6,890,000 KSh\n*Description:* 4500cc diesel, sunroof, auto, cooler box, leather seats, 7 seater, fully loaded\n\nI would like to order this.` },
-            { name: "Toyota Vanguard 2010", price: "1,590,000 KSh (asking)", desc: "Sunroof, 7 seater, powered seats, semi leather, original paint, extremely clean", image: "images/autos/vanguard-2010.jpg", msg: `*Product:* Toyota Vanguard 2010\n*Price:* 1,590,000 KSh\n*Description:* Sunroof, 7 seater, powered seats, semi leather, original paint, extremely clean\n\nI would like to order this.` },
-            { name: "Lexus RX450h 2009", price: "1,780,000 KSh (asking)", desc: "Hybrid, 99k kms, leather seats, powered/heated seats, powered boot, original paint", image: "images/autos/lexus3.jpg", msg: `*Product:* Lexus RX450h 2009\n*Price:* 1,780,000 KSh\n*Description:* Hybrid, 99k kms, leather seats, powered/heated seats, powered boot, original paint\n\nI would like to order this.` },
-            // 10th August 2026 - Second Batch
-            { name: "Toyota Corolla NZE 2002", price: "650,000 KSh (negotiable)", desc: "1500cc petrol, automatic transmission", image: "images/autos/nze2.jpg", msg: `*Product:* Toyota Corolla NZE 2002\n*Price:* 650,000 KSh\n*Description:* 1500cc petrol, automatic transmission\n\nI would like to order this.` },
-            { name: "Toyota RAV4 KCR 2014", price: "1,850,000 KSh (negotiable)", desc: "2400cc, 4WD, push to start, fabric seats, 133k km", image: "images/autos/rav4kcr.jpg", msg: `*Product:* Toyota RAV4 KCR 2014\n*Price:* 1,850,000 KSh\n*Description:* 2400cc, 4WD, push to start, fabric seats, 133k km\n\nI would like to order this.` },
-            { name: "Mercedes Benz C200 CGI 2010", price: "1,390,000 KSh (slightly negotiable)", desc: "1800cc petrol, half leather, electric seats, reverse camera", image: "images/autos/c200cgi.jpg", msg: `*Product:* Mercedes Benz C200 CGI 2010\n*Price:* 1,390,000 KSh\n*Description:* 1800cc petrol, half leather, electric seats, reverse camera\n\nI would like to order this.` },
-            { name: "Subaru Outback 2008", price: "995,000 KSh", desc: "2500cc petrol, auto, original paint, dark fabric interior, alloy rims", image: "images/autos/outback-black.jpg", msg: `*Product:* Subaru Outback 2008\n*Price:* 995,000 KSh\n*Description:* 2500cc petrol, auto, original paint, dark fabric interior, alloy rims\n\nI would like to order this.` },
-            { name: "Toyota Hiace 1KD 2012", price: "1,780,000 KSh (slightly negotiable)", desc: "3000cc diesel, auto, very clean, new tyres, bank/SACCO finance accepted", image: "images/autos/hiace1kd.jpg", msg: `*Product:* Toyota Hiace 1KD 2012\n*Price:* 1,780,000 KSh\n*Description:* 3000cc diesel, auto, very clean, new tyres, bank/SACCO finance accepted\n\nI would like to order this.` },
-            { name: "Toyota Hilux Single 2009", price: "2,650,000 KSh (Neg)", desc: "2500cc 2KD, 4WD, ex-UN, accident free", image: "images/autos/singlehilux.jpg", msg: `*Product:* Toyota Hilux Single 2009\n*Price:* 2,650,000 KSh\n*Description:* 2500cc 2KD, 4WD, ex-UN, accident free\n\nI would like to order this.` },
-            { name: "Nissan Caravan NV350 2015", price: "1,750,000 KSh", desc: "2000cc petrol, original paint, privately used", image: "images/autos/caravan-nv350.jpg", msg: `*Product:* Nissan Caravan NV350 2015\n*Price:* 1,750,000 KSh\n*Description:* 2000cc petrol, original paint, privately used\n\nI would like to order this.` },
-            { name: "Toyota Corolla Axio 2016", price: "1,450,000 KSh (negotiable)", desc: "1500cc petrol, auto, 2WD", image: "images/autos/axio2wd.jpg", msg: `*Product:* Toyota Corolla Axio 2016\n*Price:* 1,450,000 KSh\n*Description:* 1500cc petrol, auto, 2WD\n\nI would like to order this.` },
-            { name: "Mitsubishi Pajero Shogun 2010", price: "2,200,000 KSh (negotiable)", desc: "2800cc diesel turbo, 7 seater, 134k km", image: "images/autos/shogun2010.jpg", msg: `*Product:* Mitsubishi Pajero Shogun 2010\n*Price:* 2,200,000 KSh\n*Description:* 2800cc diesel turbo, 7 seater, 134k km\n\nI would like to order this.` },
-            { name: "Toyota Vellfire 2010", price: "1,500,000 KSh (slightly negotiable)", desc: "8 seater, beige fabric interior, original paint, 72k km, accident free", image: "images/autos/velfire.jpg", msg: `*Product:* Toyota Vellfire 2010\n*Price:* 1,500,000 KSh\n*Description:* 8 seater, beige fabric interior, original paint, 72k km, accident free\n\nI would like to order this.` },
-            { name: "Toyota Fielder 2011", price: "1,150,000 KSh (neg)", desc: "1500cc, 2WD, extremely clean, fully loaded", image: "images/autos/fielder2011.jpg", msg: `*Product:* Toyota Fielder 2011\n*Price:* 1,150,000 KSh\n*Description:* 1500cc, 2WD, extremely clean, fully loaded\n\nI would like to order this.` },
-            { name: "Toyota Prado TX 2008", price: "Call for price", desc: "2700cc, dark leather, automatic, new tyres, alloy rims, bank/SACCO finance accepted", image: "images/autos/pradotx.jpg", msg: `*Product:* Toyota Prado TX 2008\n*Price:* Call for price\n*Description:* 2700cc, dark leather, automatic, new tyres, alloy rims, bank/SACCO finance accepted\n\nI would like to order this.` },
-            { name: "Toyota Hilux Double Cab 2018", price: "4,700,000 KSh (asking)", desc: "2500cc diesel, auto, used like new, fully loaded, Nairobi", image: "images/autos/doublecab2018.jpg", msg: `*Product:* Toyota Hilux Double Cab 2018\n*Price:* 4,700,000 KSh\n*Description:* 2500cc diesel, auto, used like new, fully loaded, Nairobi\n\nI would like to order this.` },
-            { name: "Mazda Demio Skyactive 2015", price: "950,000 KSh", desc: "1300cc petrol, alloys, Kiambu road", image: "images/autos/skyactive.jpg", msg: `*Product:* Mazda Demio Skyactive 2015\n*Price:* 950,000 KSh\n*Description:* 1300cc petrol, alloys, Kiambu road\n\nI would like to order this.` },
-            { name: "Honda CR-V 2013", price: "1,880,000 KSh", desc: "2000cc, Kiambu road", image: "images/autos/crv2013.jpg", msg: `*Product:* Honda CR-V 2013\n*Price:* 1,880,000 KSh\n*Description:* 2000cc, Kiambu road\n\nI would like to order this.` },
-            { name: "Toyota Crown Athlete 2012", price: "1,390,000 KSh", desc: "2500cc V6 petrol, auto, original paint, electric memory seats, Kiambu road", image: "images/autos/athlete.jpg", msg: `*Product:* Toyota Crown Athlete 2012\n*Price:* 1,390,000 KSh\n*Description:* 2500cc V6 petrol, auto, original paint, electric memory seats, Kiambu road\n\nI would like to order this.` },
-            { name: "Toyota Allion 2009", price: "950,000 KSh", desc: "1500cc, 2WD, alloy rims, fog lights, android screen", image: "images/autos/allion2009.jpg", msg: `*Product:* Toyota Allion 2009\n*Price:* 950,000 KSh\n*Description:* 1500cc, 2WD, alloy rims, fog lights, android screen\n\nI would like to order this.` },
-            { name: "Toyota Fielder 2010 (Quick Sale)", price: "885,000 KSh (slightly negotiable)", desc: "1800cc, 2WD, lady owner, fully loaded, Wotee", image: "images/autos/quicksale.jpg", msg: `*Product:* Toyota Fielder 2010\n*Price:* 885,000 KSh\n*Description:* 1800cc, 2WD, lady owner, fully loaded, Wotee\n\nI would like to order this.` },
-            { name: "Mazda CX-5 AWD 2015", price: "1,650,000 KSh (negotiable)", desc: "2200cc diesel, automatic", image: "images/autos/cx5awd.jpg", msg: `*Product:* Mazda CX-5 AWD 2015\n*Price:* 1,650,000 KSh\n*Description:* 2200cc diesel, automatic\n\nI would like to order this.` },
-            { name: "Isuzu NMR 2021", price: "3,000,000 KSh (slightly negotiable)", desc: "Diesel, 5-speed manual, closed body, new tyres, trade-in accepted", image: "images/autos/nmr.jpg", msg: `*Product:* Isuzu NMR 2021\n*Price:* 3,000,000 KSh\n*Description:* Diesel, 5-speed manual, closed body, new tyres, trade-in accepted\n\nI would like to order this.` },
-            { name: "Mazda Premacy 2007", price: "670,000 KSh", desc: "2000cc petrol, 7 seater, original paint, clean fabric interior, buy and drive", image: "images/autos/premacy.jpg", msg: `*Product:* Mazda Premacy 2007\n*Price:* 670,000 KSh\n*Description:* 2000cc petrol, 7 seater, original paint, clean fabric interior, buy and drive\n\nI would like to order this.` },
-            { name: "Toyota RAV4 2015", price: "2,200,000 KSh", desc: "2400cc petrol, auto, 4WD, alloy rims", image: "images/autos/rav42016.jpg", msg: `*Product:* Toyota RAV4 2015\n*Price:* 2,200,000 KSh\n*Description:* 2400cc petrol, auto, 4WD, alloy rims\n\nI would like to order this.` },
-            { name: "Mazda CX8 2019", price: "3,750,000 KSh (asking)", desc: "2500cc petrol, 7 seater, brown leather, cruise control, low mileage", image: "images/autos/mazdacx8.jpg", msg: `*Product:* Mazda CX8 2019\n*Price:* 3,750,000 KSh\n*Description:* 2500cc petrol, 7 seater, brown leather, cruise control, low mileage\n\nI would like to order this.` },
-            { name: "Toyota Alphard 2006", price: "980,000 KSh (nego)", desc: "2400cc, original paint, auto, new tyres, alloy rims", image: "images/autos/alphard3.jpg", msg: `*Product:* Toyota Alphard 2006\n*Price:* 980,000 KSh\n*Description:* 2400cc, original paint, auto, new tyres, alloy rims\n\nI would like to order this.` },
-            { name: "Nissan Note 2013", price: "690,000 KSh (negotiable)", desc: "1300cc, 2WD, 131k km, ready documents", image: "images/autos/nissannote.jpg", msg: `*Product:* Nissan Note 2013\n*Price:* 690,000 KSh\n*Description:* 1300cc, 2WD, 131k km, ready documents\n\nI would like to order this.` },
-            { name: "Nissan Juke 2014", price: "1,060,000 KSh (slightly negotiable)", desc: "1500cc, 2WD, extremely clean, Parklands", image: "images/autos/nissanjuke.jpg", msg: `*Product:* Nissan Juke 2014\n*Price:* 1,060,000 KSh\n*Description:* 1500cc, 2WD, extremely clean, Parklands\n\nI would like to order this.` },
-            { name: "Toyota Hiace 7L 2016", price: "2,850,000 KSh", desc: "3000cc diesel, auto, 2WD, as clean as new, not locally used", image: "images/autos/hiaceblack.jpg", msg: `*Product:* Toyota Hiace 7L 2016\n*Price:* 2,850,000 KSh\n*Description:* 3000cc diesel, auto, 2WD, as clean as new, not locally used\n\nI would like to order this.` },
-            { name: "Toyota Vanguard 2010", price: "1,650,000 KSh (slightly negotiable)", desc: "2400cc, auto", image: "images/autos/vanguardnew.jpg", msg: `*Product:* Toyota Vanguard 2010\n*Price:* 1,650,000 KSh\n*Description:* 2400cc, auto\n\nI would like to order this.` },
-            { name: "Land Rover Discovery 4 2010", price: "2,499,999 KSh (negotiable)", desc: "3000cc diesel, 123k km, triple sunroof, leather, 7 seater, original paint", image: "images/autos/discovery.jpg", msg: `*Product:* Land Rover Discovery 4 2010\n*Price:* 2,499,999 KSh\n*Description:* 3000cc diesel, 123k km, triple sunroof, leather, 7 seater, original paint\n\nI would like to order this.` },
-            // All existing vehicles from previous versions are preserved below
-        ];
-
-        // ==================== HOUSEHOLD ====================
-        const household = [
-            // ... (all household items remain unchanged from previous versions)
-        ];
-
-        // ==================== SHOES & CLOTHING ====================
-        const shoesClothing = [
-            // ... (all shoes/clothing items remain unchanged from previous versions)
-        ];
-
-        // ==================== KITCHENWARE ====================
-        const kitchenware = [
-            // ... (all kitchenware items remain unchanged from previous versions)
-        ];
-
-        // ==================== BESTSELLING PRODUCTS ====================
-        const products = [
-            { name: "Wireless Bluetooth Earbuds", price: "1,850 KSh", desc: "HD sound", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Earbuds", msg: `*Product:* Wireless Bluetooth Earbuds\n*Price:* 1,850 KSh\n*Description:* HD sound\n\nI would like to order this.` },
-            { name: "Smart LED Desk Lamp", price: "2,450 KSh", desc: "Touch control", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Lamp", msg: `*Product:* Smart LED Desk Lamp\n*Price:* 2,450 KSh\n*Description:* Touch control\n\nI would like to order this.` },
-            { name: "Men's Casual Wristwatch", price: "1,250 KSh", desc: "Water resistant", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Watch", msg: `*Product:* Men's Casual Wristwatch\n*Price:* 1,250 KSh\n*Description:* Water resistant\n\nI would like to order this.` },
-            { name: "Foldable Laptop Stand", price: "1,950 KSh", desc: "Aluminum, ergonomic", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Laptop+Stand", msg: `*Product:* Foldable Laptop Stand\n*Price:* 1,950 KSh\n*Description:* Aluminum, ergonomic\n\nI would like to order this.` }
-        ];
-
-        // Helper functions (unchanged)
-        function renderGrid(containerId, items, whatsappNumber) {
-            const grid = document.getElementById(containerId);
-            if (!grid) return;
-            grid.innerHTML = '';
-            items.forEach(item => {
-                const card = document.createElement('div');
-                card.className = 'product-card';
-                card.innerHTML = `
-                    <img class="product-img" src="${item.image}" alt="${item.name}" loading="lazy" onerror="this.src='https://placehold.co/600x400/eef2f7/1a2a36?text=Image+Not+Found'">
-                    <div class="product-title">${item.name}</div>
-                    <div class="product-price">${item.price}</div>
-                    <div class="product-desc">${item.desc}</div>
-                    <button class="whatsapp-btn" data-msg="${item.msg}">
-                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
-                    </button>
-                `;
-                grid.appendChild(card);
-            });
-            document.querySelectorAll(`#${containerId} .whatsapp-btn`).forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const msg = btn.getAttribute('data-msg');
-                    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank');
-                });
-            });
-        }
-
-        function setupInquiryForm(whatsappNumber) {
-            const form = document.getElementById('inquiryForm');
-            if (!form) return;
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const name = document.getElementById('inquiryName').value;
-                const email = document.getElementById('inquiryEmail').value;
-                const product = document.getElementById('inquiryProduct').value;
-                const message = document.getElementById('inquiryMessage').value;
-                const fullMsg = `*Inquiry from Kylhab Marketing*\n\nName: ${name}\nEmail: ${email}\nProduct/Vehicle: ${product}\nMessage: ${message}`;
-                window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(fullMsg)}`, '_blank');
-            });
-        }
-
-        const MY_WHATSAPP = "254723652430";
-
-        document.addEventListener('DOMContentLoaded', () => {
-            renderGrid('vehiclesGrid', vehicles, MY_WHATSAPP);
-            renderGrid('electronicsGrid', electronics, MY_WHATSAPP);
-            renderGrid('householdGrid', household, MY_WHATSAPP);
-            renderGrid('shoesGrid', shoesClothing, MY_WHATSAPP);
-            renderGrid('kitchenwareGrid', kitchenware, MY_WHATSAPP);
-            renderGrid('productsGrid', products, MY_WHATSAPP);
-            setupInquiryForm(MY_WHATSAPP);
-
-            document.querySelectorAll('.hot-sale-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const productData = JSON.parse(btn.getAttribute('data-product'));
-                    const msg = `*Product:* ${productData.name}\n*Price:* ${productData.price}\n*Description:* ${productData.desc}\n\nI would like to order this.`;
-                    window.open(`https://wa.me/${MY_WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank');
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
