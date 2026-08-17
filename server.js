@@ -1,5 +1,4 @@
-﻿cat > server.js << 'EOF'
-const express = require('express');
+﻿const express = require('express');
 const path = require('path');
 const app = express();
 const port = process.env.PORT || 8080;
@@ -13,7 +12,6 @@ app.get('*', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
-    console.log(`Serving files from: ${__dirname}`);
+    console.log(Server running on port );
+    console.log(Serving files from: );
 });
-EOF

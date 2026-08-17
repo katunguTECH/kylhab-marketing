@@ -1,7 +1,7 @@
-{
+﻿{
   "name": "kylhab-marketing",
   "version": "1.0.0",
-  "description": "Kylhab Marketing – Dropshipping marketplace in Nairobi",
+  "description": "Kylhab Marketing - Dropshipping marketplace in Nairobi",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
