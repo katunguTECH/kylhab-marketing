@@ -1,570 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Kylhab Marketing – Modern Dropshipping in Nairobi</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #ffffff; color: #1a2530; line-height: 1.5; scroll-behavior: smooth; }
-        .container { width: 90%; max-width: 1280px; margin: 0 auto; }
-        .navbar { background: rgba(255,255,255,0.96); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 100; padding: 1rem 0; border-bottom: 1px solid #eef2f5; box-shadow: 0 4px 20px rgba(0,0,0,0.02); }
-        .nav-container { width: 90%; max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .nav-logo { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; }
-        .nav-logo img { height: 40px; width: auto; object-fit: contain; }
-        .logo-text { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; background: linear-gradient(135deg, #1e2f3f, #2c3e50); background-clip: text; -webkit-background-clip: text; color: transparent; }
-        .logo-text span { background: none; color: #e67e22; }
-        .nav-contact { display: flex; gap: 1rem; }
-        .nav-contact a { text-decoration: none; padding: 0.5rem 1.2rem; border-radius: 40px; font-weight: 500; transition: 0.2s; display: inline-flex; align-items: center; gap: 0.5rem; }
-        .nav-contact a:first-child { background: #f5f7fa; color: #1e2f3f; border: 1px solid #e0e7ed; }
-        .nav-contact a:last-child { background: #25D366; color: white; box-shadow: 0 4px 10px rgba(37,211,102,0.2); }
-        .nav-contact a:hover { transform: translateY(-2px); }
-        .hero { padding: 3rem 0 5rem; background: linear-gradient(145deg, #ffffff 0%, #fef9f2 100%); }
-        .hero-grid { display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; }
-        .hero-content { flex: 1; min-width: 280px; }
-        .hero-badge { display: inline-block; background: #eef2f5; padding: 0.3rem 1rem; border-radius: 60px; font-size: 0.8rem; font-weight: 500; margin-bottom: 1.5rem; color: #e67e22; }
-        .hero-content h1 { font-size: 3rem; font-weight: 700; line-height: 1.2; margin-bottom: 1.2rem; letter-spacing: -0.02em; color: #0b2b3b; }
-        .highlight { background: linear-gradient(120deg, #e67e22, #f39c12); background-clip: text; -webkit-background-clip: text; color: transparent; }
-        .hero-content p { font-size: 1.125rem; color: #4a5b6e; margin-bottom: 2rem; max-width: 90%; }
-        .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
-        .btn-primary { background: #1a2a36; color: white; padding: 0.8rem 1.8rem; border-radius: 48px; text-decoration: none; font-weight: 600; transition: 0.2s; display: inline-flex; align-items: center; gap: 0.5rem; border: none; cursor: pointer; }
-        .btn-primary:hover { background: #e67e22; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
-        .btn-secondary { background: transparent; border: 1.5px solid #cdd7e2; color: #1a2a36; padding: 0.8rem 1.8rem; border-radius: 48px; text-decoration: none; font-weight: 600; transition: 0.2s; display: inline-flex; align-items: center; gap: 0.5rem; }
-        .btn-secondary:hover { border-color: #e67e22; color: #e67e22; transform: translateY(-2px); }
-        .full-width { width: 100%; justify-content: center; }
-        .hero-trust { display: flex; gap: 1.8rem; flex-wrap: wrap; font-size: 0.85rem; color: #2c3e50; font-weight: 500; }
-        .trust-item i { color: #e67e22; margin-right: 0.4rem; }
-        .hero-visual { flex: 1; min-width: 260px; position: relative; display: flex; justify-content: center; align-items: center; }
-        .hero-shape { width: 260px; height: 260px; background: radial-gradient(circle, rgba(230,126,34,0.12) 0%, rgba(230,126,34,0.02) 80%); border-radius: 50%; animation: pulse 6s infinite ease; }
-        .hero-float-card { position: absolute; background: white; padding: 0.7rem 1.4rem; border-radius: 100px; box-shadow: 0 20px 35px -10px rgba(0,0,0,0.1); font-weight: 600; display: flex; align-items: center; gap: 0.5rem; bottom: 25%; right: 15%; border: 1px solid #f0e2d4; }
-        @keyframes pulse { 0% { transform: scale(0.95); opacity: 0.6; } 50% { transform: scale(1.05); opacity: 1; } 100% { transform: scale(0.95); opacity: 0.6; } }
-        .trust-banner { background: #1a2530; color: white; padding: 1.5rem 0; margin: 0; }
-        .trust-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; text-align: center; }
-        .trust-stat { font-weight: 600; display: flex; align-items: center; gap: 0.6rem; font-size: 1rem; }
-        .trust-stat i { color: #e67e22; font-size: 1.2rem; }
-        .quick-nav { background: #ffffff; padding: 1rem 0; border-bottom: 1px solid #eef2f5; text-align: center; }
-        .quick-nav a { display: inline-block; margin: 0 0.75rem; padding: 0.5rem 1.2rem; background: #f5f7fa; border-radius: 40px; text-decoration: none; color: #1e2f3f; font-weight: 500; transition: 0.2s; }
-        .quick-nav a:hover { background: #e67e22; color: white; transform: translateY(-2px); }
-        .bidhaa-section { background: linear-gradient(135deg, #f5e6d3, #ffd5a4); padding: 2rem 0; margin: 1rem auto; border-radius: 48px; width: 90%; max-width: 1280px; }
-        .bidhaa-section h2 { text-align: center; font-size: 2.5rem; font-weight: 800; color: #b33a0e; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
-        .brand-new-today { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); padding: 2rem 0; margin: 1rem auto; border-radius: 48px; width: 90%; max-width: 1280px; }
-        .brand-new-today h2 { text-align: center; font-size: 2.5rem; font-weight: 800; color: #2e7d32; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
-        .hot-sale-section { background: linear-gradient(145deg, #fff4e8, #ffe6d5); padding: 2rem 0; margin-bottom: 2rem; border-radius: 32px; width: 90%; max-width: 1280px; margin-left: auto; margin-right: auto; }
-        .hot-sale-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; justify-items: center; }
-        .hot-sale-card { background: white; border-radius: 32px; overflow: hidden; box-shadow: 0 12px 28px -8px rgba(0,0,0,0.1); display: flex; flex-direction: column; width: 100%; max-width: 350px; }
-        .hot-sale-card img { width: 100%; height: 220px; object-fit: cover; }
-        .hot-sale-info { padding: 1.5rem; text-align: center; }
-        .hot-sale-badge { background: #e67e22; color: white; display: inline-block; padding: 0.2rem 1rem; border-radius: 40px; font-size: 0.8rem; margin-bottom: 0.5rem; }
-        .hot-sale-info h3 { font-size: 1.6rem; font-weight: 700; color: #e67e22; margin-bottom: 0.5rem; }
-        .hot-sale-price { font-size: 1.4rem; font-weight: 700; color: #1a2a36; margin: 0.5rem 0; }
-        .products-section { padding: 5rem 0; background: #ffffff; }
-        .section-header { text-align: center; margin-bottom: 3rem; }
-        .section-header h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; }
-        .section-header p { color: #5b6e82; }
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; }
-        .product-card { background: white; border-radius: 32px; overflow: hidden; transition: all 0.25s ease; box-shadow: 0 12px 28px -8px rgba(0,0,0,0.05); border: 1px solid #edf2f7; padding-bottom: 1.5rem; }
-        .product-card:hover { transform: translateY(-6px); box-shadow: 0 25px 35px -12px rgba(0,0,0,0.12); border-color: #e2eaf1; }
-        .product-img { width: 100%; height: 220px; object-fit: cover; background: #f8fafc; }
-        .product-title { font-size: 1.2rem; font-weight: 700; margin: 1rem 1rem 0.3rem; }
-        .product-price { color: #e67e22; font-size: 1.35rem; font-weight: 700; margin: 0.2rem 1rem; }
-        .product-desc { font-size: 0.85rem; color: #6f7e8f; margin: 0 1rem 1rem; line-height: 1.4; }
-        .whatsapp-btn { background: #25D366; color: white; border: none; margin: 0 1rem; padding: 0.75rem; border-radius: 44px; font-weight: 700; cursor: pointer; width: calc(100% - 2rem); transition: 0.15s; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
-        .whatsapp-btn:hover { background: #128C7E; transform: scale(0.97); }
-        .inquiry { background: #fafcfc; padding: 4rem 0; border-top: 1px solid #eef2f5; border-bottom: 1px solid #eef2f5; }
-        .inquiry-container { display: flex; gap: 3rem; flex-wrap: wrap; }
-        .inquiry-content { flex: 1.2; }
-        .inquiry-content h3 { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.8rem; }
-        .inquiry-features { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; }
-        .inquiry-features div i { color: #e67e22; margin-right: 0.5rem; }
-        .inquiry-form { flex: 0.9; background: white; padding: 2rem; border-radius: 32px; box-shadow: 0 20px 35px -10px rgba(0,0,0,0.05); border: 1px solid #eef2f5; }
-        .form-row { display: flex; gap: 1rem; margin-bottom: 0.8rem; flex-wrap: wrap; }
-        .form-row input { flex: 1; }
-        input, textarea { width: 100%; padding: 1rem; border: 1px solid #dee6ef; border-radius: 24px; font-family: 'Inter', sans-serif; margin-bottom: 1rem; transition: 0.1s; font-size: 0.9rem; }
-        input:focus, textarea:focus { outline: none; border-color: #e67e22; box-shadow: 0 0 0 3px rgba(230,126,34,0.1); }
-        footer { background: #0c1a24; color: #b9cdde; padding-top: 3rem; }
-        .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #1f3a48; }
-        .footer-brand h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
-        .footer-brand span { color: #e67e22; }
-        .footer-links ul { list-style: none; }
-        .footer-links ul li a { color: #b9cdde; text-decoration: none; transition: 0.1s; }
-        .footer-links ul li a:hover { color: #e67e22; }
-        .footer-contact p i { margin-right: 0.5rem; width: 1.5rem; }
-        .footer-bottom { text-align: center; padding: 2rem 0; font-size: 0.8rem; }
-        .payment-methods { margin-top: 0.5rem; font-size: 0.75rem; }
-        @media (max-width: 760px) { .hero-content h1 { font-size: 2rem; } .hero-content p { max-width: 100%; } .hide-mobile { display: none; } .nav-contact a { padding: 0.4rem 1rem; } .trust-grid { justify-content: center; } .quick-nav a { display: inline-block; margin: 0.3rem; } .nav-logo img { height: 30px; } .logo-text { font-size: 1.2rem; } }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Kylhab Marketing – Nairobi Dropshipping</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet"/>
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <img src="images-kylhab-logo.jpg" alt="Kylhab Marketing Logo" onerror="this.src='https://placehold.co/40x40/e67e22/white?text=K'">
-                <span class="logo-text">Kylhab <span>Marketing</span></span>
-            </a>
-            <div class="nav-contact">
-                <a href="tel:+254723652430" class="nav-phone"><i class="fas fa-phone-alt"></i> <span class="hide-mobile">Call Us</span></a>
-                <a href="https://wa.me/254723652430?text=Hello%2C%20I%20would%20like%20to%20order" class="nav-wa" target="_blank"><i class="fab fa-whatsapp"></i> <span class="hide-mobile">Order on WhatsApp</span></a>
+    <!-- ===== HEADER / NAV ===== -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="images/kylhab-logo.png" alt="Kylhab Marketing" style="height:50px; width:auto;">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#vehicles">Autos</a></li>
+                    <li><a href="#electronics">Electronics</a></li>
+                    <li><a href="#household">Household</a></li>
+                    <li><a href="#kitchenware">Kitchenware</a></li>
+                    <li><a href="#shoes">Shoes &amp; Clothing</a></li>
+                    <li><a href="#products">Bestsellers</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:+254723652430" class="call-btn"><i class="fas fa-phone-alt"></i> Call Us</a>
+                <a href="https://wa.me/254723652430" class="whatsapp-header-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                </a>
             </div>
         </div>
-    </nav>
+    </header>
 
+    <!-- ===== HERO SECTION ===== -->
     <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <div class="hero-badge">Trusted Dropshipping Partner in Nairobi</div>
-                <h1>Quality products & vehicles, <span class="highlight">delivered fast.</span></h1>
-                <p>Shop the latest gadgets, accessories, lifestyle essentials, and verified autos. Experience a seamless, modern shopping experience with Kylhab Marketing.</p>
-                <div class="hero-buttons">
-                    <a href="#vehicles" class="btn-primary">View Vehicles <i class="fas fa-car"></i></a>
-                    <a href="#products" class="btn-secondary">Shop Products <i class="fas fa-shopping-bag"></i></a>
-                </div>
-                <div class="hero-trust">
-                    <div class="trust-item"><i class="fas fa-truck-fast"></i> 2-5 Day Delivery</div>
-                    <div class="trust-item"><i class="fas fa-shield-alt"></i> M-PESA Secure</div>
-                    <div class="trust-item"><i class="fas fa-headset"></i> 24/7 Support</div>
-                </div>
+        <div class="container hero-content">
+            <h1>Trusted Dropshipping Partner in Nairobi</h1>
+            <p>Quality products &amp; vehicles, delivered fast.</p>
+            <div class="hero-buttons">
+                <a href="#vehicles" class="btn-primary">Shop Now</a>
+                <a href="#inquiry" class="btn-secondary">Bulk Inquiry</a>
             </div>
-            <div class="hero-visual">
-                <div class="hero-shape"></div>
-                <div class="hero-float-card"><i class="fas fa-box-open"></i><span>#1 Rated in Nairobi</span></div>
+            <div class="hero-stats">
+                <span><i class="fas fa-truck"></i> 2-5 Day Delivery</span>
+                <span><i class="fas fa-shield-alt"></i> M-PESA Secure</span>
+                <span><i class="fas fa-headset"></i> 24/7 Support</span>
             </div>
         </div>
     </section>
 
-    <div class="trust-banner">
-        <div class="container trust-grid">
-            <div class="trust-stat"><i class="fas fa-shopping-bag"></i> <span>500+ Orders Fulfilled</span></div>
-            <div class="trust-stat"><i class="fas fa-star"></i> <span>4.9 ★ Customer Rating</span></div>
-            <div class="trust-stat"><i class="fas fa-clock"></i> <span>Same-Day Dispatch</span></div>
-        </div>
-    </div>
-
-    <!-- Quick Navigation -->
-    <div class="quick-nav">
+    <!-- ===== QUICK LINKS ===== -->
+    <section class="quick-links">
         <div class="container">
-            <a href="#vehicles"><i class="fas fa-car"></i> Autos</a>
-            <a href="#electronics"><i class="fas fa-mobile-alt"></i> Electronics</a>
-            <a href="#shoes-clothing"><i class="fas fa-tshirt"></i> Shoes & Clothing</a>
-            <a href="#household"><i class="fas fa-home"></i> Household</a>
-            <a href="#kitchenware"><i class="fas fa-utensils"></i> Kitchenware</a>
+            <a href="#vehicles" class="quick-link"><i class="fas fa-car"></i> Autos</a>
+            <a href="#electronics" class="quick-link"><i class="fas fa-mobile-alt"></i> Electronics</a>
+            <a href="#shoes" class="quick-link"><i class="fas fa-shoe-prints"></i> Shoes &amp; Clothing</a>
+            <a href="#household" class="quick-link"><i class="fas fa-couch"></i> Household</a>
+            <a href="#kitchenware" class="quick-link"><i class="fas fa-utensils"></i> Kitchenware</a>
         </div>
-    </div>
+    </section>
 
-    <main>
-        <!-- Featured Autos (FIRST on the page) -->
-        <section class="products-section" id="vehicles">
-            <div class="container">
-                <div class="section-header">
-                    <h2>🚗 Featured Autos</h2>
-                    <p>Latest arrivals and verified used cars in Nairobi – drive home today.</p>
-                </div>
-                <div class="products-grid" id="vehiclesGrid"></div>
-            </div>
-        </section>
-
-        <!-- BIDHAA KALI KALI!!!!!! Section -->
-        <div class="bidhaa-section">
-            <div class="container">
-                <h2>🔥 BIDHAA KALI KALI!!!!!! 🔥</h2>
-                <div class="hot-sale-grid">
-                    <div class="hot-sale-card">
-                        <img src="images/shoes-clothing-textiles/walker-boots.jpg" alt="Walker Boots" onerror="this.src='https://placehold.co/600x400/eef2f7/1a2a36?text=Walker+Boots'">
-                        <div class="hot-sale-info">
-                            <span class="hot-sale-badge">HOT</span>
-                            <h3>Walker Boots</h3>
-                            <p class="hot-sale-price">3,300 KSh</p>
-                            <p>Sizes 37-43, normal fitting</p>
-                            <button class="whatsapp-btn hot-sale-btn" data-product='{"name":"Walker Boots","price":"3,300 KSh","desc":"Sizes 37-43, normal fitting"}'>Order on WhatsApp <i class="fab fa-whatsapp"></i></button>
-                        </div>
-                    </div>
-                    <div class="hot-sale-card">
-                        <img src="images/shoes-clothing-textiles/prada-boots.jpg" alt="Prada Boots" onerror="this.src='https://placehold.co/600x400/eef2f7/1a2a36?text=Prada+Boots'">
-                        <div class="hot-sale-info">
-                            <span class="hot-sale-badge">HOT</span>
-                            <h3>Prada Boots</h3>
-                            <p class="hot-sale-price">3,500 KSh</p>
-                            <p>Sizes 37-42</p>
-                            <button class="whatsapp-btn hot-sale-btn" data-product='{"name":"Prada Boots","price":"3,500 KSh","desc":"Sizes 37-42"}'>Order on WhatsApp <i class="fab fa-whatsapp"></i></button>
-                        </div>
-                    </div>
-                </div>
+    <!-- ===== BIDHAA KALI KALI SECTION ===== -->
+    <section class="hot-sale" id="bidhaa-kali">
+        <div class="container">
+            <h2 class="section-title">🔥 BIDHAA KALI KALI!!!!!! 🔥</h2>
+            <div class="grid" id="hotDealsGrid">
+                <!-- This section is populated dynamically -->
             </div>
         </div>
+    </section>
 
-        <!-- BRAND NEW TODAY section -->
-        <div class="brand-new-today">
-            <div class="container">
-                <h2>🔥 BRAND NEW TODAY!!!!!!!!!!! 🔥</h2>
-                <div class="hot-sale-grid">
-                    <div class="hot-sale-card">
-                        <img src="images/shoes-clothing-textiles/arsenal-hoodie.jpg" alt="Arsenal Hoodie" onerror="this.src='https://placehold.co/600x400/eef2f7/1a2a36?text=Arsenal+Hoodie'">
-                        <div class="hot-sale-info">
-                            <span class="hot-sale-badge">NEW</span>
-                            <h3>Arsenal Hoodie</h3>
-                            <p class="hot-sale-price">3,700 KSh</p>
-                            <p>High quality, Sizes L-3XL</p>
-                            <button class="whatsapp-btn hot-sale-btn" data-product='{"name":"Arsenal Hoodie","price":"3,700 KSh","desc":"High quality, Sizes L-3XL"}'>Order on WhatsApp <i class="fab fa-whatsapp"></i></button>
-                        </div>
-                    </div>
-                    <div class="hot-sale-card">
-                        <img src="images/electronics-phones/jeep-laptop.jpg" alt="Jeep Laptop Bag" onerror="this.src='https://placehold.co/600x400/eef2f7/1a2a36?text=Jeep+Laptop+Bag'">
-                        <div class="hot-sale-info">
-                            <span class="hot-sale-badge">NEW</span>
-                            <h3>Jeep Laptop Bag</h3>
-                            <p class="hot-sale-price">3,300 KSh</p>
-                            <p>Size 38*27, fits laptop up to 15 inch</p>
-                            <button class="whatsapp-btn hot-sale-btn" data-product='{"name":"Jeep Laptop Bag","price":"3,300 KSh","desc":"Size 38*27, fits laptop up to 15 inch"}'>Order on WhatsApp <i class="fab fa-whatsapp"></i></button>
-                        </div>
-                    </div>
-                </div>
+    <!-- ===== BRAND NEW HOT SALE ===== -->
+    <section class="hot-sale" id="brand-new-hot-sale">
+        <div class="container">
+            <h2 class="section-title">🔥 BRAND NEW HOT SALE 🔥</h2>
+            <div class="grid" id="hotSaleGrid">
+                <!-- This section is populated dynamically -->
             </div>
         </div>
+    </section>
 
-        <!-- Brand New Hot Sale -->
-        <div class="hot-sale-section">
-            <div class="container">
-                <div class="hot-sale-grid">
-                    <div class="hot-sale-card">
-                        <img src="images/electronics-phones/iphone-15pro.jpg" alt="iPhone 15 Pro" onerror="this.src='https://placehold.co/600x400/eef2f7/1a2a36?text=iPhone+15+Pro'">
-                        <div class="hot-sale-info">
-                            <span class="hot-sale-badge">🔥 BRAND NEW HOT SALE 🔥</span>
-                            <h3>iPhone 15 Pro</h3>
-                            <p class="hot-sale-price">88,000 KSh</p>
-                            <p>256GB, 84% battery, physical SIM, clean unit</p>
-                            <button class="whatsapp-btn hot-sale-btn" data-product='{"name":"iPhone 15 Pro","price":"88,000 KSh","desc":"256GB, 84% battery, physical SIM, clean unit"}'>Order on WhatsApp <i class="fab fa-whatsapp"></i></button>
-                        </div>
-                    </div>
-                    <div class="hot-sale-card">
-                        <img src="images/shoes-clothing-textiles/arsenal-throwback.jpg" alt="Arsenal Retro Jersey" onerror="this.src='https://placehold.co/600x400/eef2f7/1a2a36?text=Arsenal+Jersey'">
-                        <div class="hot-sale-info">
-                            <span class="hot-sale-badge">🔥 BRAND NEW HOT SALE 🔥</span>
-                            <h3>Arsenal Retro Jersey</h3>
-                            <p class="hot-sale-price">3,000 KSh</p>
-                            <p>Authentic retro design, high quality, limited stock</p>
-                            <button class="whatsapp-btn hot-sale-btn" data-product='{"name":"Arsenal Retro Jersey","price":"3,000 KSh","desc":"Authentic retro design, high quality, limited stock"}'>Order on WhatsApp <i class="fab fa-whatsapp"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- ===== VEHICLES SECTION ===== -->
+    <section id="vehicles">
+        <div class="container">
+            <h2 class="section-title">🚗 Featured Autos</h2>
+            <p class="section-subtitle">Latest arrivals and verified used cars in Nairobi – drive home today.</p>
+            <div class="grid" id="vehiclesGrid"></div>
         </div>
+    </section>
 
-        <!-- Electronics & Phones -->
-        <section class="products-section" id="electronics" style="background-color: #f0f7ff;">
-            <div class="container">
-                <div class="section-header">
-                    <h2>📱 Electronics & Phones</h2>
-                    <p>Latest smartphones and gadgets – quality assured.</p>
-                </div>
-                <div class="products-grid" id="electronicsGrid"></div>
-            </div>
-        </section>
+    <!-- ===== ELECTRONICS SECTION ===== -->
+    <section id="electronics">
+        <div class="container">
+            <h2 class="section-title">📱 Electronics &amp; Phones</h2>
+            <p class="section-subtitle">Latest smartphones and gadgets – quality assured.</p>
+            <div class="grid" id="electronicsGrid"></div>
+        </div>
+    </section>
 
-        <!-- Household Items -->
-        <section class="products-section" id="household" style="background-color: #f9fafc;">
-            <div class="container">
-                <div class="section-header">
-                    <h2>🏠 Household Items</h2>
-                    <p>Comfort and style for your home – duvets, bikes, scooters & more.</p>
-                </div>
-                <div class="products-grid" id="householdGrid"></div>
-            </div>
-        </section>
+    <!-- ===== HOUSEHOLD SECTION ===== -->
+    <section id="household">
+        <div class="container">
+            <h2 class="section-title">🏠 Household Items</h2>
+            <p class="section-subtitle">Comfort and style for your home – duvets, bikes, scooters &amp; more.</p>
+            <div class="grid" id="householdGrid"></div>
+        </div>
+    </section>
 
-        <!-- Shoes, Clothing & Textiles -->
-        <section class="products-section" id="shoes-clothing" style="background-color: #fff9f5;">
-            <div class="container">
-                <div class="section-header">
-                    <h2>👟 Shoes, Clothing & Textiles</h2>
-                    <p>Trendy fashion, comfy footwear, and premium tracksuits.</p>
-                </div>
-                <div class="products-grid" id="shoesGrid"></div>
-            </div>
-        </section>
+    <!-- ===== KITCHENWARE SECTION ===== -->
+    <section id="kitchenware">
+        <div class="container">
+            <h2 class="section-title">🍳 Premium Kitchenware</h2>
+            <p class="section-subtitle">Upgrade your cooking with the latest cookware, appliances &amp; serving essentials.</p>
+            <div class="grid" id="kitchenwareGrid"></div>
+        </div>
+    </section>
 
-        <!-- Premium Kitchenware -->
-        <section class="products-section" id="kitchenware" style="background-color: #fefaf5;">
-            <div class="container">
-                <div class="section-header">
-                    <h2>🍳 Premium Kitchenware</h2>
-                    <p>Upgrade your cooking with the latest cookware, appliances & serving essentials.</p>
-                </div>
-                <div class="products-grid" id="kitchenwareGrid"></div>
-            </div>
-        </section>
+    <!-- ===== SHOES & CLOTHING SECTION ===== -->
+    <section id="shoes">
+        <div class="container">
+            <h2 class="section-title">👟 Shoes, Clothing &amp; Textiles</h2>
+            <p class="section-subtitle">Trendy fashion, comfy footwear, and premium tracksuits.</p>
+            <div class="grid" id="shoesGrid"></div>
+        </div>
+    </section>
 
-        <!-- Bestselling Products -->
-        <section class="products-section" id="products">
-            <div class="container">
-                <div class="section-header">
-                    <h2>🔥 Bestselling Products</h2>
-                    <p>Curated just for you. High-quality, in-demand items at unbeatable prices.</p>
-                </div>
-                <div class="products-grid" id="productsGrid"></div>
-            </div>
-        </section>
+    <!-- ===== BESTSELLING PRODUCTS SECTION ===== -->
+    <section id="products">
+        <div class="container">
+            <h2 class="section-title">🔥 Bestselling Products</h2>
+            <p class="section-subtitle">Curated just for you. High-quality, in-demand items at unbeatable prices.</p>
+            <div class="grid" id="productsGrid"></div>
+        </div>
+    </section>
 
-        <!-- Inquiry Section -->
-        <section id="inquiry" class="inquiry">
-            <div class="container inquiry-container">
-                <div class="inquiry-content">
-                    <h3>📦 Need a specific product or vehicle?</h3>
-                    <p>Tell us what you're looking for — we'll source it directly from our trusted partners. Fast, reliable, and hassle-free.</p>
-                    <div class="inquiry-features">
-                        <div><i class="fas fa-check-circle"></i> Bulk pricing available</div>
-                        <div><i class="fas fa-check-circle"></i> Express delivery options</div>
-                        <div><i class="fas fa-check-circle"></i> Dedicated account manager</div>
-                    </div>
+    <!-- ===== INQUIRY FORM ===== -->
+    <section id="inquiry">
+        <div class="container">
+            <h2 class="section-title">📦 Need a specific product or vehicle?</h2>
+            <p>Tell us what you're looking for — we'll source it directly from our trusted partners. Fast, reliable, and hassle-free.</p>
+            <ul class="inquiry-benefits">
+                <li><i class="fas fa-check-circle"></i> Bulk pricing available</li>
+                <li><i class="fas fa-check-circle"></i> Express delivery options</li>
+                <li><i class="fas fa-check-circle"></i> Dedicated account manager</li>
+            </ul>
+            <form id="inquiryForm">
+                <div class="form-row">
+                    <input type="text" id="inquiryName" placeholder="Your name" required />
+                    <input type="email" id="inquiryEmail" placeholder="Your email" required />
                 </div>
-                <div class="inquiry-form">
-                    <form id="inquiryForm">
-                        <div class="form-row">
-                            <input type="text" id="inquiryName" placeholder="Your name" required>
-                            <input type="email" id="inquiryEmail" placeholder="Your email">
-                        </div>
-                        <input type="text" id="inquiryProduct" placeholder="Product or vehicle you're looking for" required>
-                        <textarea id="inquiryMessage" rows="3" placeholder="Any details... quantity, specs, etc."></textarea>
-                        <button type="submit" class="btn-primary full-width">Send Inquiry <i class="fab fa-whatsapp"></i></button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
+                <input type="text" id="inquiryProduct" placeholder="Product or vehicle you're looking for" required />
+                <textarea id="inquiryMessage" rows="4" placeholder="Any details... quantity, specs, etc."></textarea>
+                <button type="submit" class="btn-primary"><i class="fab fa-whatsapp"></i> Send Inquiry</button>
+            </form>
+        </div>
+    </section>
 
+    <!-- ===== FOOTER ===== -->
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand"><h3>Kylhab <span>Marketing</span></h3><p>Your trusted dropshipping partner, delivering quality products & vehicles across Kenya.</p></div>
-                <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="#">Home</a></li><li><a href="#vehicles">Vehicles</a></li><li><a href="#electronics">Electronics</a></li><li><a href="#household">Household</a></li><li><a href="#shoes-clothing">Clothing</a></li><li><a href="#kitchenware">Kitchenware</a></li><li><a href="#products">Products</a></li><li><a href="#inquiry">Bulk Orders</a></li><li><a href="#">Terms & Conditions</a></li></ul></div>
-                <div class="footer-contact"><h4>Contact Us</h4><p><i class="fab fa-whatsapp"></i> +254 723 652 430</p><p><i class="fas fa-envelope"></i> alice.mweru@dukaapp.online</p></div>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Kylhab Marketing</h3>
+                <p>Your trusted dropshipping partner, delivering quality products &amp; vehicles across Kenya.</p>
             </div>
-            <div class="footer-bottom"><p>&copy; 2026 Kylhab Marketing – Nairobi, Kenya. All rights reserved.</p><p class="payment-methods">We accept: M-PESA | Airtel Money | Bank Transfer</p></div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#vehicles">Home</a></li>
+                    <li><a href="#electronics">Electronics</a></li>
+                    <li><a href="#vehicles">Vehicles</a></li>
+                    <li><a href="#household">Household</a></li>
+                    <li><a href="#shoes">Clothing</a></li>
+                    <li><a href="#kitchenware">Kitchenware</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#inquiry">Bulk Orders</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#inquiry">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-phone"></i> <a href="tel:+254723652430">+254 723 652 430</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:alice.mweru@dukaapp.online">alice.mweru@dukaapp.online</a></p>
+                <div class="payment-icons">
+                    <span>We accept:</span>
+                    <i class="fas fa-mobile-alt" title="M-PESA"></i>
+                    <i class="fas fa-mobile-alt" title="Airtel Money"></i>
+                    <i class="fas fa-university" title="Bank Transfer"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Kylhab Marketing – Nairobi, Kenya. All rights reserved.</p>
         </div>
     </footer>
 
-    <script>
-        // ==================== ELECTRONICS ====================
-        const electronics = [
-            { name: "iPhone 15 Pro", price: "88,000 KSh", desc: "256GB, 84% battery, physical SIM, clean unit", image: "images/electronics-phones/iphone-15pro.jpg", msg: `*Product:* iPhone 15 Pro\n*Price:* 88,000 KSh\n*Description:* 256GB, 84% battery, physical SIM, clean unit\n\nI would like to order this.` },
-            { name: "iPhone 16 Pro Max", price: "128,000 KSh", desc: "256GB, 100%🔋, E‑Sim, Cycle Count 2", image: "images/electronics-phones/iphone-16pro.jpg", msg: `*Product:* iPhone 16 Pro Max\n*Price:* 128,000 KSh\n*Description:* 256GB, 100%🔋, E‑Sim, Cycle Count 2\n\nI would like to order this.` },
-            { name: "MacBook Pro (2020)", price: "70,000 KSh", desc: "Intel Core i7, 32GB RAM, 512GB SSD", image: "images/electronics-phones/macbook-pro.jpg", msg: `*Product:* MacBook Pro 2020\n*Price:* 70,000 KSh\n*Description:* Intel Core i7, 32GB RAM, 512GB SSD\n\nI would like to order this.` },
-            { name: "Jeep Laptop Bag", price: "3,300 KSh", desc: "Size 38*27, fits laptop up to 15 inch", image: "images/electronics-phones/jeep-laptop.jpg", msg: `*Product:* Jeep Laptop Bag\n*Price:* 3,300 KSh\n*Description:* Size 38*27, fits laptop up to 15 inch\n\nI would like to order this.` }
-        ];
+    <!-- ===== SCRIPTS ===== -->
+    <!-- Load data files FIRST -->
+    <script src="vehicles.js"></script>
+    <script src="electronics.js"></script>
+    <script src="household.js"></script>
+    <script src="kitchenware.js"></script>
+    <script src="shoes-clothing.js"></script>
 
-        // ==================== VEHICLES ====================
-        const vehicles = [
-            // 9th August 2026 - First Batch
-            { name: "Honda Insight", price: "430,000 KSh", desc: "1330cc Petrol, auto", image: "images/autos/honda-insight.jpg", msg: `*Product:* Honda Insight\n*Price:* 430,000 KSh\n*Description:* 1330cc Petrol, auto\n\nI would like to order this.` },
-            { name: "Subaru Forester 2.0xs (sg5)", price: "499,000 KSh (now)", desc: "2000cc auto, KBZ", image: "images/autos/forester-20xs.jpg", msg: `*Product:* Subaru Forester 2.0xs (sg5)\n*Price:* 499,000 KSh\n*Description:* 2000cc auto, KBZ\n\nI would like to order this.` },
-            { name: "Toyota Noah Azr60", price: "210,000 KSh (now)", desc: "1990cc, KBU", image: "images/autos/noah-azr60.jpg", msg: `*Product:* Toyota Noah Azr60\n*Price:* 210,000 KSh\n*Description:* 1990cc, KBU\n\nI would like to order this.` },
-            { name: "Volkswagen Up", price: "310,000 KSh (now)", desc: "1000cc, KDE, viewing Jogoo Rd", image: "images/autos/volkswagen-u.jpg", msg: `*Product:* Volkswagen Up\n*Price:* 310,000 KSh\n*Description:* 1000cc, KDE, viewing Jogoo Rd\n\nI would like to order this.` },
-            { name: "Toyota Land Cruiser Prado Tx 2017", price: "5,200,000 KSh", desc: "KDT, diesel, automatic, sunroof", image: "images/autos/prado-kdt.jpg", msg: `*Product:* Toyota Land Cruiser Prado Tx 2017\n*Price:* 5,200,000 KSh\n*Description:* KDT, diesel, automatic, sunroof\n\nI would like to order this.` },
-            { name: "Lexus Nx 200t 2015", price: "2,500,000 KSh", desc: "2000cc, KDE, viewing Jogoo Rd", image: "images/autos/lexus-nx.jpg", msg: `*Product:* Lexus Nx 200t 2015\n*Price:* 2,500,000 KSh\n*Description:* 2000cc, KDE, viewing Jogoo Rd\n\nI would like to order this.` },
-            { name: "BMW (Price Drop)", price: "480,000 KSh", desc: "Price drop", image: "images/autos/bmw.jpg", msg: `*Product:* BMW\n*Price:* 480,000 KSh\n*Description:* Price drop\n\nI would like to order this.` },
-            { name: "Toyota Harrier KDP 2016", price: "2,450,000 KSh", desc: "KDP", image: "images/autos/harrier-kdp.jpg", msg: `*Product:* Toyota Harrier KDP 2016\n*Price:* 2,450,000 KSh\n*Description:* KDP\n\nI would like to order this.` },
-            { name: "Nissan X-Trail 2010", price: "970,000 KSh", desc: "2000cc auto", image: "images/autos/xtrail-2010.jpg", msg: `*Product:* Nissan X-Trail 2010\n*Price:* 970,000 KSh\n*Description:* 2000cc auto\n\nI would like to order this.` },
-            { name: "Volkswagen Golf Variant 2012", price: "750,000 KSh", desc: "1200cc, automatic", image: "images/autos/volkswagen-golf.jpg", msg: `*Product:* Volkswagen Golf Variant 2012\n*Price:* 750,000 KSh\n*Description:* 1200cc, automatic\n\nI would like to order this.` },
-            { name: "Toyota Harrier 2016", price: "2,499,000 KSh", desc: "133K km, leather interior, Nairobi", image: "images/autos/harrier-2016.jpg", msg: `*Product:* Toyota Harrier 2016\n*Price:* 2,499,000 KSh\n*Description:* 133K km, leather interior, Nairobi\n\nI would like to order this.` },
-            { name: "Isuzu Dmax-tfs 86 2019", price: "1,900,000 KSh", desc: "2500cc manual diesel, KCW local", image: "images/autos/dmax-tfs.jpg", msg: `*Product:* Isuzu Dmax-tfs 86 2019\n*Price:* 1,900,000 KSh\n*Description:* 2500cc manual diesel, KCW local\n\nI would like to order this.` },
-            { name: "Toyota Vitz Jewela 2012", price: "695,000 KSh", desc: "1000cc, alloy wheels, original paint, Kiambu road", image: "images/autos/vitz-jewela.jpg", msg: `*Product:* Toyota Vitz Jewela 2012\n*Price:* 695,000 KSh\n*Description:* 1000cc, alloy wheels, original paint, Kiambu road\n\nI would like to order this.` },
-            { name: "Toyota Rush Executive 2011", price: "1,360,000 KSh (slightly negotiable)", desc: "1500cc, accident free, original paint, Kahawa Sukari", image: "images/autos/rush-executive.jpg", msg: `*Product:* Toyota Rush Executive 2011\n*Price:* 1,360,000 KSh\n*Description:* 1500cc, accident free, original paint, Kahawa Sukari\n\nI would like to order this.` },
-            { name: "Mercedes Benz C200-Kompresser 2007", price: "1,100,000 KSh (very slightly negotiable)", desc: "1800cc petrol, dark leather, Kahawa Sukari", image: "images/autos/benz-c200.jpg", msg: `*Product:* Mercedes Benz C200-Kompresser 2007\n*Price:* 1,100,000 KSh\n*Description:* 1800cc petrol, dark leather, Kahawa Sukari\n\nI would like to order this.` },
-            { name: "Nissan Note Nismo E-power 2017", price: "870,000 KSh", desc: "1200cc auto", image: "images/autos/note-nismo.jpg", msg: `*Product:* Nissan Note Nismo E-power 2017\n*Price:* 870,000 KSh\n*Description:* 1200cc auto\n\nI would like to order this.` },
-            { name: "Nissan XTRAIL NT32 2015", price: "1,200,000 KSh", desc: "@all", image: "images/autos/xtrail-nt32.jpg", msg: `*Product:* Nissan XTRAIL NT32 2015\n*Price:* 1,200,000 KSh\n*Description:* @all\n\nI would like to order this.` },
-            { name: "Outlander 2012", price: "840,000 KSh", desc: "@all", image: "images/autos/outlander-2013.jpg", msg: `*Product:* Outlander 2012\n*Price:* 840,000 KSh\n*Description:* @all\n\nI would like to order this.` },
-            { name: "Volkswagen Jetta 2008", price: "380,000 KSh", desc: "Petrol auto 2000cc", image: "images/autos/jetta-2008.jpg", msg: `*Product:* Volkswagen Jetta 2008\n*Price:* 380,000 KSh\n*Description:* Petrol auto 2000cc\n\nI would like to order this.` },
-            { name: "Mazda CX-5 2018", price: "2,600,000 KSh", desc: "2000cc petrol, auto, nearest offer", image: "images/autos/cx5-2018.jpg", msg: `*Product:* Mazda CX-5 2018\n*Price:* 2,600,000 KSh\n*Description:* 2000cc petrol, auto, nearest offer\n\nI would like to order this.` },
-            { name: "Toyota Hiace 7L 2012", price: "1,420,000 KSh (neg)", desc: "1kd-2wheel, auto-diesel", image: "images/autos/hiace7l2-2012.jpg", msg: `*Product:* Toyota Hiace 7L 2012\n*Price:* 1,420,000 KSh\n*Description:* 1kd-2wheel, auto-diesel\n\nI would like to order this.` },
-            { name: "Nissan Tiida 2010", price: "585,000 KSh (slightly negotiable)", desc: "1500cc, accident free, ready documents", image: "images/autos/tiida2-2010.jpg", msg: `*Product:* Nissan Tiida 2010\n*Price:* 585,000 KSh\n*Description:* 1500cc, accident free, ready documents\n\nI would like to order this.` },
-            { name: "Toyota Hilux Double Cab 2009", price: "2,280,000 KSh (slightly negotiable)", desc: "3000cc diesel, automatic, optional 4WD, original paint", image: "images/autos/hiluxdoublecab-2009.jpg", msg: `*Product:* Toyota Hilux Double Cab 2009\n*Price:* 2,280,000 KSh\n*Description:* 3000cc diesel, automatic, optional 4WD, original paint\n\nI would like to order this.` },
-            { name: "Toyota Fielder Hybrid G Grade 2019", price: "1,800,000 KSh", desc: "1500cc hybrid, 2WD, silver, push start, reverse camera", image: "images/autos/fieler-hybrid3.jpg", msg: `*Product:* Toyota Fielder Hybrid G Grade 2019\n*Price:* 1,800,000 KSh\n*Description:* 1500cc hybrid, 2WD, silver, push start, reverse camera\n\nI would like to order this.` },
-            { name: "Toyota Ractis 2017", price: "1,120,000 KSh (negotiable)", desc: "1300cc, original paint", image: "images/autos/ractis2-2017.jpg", msg: `*Product:* Toyota Ractis 2017\n*Price:* 1,120,000 KSh\n*Description:* 1300cc, original paint\n\nI would like to order this.` },
-            { name: "Isuzu Dmax 3.0TD V-Cross 2015", price: "3,150,000 KSh", desc: "Diesel, automatic, leather interior, Parklands", image: "images/autos/dmax-2015.jpg", msg: `*Product:* Isuzu Dmax 3.0TD V-Cross 2015\n*Price:* 3,150,000 KSh\n*Description:* Diesel, automatic, leather interior, Parklands\n\nI would like to order this.` },
-            { name: "Ford Ranger 2200cc Diesel", price: "1,750,000 KSh (slightly neg)", desc: "4WD optional, locally manufactured, original paint", image: "images/autos/ford-ranger.jpg", msg: `*Product:* Ford Ranger 2200cc Diesel\n*Price:* 1,750,000 KSh\n*Description:* 4WD optional, locally manufactured, original paint\n\nI would like to order this.` },
-            { name: "Toyota Hilux Single Locally Assembled 2017", price: "2,450,000 KSh", desc: "2500cc, 2WD, extremely clean", image: "images/autos/hilux-single.jpg", msg: `*Product:* Toyota Hilux Single Locally Assembled 2017\n*Price:* 2,450,000 KSh\n*Description:* 2500cc, 2WD, extremely clean\n\nI would like to order this.` },
-            { name: "Mazda Bongo 2014", price: "800,000 KSh (negotiable)", desc: "1800cc", image: "images/autos/bongo-2014.jpg", msg: `*Product:* Mazda Bongo 2014\n*Price:* 800,000 KSh\n*Description:* 1800cc\n\nI would like to order this.` },
-            { name: "Toyota Ist 1300cc", price: "580,000 KSh", desc: "Clean unit", image: "images/autos/toyota-ist.jpg", msg: `*Product:* Toyota Ist 1300cc\n*Price:* 580,000 KSh\n*Description:* Clean unit\n\nI would like to order this.` },
-            { name: "Toyota RAV4 2008", price: "1,350,000 KSh (Neg)", desc: "2400cc, 4WD, accident free, well maintained", image: "images/autos/rav4-2008.jpg", msg: `*Product:* Toyota RAV4 2008\n*Price:* 1,350,000 KSh\n*Description:* 2400cc, 4WD, accident free, well maintained\n\nI would like to order this.` },
-            { name: "Toyota Prado J95 2002", price: "1,480,000 KSh", desc: "3000cc diesel, automatic, 7 seater, accident free", image: "images/autos/j95-2002.jpg", msg: `*Product:* Toyota Prado J95 2002\n*Price:* 1,480,000 KSh\n*Description:* 3000cc diesel, automatic, 7 seater, accident free\n\nI would like to order this.` },
-            { name: "Subaru Outback 2008", price: "995,000 KSh", desc: "2500cc petrol, automatic, original paint, dark interior", image: "images/autos/subaru.jpg", msg: `*Product:* Subaru Outback 2008\n*Price:* 995,000 KSh\n*Description:* 2500cc petrol, automatic, original paint, dark interior\n\nI would like to order this.` },
-            { name: "Ford Ranger 2012", price: "2,440,000 KSh", desc: "3.2 diesel turbo, 4x4, leather interior, fully serviced", image: "images/autos/ford-ranger2.jpg", msg: `*Product:* Ford Ranger 2012\n*Price:* 2,440,000 KSh\n*Description:* 3.2 diesel turbo, 4x4, leather interior, fully serviced\n\nI would like to order this.` },
-            { name: "Toyota Wish 2012", price: "1,100,000 KSh", desc: "1800cc Valvematic, well maintained", image: "images/autos/wish4-2012.jpg", msg: `*Product:* Toyota Wish 2012\n*Price:* 1,100,000 KSh\n*Description:* 1800cc Valvematic, well maintained\n\nI would like to order this.` },
-            { name: "Nissan NV200 2014", price: "1,080,000 KSh (negotiable)", desc: "1600cc, original paint, well maintained, Kiambu road", image: "images/autos/nissan-nv200.jpg", msg: `*Product:* Nissan NV200 2014\n*Price:* 1,080,000 KSh\n*Description:* 1600cc, original paint, well maintained, Kiambu road\n\nI would like to order this.` },
-            { name: "Toyota Hilux Surf 2007", price: "1,800,000 KSh (negotiable)", desc: "2700cc petrol, auto, optional 4WD, sunroof", image: "images/autos/hilux-surf.jpg", msg: `*Product:* Toyota Hilux Surf 2007\n*Price:* 1,800,000 KSh\n*Description:* 2700cc petrol, auto, optional 4WD, sunroof\n\nI would like to order this.` },
-            { name: "Mercedes Benz C200 2010", price: "1,400,000 KSh", desc: "1800cc, original paint, accident free", image: "images/autos/benz2-c200.jpg", msg: `*Product:* Mercedes Benz C200 2010\n*Price:* 1,400,000 KSh\n*Description:* 1800cc, original paint, accident free\n\nI would like to order this.` },
-            { name: "Mercedes Benz C200 2010", price: "1,450,000 KSh (negotiable)", desc: "1800cc petrol, auto, electric seats, trade-in accepted", image: "images/autos/2010-c200.jpg", msg: `*Product:* Mercedes Benz C200 2010\n*Price:* 1,450,000 KSh\n*Description:* 1800cc petrol, auto, electric seats, trade-in accepted\n\nI would like to order this.` },
-            { name: "Subaru Forester SJ5 2014", price: "2,100,000 KSh (negotiable)", desc: "2000cc, keyless entry, X-mode, seat warmers, smart stop, fog lights, DRL", image: "images/autos/sj5.jpg", msg: `*Product:* Subaru Forester SJ5 2014\n*Price:* 2,100,000 KSh\n*Description:* 2000cc, keyless entry, X-mode, seat warmers, smart stop, fog lights, DRL\n\nI would like to order this.` },
-            { name: "Honda CR-V 2014", price: "2,200,000 KSh (negotiable)", desc: "2000cc, 2WD, original paint, ready documents", image: "images/autos/crv.jpg", msg: `*Product:* Honda CR-V 2014\n*Price:* 2,200,000 KSh\n*Description:* 2000cc, 2WD, original paint, ready documents\n\nI would like to order this.` },
-            { name: "Toyota Corolla Axio 2016", price: "1,450,000 KSh (negotiable)", desc: "1500cc petrol, auto, 2WD", image: "images/autos/axio4-2014.jpg", msg: `*Product:* Toyota Corolla Axio 2016\n*Price:* 1,450,000 KSh\n*Description:* 1500cc petrol, auto, 2WD\n\nI would like to order this.` },
-            { name: "Toyota Vitz Jewela 2015", price: "890,000 KSh (negotiable)", desc: "1320cc petrol, automatic", image: "images/autos/jewela.jpg", msg: `*Product:* Toyota Vitz Jewela 2015\n*Price:* 890,000 KSh\n*Description:* 1320cc petrol, automatic\n\nI would like to order this.` },
-            { name: "Toyota Belta 2012", price: "740,000 KSh", desc: "1300cc, 2WD, clean, buy and drive", image: "images/autos/belta-2014.jpg", msg: `*Product:* Toyota Belta 2012\n*Price:* 740,000 KSh\n*Description:* 1300cc, 2WD, clean, buy and drive\n\nI would like to order this.` },
-            { name: "Nissan Juke 2014", price: "1,060,000 KSh (slightly negotiable)", desc: "1500cc, 2WD, extremely clean, musically armed, Parklands", image: "images/autos/juke.jpg", msg: `*Product:* Nissan Juke 2014\n*Price:* 1,060,000 KSh\n*Description:* 1500cc, 2WD, extremely clean, musically armed, Parklands\n\nI would like to order this.` },
-            { name: "Toyota RAV4 2014", price: "1,850,000 KSh (negotiable)", desc: "2400cc, 4WD, push start, fabric seats, 133k km", image: "images/autos/rav4.jpg", msg: `*Product:* Toyota RAV4 2014\n*Price:* 1,850,000 KSh\n*Description:* 2400cc, 4WD, push start, fabric seats, 133k km\n\nI would like to order this.` },
-            { name: "Nissan X-Trail NT31 2009", price: "1,080,000 KSh", desc: "2000cc petrol, black leather, seat warmers, alloy rims, buy and drive", image: "images/autos/nt31.jpg", msg: `*Product:* Nissan X-Trail NT31 2009\n*Price:* 1,080,000 KSh\n*Description:* 2000cc petrol, black leather, seat warmers, alloy rims, buy and drive\n\nI would like to order this.` },
-            { name: "Toyota Hiace Staff Van 2012", price: "1,780,000 KSh (slightly neg)", desc: "1KD diesel, 3000cc, automatic, very clean, new tyres", image: "images/autos/hiace-staffvan.jpg", msg: `*Product:* Toyota Hiace Staff Van 2012\n*Price:* 1,780,000 KSh\n*Description:* 1KD diesel, 3000cc, automatic, very clean, new tyres\n\nI would like to order this.` },
-            { name: "Toyota Hilux Single 2009", price: "2,650,000 KSh (Neg)", desc: "2500cc 2KD, 4WD, ex-UN, accident free, bank/SACCO finance accepted", image: "images/autos/single-2009.jpg", msg: `*Product:* Toyota Hilux Single 2009\n*Price:* 2,650,000 KSh\n*Description:* 2500cc 2KD, 4WD, ex-UN, accident free, bank/SACCO finance accepted\n\nI would like to order this.` },
-            { name: "Mitsubishi Pajero Shogun 2010", price: "2,200,000 KSh (negotiable)", desc: "4M40 engine, 2800cc diesel turbo, 7 seater, 134k km", image: "images/autos/shogun.jpg", msg: `*Product:* Mitsubishi Pajero Shogun 2010\n*Price:* 2,200,000 KSh\n*Description:* 4M40 engine, 2800cc diesel turbo, 7 seater, 134k km\n\nI would like to order this.` },
-            { name: "Land Cruiser Prado 2013", price: "3,450,000 KSh", desc: "2700cc, 5 seater, petrol, fabric beige interior, original paint", image: "images/autos/prado-2013.jpg", msg: `*Product:* Land Cruiser Prado 2013\n*Price:* 3,450,000 KSh\n*Description:* 2700cc, 5 seater, petrol, fabric beige interior, original paint\n\nI would like to order this.` },
-            { name: "Honda Shuttle Hybrid 2016", price: "1,300,000 KSh", desc: "1500cc, fully loaded, half leather interior", image: "images/autos/shuttle.jpg", msg: `*Product:* Honda Shuttle Hybrid 2016\n*Price:* 1,300,000 KSh\n*Description:* 1500cc, fully loaded, half leather interior\n\nI would like to order this.` },
-            { name: "Toyota Harrier 240G 2007", price: "1,270,000 KSh", desc: "2400cc, extremely clean", image: "images/autos/240g.jpg", msg: `*Product:* Toyota Harrier 240G 2007\n*Price:* 1,270,000 KSh\n*Description:* 2400cc, extremely clean\n\nI would like to order this.` },
-            { name: "Toyota Land Cruiser Prado J150 2012", price: "4,850,000 KSh", desc: "3000cc, auto, 4wd, diff lock, dark leather, 7 seater, double fuel tank", image: "images/autos/j150.jpg", msg: `*Product:* Toyota Land Cruiser Prado J150 2012\n*Price:* 4,850,000 KSh\n*Description:* 3000cc, auto, 4wd, diff lock, dark leather, 7 seater, double fuel tank\n\nI would like to order this.` },
-            { name: "Toyota Prado J150 2016", price: "4,850,000 KSh", desc: "2700cc petrol, sunroof, 7 seater, leather seats, trade-in allowed, finance accepted", image: "images/autos/j1502.jpg", msg: `*Product:* Toyota Prado J150 2016\n*Price:* 4,850,000 KSh\n*Description:* 2700cc petrol, sunroof, 7 seater, leather seats, trade-in allowed, finance accepted\n\nI would like to order this.` },
-            { name: "Honda CRV 2008", price: "1,150,000 KSh", desc: "2400cc, new tyres, alloy rims, suspension 100%", image: "images/autos/crv2.jpg", msg: `*Product:* Honda CRV 2008\n*Price:* 1,150,000 KSh\n*Description:* 2400cc, new tyres, alloy rims, suspension 100%\n\nI would like to order this.` },
-            { name: "Honda CRV UK Model 2011", price: "1,380,000 KSh", desc: "2000cc, moonroof, leather seats", image: "images/autos/crv-uk.jpg", msg: `*Product:* Honda CRV UK Model 2011\n*Price:* 1,380,000 KSh\n*Description:* 2000cc, moonroof, leather seats\n\nI would like to order this.` },
-            { name: "Toyota Fielder Non-Hybrid", price: "1,550,000 KSh", desc: "1500cc, 2wd, sidemirror indicators, xenon headlights", image: "images/autos/non-hybrid.jpg", msg: `*Product:* Toyota Fielder Non-Hybrid\n*Price:* 1,550,000 KSh\n*Description:* 1500cc, 2wd, sidemirror indicators, xenon headlights\n\nI would like to order this.` },
-            { name: "Nissan Sylphy 2017", price: "1,250,000 KSh", desc: "1800cc, automatic, 2wd, excellently clean, mint condition", image: "images/autos/sylphy2.jpg", msg: `*Product:* Nissan Sylphy 2017\n*Price:* 1,250,000 KSh\n*Description:* 1800cc, automatic, 2wd, excellently clean, mint condition\n\nI would like to order this.` },
-            { name: "Toyota Auris 2009", price: "890,000 KSh", desc: "1490cc", image: "images/autos/auris.jpg", msg: `*Product:* Toyota Auris 2009\n*Price:* 890,000 KSh\n*Description:* 1490cc\n\nI would like to order this.` },
-            { name: "Isuzu Dmax LS Double Cab 2023", price: "4,500,000 KSh (slightly negotiable)", desc: "2500cc diesel, 4WD, manual, leather seats, brand new tyres, ready documents", image: "images/autos/dmax2-2023.jpg", msg: `*Product:* Isuzu Dmax LS Double Cab 2023\n*Price:* 4,500,000 KSh\n*Description:* 2500cc diesel, 4WD, manual, leather seats, brand new tyres, ready documents\n\nI would like to order this.` },
-            { name: "Toyota Passo 2016", price: "820,000 KSh (neg)", desc: "1000cc, original paint, touch screen, keyless, reverse camera, roof rack", image: "images/autos/passo2-2016.jpg", msg: `*Product:* Toyota Passo 2016\n*Price:* 820,000 KSh\n*Description:* 1000cc, original paint, touch screen, keyless, reverse camera, roof rack\n\nI would like to order this.` },
-            { name: "Mercedes Benz C200 2008", price: "1,300,000 KSh", desc: "1800cc, leather seats, original paint, Kiambu road", image: "images/autos/benz-2008.jpg", msg: `*Product:* Mercedes Benz C200 2008\n*Price:* 1,300,000 KSh\n*Description:* 1800cc, leather seats, original paint, Kiambu road\n\nI would like to order this.` },
-            { name: "Toyota Noah 2007", price: "870,000 KSh (slightly neg)", desc: "2000cc auto petrol, Location CBD", image: "images/autos/noah-2007.jpg", msg: `*Product:* Toyota Noah 2007\n*Price:* 870,000 KSh\n*Description:* 2000cc auto petrol, Location CBD\n\nI would like to order this.` },
-            { name: "Toyota Voxy 2018", price: "1,800,000 KSh", desc: "2000cc, 8 seater, Karen", image: "images/autos/voxy-2006.jpg", msg: `*Product:* Toyota Voxy 2018\n*Price:* 1,800,000 KSh\n*Description:* 2000cc, 8 seater, Karen\n\nI would like to order this.` },
-            { name: "Mazda CX3 2017", price: "1,700,000 KSh", desc: "KDT, diesel, auto, Nairobi", image: "images/autos/mazda-kdt.jpg", msg: `*Product:* Mazda CX3 2017\n*Price:* 1,700,000 KSh\n*Description:* KDT, diesel, auto, Nairobi\n\nI would like to order this.` },
-            { name: "Toyota Land Cruiser Prado 2005", price: "2,200,000 KSh", desc: "3000cc, sunroof, 7 seater, diesel", image: "images/autos/prado-2005.jpg", msg: `*Product:* Toyota Land Cruiser Prado 2005\n*Price:* 2,200,000 KSh\n*Description:* 3000cc, sunroof, 7 seater, diesel\n\nI would like to order this.` },
-            { name: "Volkswagen Golf TSI 2015", price: "1,350,000 KSh", desc: "1400cc, automatic, blue motion, alloy rims", image: "images/autos/golf-tsi.jpg", msg: `*Product:* Volkswagen Golf TSI 2015\n*Price:* 1,350,000 KSh\n*Description:* 1400cc, automatic, blue motion, alloy rims\n\nI would like to order this.` },
-            { name: "Volkswagen Golf TSI 2015", price: "1,350,000 KSh", desc: "1400cc, automatic, blue motion, alloy rims", image: "images/autos/golf-2015.jpg", msg: `*Product:* Volkswagen Golf TSI 2015\n*Price:* 1,350,000 KSh\n*Description:* 1400cc, automatic, blue motion, alloy rims\n\nI would like to order this.` },
-            { name: "Toyota Hilux Double Cab 2009", price: "2,500,000 KSh", desc: "3000cc diesel, original paint, fully loaded, clean unit", image: "images/autos/hilux-2009.jpg", msg: `*Product:* Toyota Hilux Double Cab 2009\n*Price:* 2,500,000 KSh\n*Description:* 3000cc diesel, original paint, fully loaded, clean unit\n\nI would like to order this.` },
-            { name: "Toyota Harrier GR", price: "Call for price", desc: "Toyota Harrier GR", image: "images/autos/harrier-gr.jpg", msg: `*Product:* Toyota Harrier GR\n*Price:* Call for price\n*Description:* Toyota Harrier GR\n\nI would like to order this.` },
-            { name: "Toyota Mark X 2wd", price: "650,000 KSh", desc: "2500cc auto, KCH, viewing Westlands", image: "images/autos/markx2.jpg", msg: `*Product:* Toyota Mark X 2wd\n*Price:* 650,000 KSh\n*Description:* 2500cc auto, KCH, viewing Westlands\n\nI would like to order this.` },
-            { name: "Mercedes-Benz GLC 250 4MATIC 2016", price: "4,750,000 KSh (negotiable upon viewing)", desc: "2000cc petrol turbo, 9-speed auto, AWD, panoramic sunroof, 100k km, many features", image: "images/autos/glc.jpg", msg: `*Product:* Mercedes-Benz GLC 250 4MATIC 2016\n*Price:* 4,750,000 KSh\n*Description:* 2000cc petrol turbo, 9-speed auto, AWD, panoramic sunroof, 100k km, many features\n\nI would like to order this.` },
-            { name: "Land Cruiser 100 Series Cygnus 2007", price: "3,200,000 KSh (negotiable)", desc: "4700cc petrol, auto, low mileage, Kiambu Road", image: "images/autos/cruiser-100.jpg", msg: `*Product:* Land Cruiser 100 Series Cygnus 2007\n*Price:* 3,200,000 KSh\n*Description:* 4700cc petrol, auto, low mileage, Kiambu Road\n\nI would like to order this.` },
-            { name: "Toyota Rush Executive 2011", price: "1,360,000 KSh (slightly negotiable)", desc: "1500cc, accident free, original paint, Kahawa Sukari", image: "images/autos/rush-executive2.jpg", msg: `*Product:* Toyota Rush Executive 2011\n*Price:* 1,360,000 KSh\n*Description:* 1500cc, accident free, original paint, Kahawa Sukari\n\nI would like to order this.` },
-            { name: "Honda Airwave 2007", price: "580,000 KSh", desc: "1500cc, working moonroof, alloy rims, android music, mint condition, Kahawa Sukari", image: "images/autos/airwave.jpg", msg: `*Product:* Honda Airwave 2007\n*Price:* 580,000 KSh\n*Description:* 1500cc, working moonroof, alloy rims, android music, mint condition, Kahawa Sukari\n\nI would like to order this.` },
-            { name: "Toyota Axio 1500cc", price: "790,000 KSh", desc: "2wd, super clean, accident free, fully loaded, Kahawa Sukari", image: "images/autos/axio-toyota.jpg", msg: `*Product:* Toyota Axio 1500cc\n*Price:* 790,000 KSh\n*Description:* 2wd, super clean, accident free, fully loaded, Kahawa Sukari\n\nI would like to order this.` },
-            { name: "Toyota Voxy 2011", price: "1,100,000 KSh (very slightly negotiable)", desc: "2000cc 2WD, accident free, power doors, Kahawa Sukari", image: "images/autos/voxy-toyota.jpg", msg: `*Product:* Toyota Voxy 2011\n*Price:* 1,100,000 KSh\n*Description:* 2000cc 2WD, accident free, power doors, Kahawa Sukari\n\nI would like to order this.` },
-            { name: "Nissan Note 2014", price: "685,000 KSh", desc: "1500cc petrol, 2WD, 137000 km, new tyres, android music, reverse camera, fog lights", image: "images/autos/note-nissan.jpg", msg: `*Product:* Nissan Note 2014\n*Price:* 685,000 KSh\n*Description:* 1500cc petrol, 2WD, 137000 km, new tyres, android music, reverse camera, fog lights\n\nI would like to order this.` },
-            { name: "Mercedes Benz C200 Avant-Garde 2012", price: "1,690,000 KSh", desc: "1800cc petrol, half leather, electric seats, reverse camera, Kiambu Road", image: "images/autos/avant-garde.jpg", msg: `*Product:* Mercedes Benz C200 Avant-Garde 2012\n*Price:* 1,690,000 KSh\n*Description:* 1800cc petrol, half leather, electric seats, reverse camera, Kiambu Road\n\nI would like to order this.` },
-            { name: "BMW 325i MM Sport 2004", price: "750,000 KSh", desc: "2200cc petrol, auto, dark leather, daylight headlights, alloy rims", image: "images/autos/bmw-325i.jpg", msg: `*Product:* BMW 325i MM Sport 2004\n*Price:* 750,000 KSh\n*Description:* 2200cc petrol, auto, dark leather, daylight headlights, alloy rims\n\nI would like to order this.` },
-            { name: "Nissan Elgrand", price: "1,490,000 KSh", desc: "2400cc petrol, 7 seater, electric sliding door, push start, recliner seats, alloy rims", image: "images/autos/elgrande.jpg", msg: `*Product:* Nissan Elgrand\n*Price:* 1,490,000 KSh\n*Description:* 2400cc petrol, 7 seater, electric sliding door, push start, recliner seats, alloy rims\n\nI would like to order this.` },
-            { name: "Toyota Prado J120 2005", price: "2,550,000 KSh (slightly negotiable)", desc: "3000cc diesel, auto, 7 seater, leather seats, sunroof, trade-in accepted", image: "images/autos/j120.jpg", msg: `*Product:* Toyota Prado J120 2005\n*Price:* 2,550,000 KSh\n*Description:* 3000cc diesel, auto, 7 seater, leather seats, sunroof, trade-in accepted\n\nI would like to order this.` },
-            { name: "Toyota Passo 2014", price: "670,000 KSh (slightly negotiable)", desc: "1000cc petrol, auto, 5 seater, keyless entry, alloy rims, bank/SACCO finance accepted", image: "images/autos/toyotapasso.jpg", msg: `*Product:* Toyota Passo 2014\n*Price:* 670,000 KSh\n*Description:* 1000cc petrol, auto, 5 seater, keyless entry, alloy rims, bank/SACCO finance accepted\n\nI would like to order this.` },
-            { name: "Subaru Forester XT 2008", price: "1,300,000 KSh (negotiable)", desc: "2500cc turbo charged, accident free, well maintained", image: "images/autos/foresterxt.jpg", msg: `*Product:* Subaru Forester XT 2008\n*Price:* 1,300,000 KSh\n*Description:* 2500cc turbo charged, accident free, well maintained\n\nI would like to order this.` },
-            { name: "Subaru Forester 2002", price: "790,000 KSh", desc: "2000cc petrol, manual 5-speed, original paint, extremely clean, heavy music system", image: "images/autos/forester-subaru.jpg", msg: `*Product:* Subaru Forester 2002\n*Price:* 790,000 KSh\n*Description:* 2000cc petrol, manual 5-speed, original paint, extremely clean, heavy music system\n\nI would like to order this.` },
-            { name: "Toyota Fielder 2006", price: "790,000 KSh", desc: "1500cc, 2WD", image: "images/autos/fieldertoyota.jpg", msg: `*Product:* Toyota Fielder 2006\n*Price:* 790,000 KSh\n*Description:* 1500cc, 2WD\n\nI would like to order this.` },
-            { name: "Land Cruiser Prado J150 TXL 2011", price: "3,980,000 KSh (asking)", desc: "3000cc diesel, 1KD, sunroof, ex-embassy, Nairobi west", image: "images/autos/xembassy.jpg", msg: `*Product:* Land Cruiser Prado J150 TXL 2011\n*Price:* 3,980,000 KSh\n*Description:* 3000cc diesel, 1KD, sunroof, ex-embassy, Nairobi west\n\nI would like to order this.` },
-            { name: "Honda Fit Hybrid 2017", price: "1,300,000 KSh", desc: "1500cc, original paint", image: "images/autos/fithybrid.jpg", msg: `*Product:* Honda Fit Hybrid 2017\n*Price:* 1,300,000 KSh\n*Description:* 1500cc, original paint\n\nI would like to order this.` },
-            { name: "Toyota Vanguard 2010", price: "1,550,000 KSh (slightly negotiable)", desc: "2400cc, 7 seater, auto, dark interior, original paint", image: "images/autos/vanguard.jpg", msg: `*Product:* Toyota Vanguard 2010\n*Price:* 1,550,000 KSh\n*Description:* 2400cc, 7 seater, auto, dark interior, original paint\n\nI would like to order this.` },
-            { name: "Toyota Land Cruiser V8 2015", price: "6,890,000 KSh (asking)", desc: "4500cc diesel, sunroof, auto, cooler box, leather seats, 7 seater, fully loaded", image: "images/autos/toyotav8.jpg", msg: `*Product:* Toyota Land Cruiser V8 2015\n*Price:* 6,890,000 KSh\n*Description:* 4500cc diesel, sunroof, auto, cooler box, leather seats, 7 seater, fully loaded\n\nI would like to order this.` },
-            { name: "Toyota Vanguard 2010", price: "1,590,000 KSh (asking)", desc: "Sunroof, 7 seater, powered seats, semi leather, original paint, extremely clean", image: "images/autos/vanguard-2010.jpg", msg: `*Product:* Toyota Vanguard 2010\n*Price:* 1,590,000 KSh\n*Description:* Sunroof, 7 seater, powered seats, semi leather, original paint, extremely clean\n\nI would like to order this.` },
-            { name: "Lexus RX450h 2009", price: "1,780,000 KSh (asking)", desc: "Hybrid, 99k kms, leather seats, powered/heated seats, powered boot, original paint", image: "images/autos/lexus3.jpg", msg: `*Product:* Lexus RX450h 2009\n*Price:* 1,780,000 KSh\n*Description:* Hybrid, 99k kms, leather seats, powered/heated seats, powered boot, original paint\n\nI would like to order this.` },
-            // 10th August 2026 - Second Batch
-            { name: "Toyota Corolla NZE 2002", price: "650,000 KSh (negotiable)", desc: "1500cc petrol, automatic transmission", image: "images/autos/nze2.jpg", msg: `*Product:* Toyota Corolla NZE 2002\n*Price:* 650,000 KSh\n*Description:* 1500cc petrol, automatic transmission\n\nI would like to order this.` },
-            { name: "Toyota RAV4 KCR 2014", price: "1,850,000 KSh (negotiable)", desc: "2400cc, 4WD, push to start, fabric seats, 133k km", image: "images/autos/rav4kcr.jpg", msg: `*Product:* Toyota RAV4 KCR 2014\n*Price:* 1,850,000 KSh\n*Description:* 2400cc, 4WD, push to start, fabric seats, 133k km\n\nI would like to order this.` },
-            { name: "Mercedes Benz C200 CGI 2010", price: "1,390,000 KSh (slightly negotiable)", desc: "1800cc petrol, half leather, electric seats, reverse camera", image: "images/autos/c200cgi.jpg", msg: `*Product:* Mercedes Benz C200 CGI 2010\n*Price:* 1,390,000 KSh\n*Description:* 1800cc petrol, half leather, electric seats, reverse camera\n\nI would like to order this.` },
-            { name: "Subaru Outback 2008", price: "995,000 KSh", desc: "2500cc petrol, auto, original paint, dark fabric interior, alloy rims", image: "images/autos/outback-black.jpg", msg: `*Product:* Subaru Outback 2008\n*Price:* 995,000 KSh\n*Description:* 2500cc petrol, auto, original paint, dark fabric interior, alloy rims\n\nI would like to order this.` },
-            { name: "Toyota Hiace 1KD 2012", price: "1,780,000 KSh (slightly negotiable)", desc: "3000cc diesel, auto, very clean, new tyres, bank/SACCO finance accepted", image: "images/autos/hiace1kd.jpg", msg: `*Product:* Toyota Hiace 1KD 2012\n*Price:* 1,780,000 KSh\n*Description:* 3000cc diesel, auto, very clean, new tyres, bank/SACCO finance accepted\n\nI would like to order this.` },
-            { name: "Toyota Hilux Single 2009", price: "2,650,000 KSh (Neg)", desc: "2500cc 2KD, 4WD, ex-UN, accident free", image: "images/autos/singlehilux.jpg", msg: `*Product:* Toyota Hilux Single 2009\n*Price:* 2,650,000 KSh\n*Description:* 2500cc 2KD, 4WD, ex-UN, accident free\n\nI would like to order this.` },
-            { name: "Nissan Caravan NV350 2015", price: "1,750,000 KSh", desc: "2000cc petrol, original paint, privately used", image: "images/autos/caravan-nv350.jpg", msg: `*Product:* Nissan Caravan NV350 2015\n*Price:* 1,750,000 KSh\n*Description:* 2000cc petrol, original paint, privately used\n\nI would like to order this.` },
-            { name: "Toyota Corolla Axio 2016", price: "1,450,000 KSh (negotiable)", desc: "1500cc petrol, auto, 2WD", image: "images/autos/axio2wd.jpg", msg: `*Product:* Toyota Corolla Axio 2016\n*Price:* 1,450,000 KSh\n*Description:* 1500cc petrol, auto, 2WD\n\nI would like to order this.` },
-            { name: "Mitsubishi Pajero Shogun 2010", price: "2,200,000 KSh (negotiable)", desc: "2800cc diesel turbo, 7 seater, 134k km", image: "images/autos/shogun2010.jpg", msg: `*Product:* Mitsubishi Pajero Shogun 2010\n*Price:* 2,200,000 KSh\n*Description:* 2800cc diesel turbo, 7 seater, 134k km\n\nI would like to order this.` },
-            { name: "Toyota Vellfire 2010", price: "1,500,000 KSh (slightly negotiable)", desc: "8 seater, beige fabric interior, original paint, 72k km, accident free", image: "images/autos/velfire.jpg", msg: `*Product:* Toyota Vellfire 2010\n*Price:* 1,500,000 KSh\n*Description:* 8 seater, beige fabric interior, original paint, 72k km, accident free\n\nI would like to order this.` },
-            { name: "Toyota Fielder 2011", price: "1,150,000 KSh (neg)", desc: "1500cc, 2WD, extremely clean, fully loaded", image: "images/autos/fielder2011.jpg", msg: `*Product:* Toyota Fielder 2011\n*Price:* 1,150,000 KSh\n*Description:* 1500cc, 2WD, extremely clean, fully loaded\n\nI would like to order this.` },
-            { name: "Toyota Prado TX 2008", price: "Call for price", desc: "2700cc, dark leather, automatic, new tyres, alloy rims, bank/SACCO finance accepted", image: "images/autos/pradotx.jpg", msg: `*Product:* Toyota Prado TX 2008\n*Price:* Call for price\n*Description:* 2700cc, dark leather, automatic, new tyres, alloy rims, bank/SACCO finance accepted\n\nI would like to order this.` },
-            { name: "Toyota Hilux Double Cab 2018", price: "4,700,000 KSh (asking)", desc: "2500cc diesel, auto, used like new, fully loaded, Nairobi", image: "images/autos/doublecab2018.jpg", msg: `*Product:* Toyota Hilux Double Cab 2018\n*Price:* 4,700,000 KSh\n*Description:* 2500cc diesel, auto, used like new, fully loaded, Nairobi\n\nI would like to order this.` },
-            { name: "Mazda Demio Skyactive 2015", price: "950,000 KSh", desc: "1300cc petrol, alloys, Kiambu road", image: "images/autos/skyactive.jpg", msg: `*Product:* Mazda Demio Skyactive 2015\n*Price:* 950,000 KSh\n*Description:* 1300cc petrol, alloys, Kiambu road\n\nI would like to order this.` },
-            { name: "Honda CR-V 2013", price: "1,880,000 KSh", desc: "2000cc, Kiambu road", image: "images/autos/crv2013.jpg", msg: `*Product:* Honda CR-V 2013\n*Price:* 1,880,000 KSh\n*Description:* 2000cc, Kiambu road\n\nI would like to order this.` },
-            { name: "Toyota Crown Athlete 2012", price: "1,390,000 KSh", desc: "2500cc V6 petrol, auto, original paint, electric memory seats, Kiambu road", image: "images/autos/athlete.jpg", msg: `*Product:* Toyota Crown Athlete 2012\n*Price:* 1,390,000 KSh\n*Description:* 2500cc V6 petrol, auto, original paint, electric memory seats, Kiambu road\n\nI would like to order this.` },
-            { name: "Toyota Allion 2009", price: "950,000 KSh", desc: "1500cc, 2WD, alloy rims, fog lights, android screen", image: "images/autos/allion2009.jpg", msg: `*Product:* Toyota Allion 2009\n*Price:* 950,000 KSh\n*Description:* 1500cc, 2WD, alloy rims, fog lights, android screen\n\nI would like to order this.` },
-            { name: "Toyota Fielder 2010 (Quick Sale)", price: "885,000 KSh (slightly negotiable)", desc: "1800cc, 2WD, lady owner, fully loaded, Wotee", image: "images/autos/quicksale.jpg", msg: `*Product:* Toyota Fielder 2010\n*Price:* 885,000 KSh\n*Description:* 1800cc, 2WD, lady owner, fully loaded, Wotee\n\nI would like to order this.` },
-            { name: "Mazda CX-5 AWD 2015", price: "1,650,000 KSh (negotiable)", desc: "2200cc diesel, automatic", image: "images/autos/cx5awd.jpg", msg: `*Product:* Mazda CX-5 AWD 2015\n*Price:* 1,650,000 KSh\n*Description:* 2200cc diesel, automatic\n\nI would like to order this.` },
-            { name: "Isuzu NMR 2021", price: "3,000,000 KSh (slightly negotiable)", desc: "Diesel, 5-speed manual, closed body, new tyres, trade-in accepted", image: "images/autos/nmr.jpg", msg: `*Product:* Isuzu NMR 2021\n*Price:* 3,000,000 KSh\n*Description:* Diesel, 5-speed manual, closed body, new tyres, trade-in accepted\n\nI would like to order this.` },
-            { name: "Mazda Premacy 2007", price: "670,000 KSh", desc: "2000cc petrol, 7 seater, original paint, clean fabric interior, buy and drive", image: "images/autos/premacy.jpg", msg: `*Product:* Mazda Premacy 2007\n*Price:* 670,000 KSh\n*Description:* 2000cc petrol, 7 seater, original paint, clean fabric interior, buy and drive\n\nI would like to order this.` },
-            { name: "Toyota RAV4 2015", price: "2,200,000 KSh", desc: "2400cc petrol, auto, 4WD, alloy rims", image: "images/autos/rav42016.jpg", msg: `*Product:* Toyota RAV4 2015\n*Price:* 2,200,000 KSh\n*Description:* 2400cc petrol, auto, 4WD, alloy rims\n\nI would like to order this.` },
-            { name: "Mazda CX8 2019", price: "3,750,000 KSh (asking)", desc: "2500cc petrol, 7 seater, brown leather, cruise control, low mileage", image: "images/autos/mazdacx8.jpg", msg: `*Product:* Mazda CX8 2019\n*Price:* 3,750,000 KSh\n*Description:* 2500cc petrol, 7 seater, brown leather, cruise control, low mileage\n\nI would like to order this.` },
-            { name: "Toyota Alphard 2006", price: "980,000 KSh (nego)", desc: "2400cc, original paint, auto, new tyres, alloy rims", image: "images/autos/alphard3.jpg", msg: `*Product:* Toyota Alphard 2006\n*Price:* 980,000 KSh\n*Description:* 2400cc, original paint, auto, new tyres, alloy rims\n\nI would like to order this.` },
-            { name: "Nissan Note 2013", price: "690,000 KSh (negotiable)", desc: "1300cc, 2WD, 131k km, ready documents", image: "images/autos/nissannote.jpg", msg: `*Product:* Nissan Note 2013\n*Price:* 690,000 KSh\n*Description:* 1300cc, 2WD, 131k km, ready documents\n\nI would like to order this.` },
-            { name: "Nissan Juke 2014", price: "1,060,000 KSh (slightly negotiable)", desc: "1500cc, 2WD, extremely clean, Parklands", image: "images/autos/nissanjuke.jpg", msg: `*Product:* Nissan Juke 2014\n*Price:* 1,060,000 KSh\n*Description:* 1500cc, 2WD, extremely clean, Parklands\n\nI would like to order this.` },
-            { name: "Toyota Hiace 7L 2016", price: "2,850,000 KSh", desc: "3000cc diesel, auto, 2WD, as clean as new, not locally used", image: "images/autos/hiaceblack.jpg", msg: `*Product:* Toyota Hiace 7L 2016\n*Price:* 2,850,000 KSh\n*Description:* 3000cc diesel, auto, 2WD, as clean as new, not locally used\n\nI would like to order this.` },
-            { name: "Toyota Vanguard 2010", price: "1,650,000 KSh (slightly negotiable)", desc: "2400cc, auto", image: "images/autos/vanguardnew.jpg", msg: `*Product:* Toyota Vanguard 2010\n*Price:* 1,650,000 KSh\n*Description:* 2400cc, auto\n\nI would like to order this.` },
-            { name: "Land Rover Discovery 4 2010", price: "2,499,999 KSh (negotiable)", desc: "3000cc diesel, 123k km, triple sunroof, leather, 7 seater, original paint", image: "images/autos/discovery.jpg", msg: `*Product:* Land Rover Discovery 4 2010\n*Price:* 2,499,999 KSh\n*Description:* 3000cc diesel, 123k km, triple sunroof, leather, 7 seater, original paint\n\nI would like to order this.` },
-            // All existing vehicles from previous versions are preserved below
-        ];
+    <!-- Then load your main script -->
+    <script src="script.js"></script>
 
-        // ==================== HOUSEHOLD ====================
-        const household = [
-            // ... (all household items remain unchanged from previous versions)
-        ];
-
-        // ==================== SHOES & CLOTHING ====================
-        const shoesClothing = [
-            // ... (all shoes/clothing items remain unchanged from previous versions)
-        ];
-
-        // ==================== KITCHENWARE ====================
-        const kitchenware = [
-            // ... (all kitchenware items remain unchanged from previous versions)
-        ];
-
-        // ==================== BESTSELLING PRODUCTS ====================
-        const products = [
-            { name: "Wireless Bluetooth Earbuds", price: "1,850 KSh", desc: "HD sound", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Earbuds", msg: `*Product:* Wireless Bluetooth Earbuds\n*Price:* 1,850 KSh\n*Description:* HD sound\n\nI would like to order this.` },
-            { name: "Smart LED Desk Lamp", price: "2,450 KSh", desc: "Touch control", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Lamp", msg: `*Product:* Smart LED Desk Lamp\n*Price:* 2,450 KSh\n*Description:* Touch control\n\nI would like to order this.` },
-            { name: "Men's Casual Wristwatch", price: "1,250 KSh", desc: "Water resistant", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Watch", msg: `*Product:* Men's Casual Wristwatch\n*Price:* 1,250 KSh\n*Description:* Water resistant\n\nI would like to order this.` },
-            { name: "Foldable Laptop Stand", price: "1,950 KSh", desc: "Aluminum, ergonomic", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Laptop+Stand", msg: `*Product:* Foldable Laptop Stand\n*Price:* 1,950 KSh\n*Description:* Aluminum, ergonomic\n\nI would like to order this.` }
-        ];
-
-        // Helper functions (unchanged)
-        function renderGrid(containerId, items, whatsappNumber) {
-            const grid = document.getElementById(containerId);
-            if (!grid) return;
-            grid.innerHTML = '';
-            items.forEach(item => {
-                const card = document.createElement('div');
-                card.className = 'product-card';
-                card.innerHTML = `
-                    <img class="product-img" src="${item.image}" alt="${item.name}" loading="lazy" onerror="this.src='https://placehold.co/600x400/eef2f7/1a2a36?text=Image+Not+Found'">
-                    <div class="product-title">${item.name}</div>
-                    <div class="product-price">${item.price}</div>
-                    <div class="product-desc">${item.desc}</div>
-                    <button class="whatsapp-btn" data-msg="${item.msg}">
-                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
-                    </button>
-                `;
-                grid.appendChild(card);
-            });
-            document.querySelectorAll(`#${containerId} .whatsapp-btn`).forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const msg = btn.getAttribute('data-msg');
-                    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank');
-                });
-            });
-        }
-
-        function setupInquiryForm(whatsappNumber) {
-            const form = document.getElementById('inquiryForm');
-            if (!form) return;
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const name = document.getElementById('inquiryName').value;
-                const email = document.getElementById('inquiryEmail').value;
-                const product = document.getElementById('inquiryProduct').value;
-                const message = document.getElementById('inquiryMessage').value;
-                const fullMsg = `*Inquiry from Kylhab Marketing*\n\nName: ${name}\nEmail: ${email}\nProduct/Vehicle: ${product}\nMessage: ${message}`;
-                window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(fullMsg)}`, '_blank');
-            });
-        }
-
-        const MY_WHATSAPP = "254723652430";
-
-        document.addEventListener('DOMContentLoaded', () => {
-            renderGrid('vehiclesGrid', vehicles, MY_WHATSAPP);
-            renderGrid('electronicsGrid', electronics, MY_WHATSAPP);
-            renderGrid('householdGrid', household, MY_WHATSAPP);
-            renderGrid('shoesGrid', shoesClothing, MY_WHATSAPP);
-            renderGrid('kitchenwareGrid', kitchenware, MY_WHATSAPP);
-            renderGrid('productsGrid', products, MY_WHATSAPP);
-            setupInquiryForm(MY_WHATSAPP);
-
-            document.querySelectorAll('.hot-sale-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const productData = JSON.parse(btn.getAttribute('data-product'));
-                    const msg = `*Product:* ${productData.name}\n*Price:* ${productData.price}\n*Description:* ${productData.desc}\n\nI would like to order this.`;
-                    window.open(`https://wa.me/${MY_WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank');
-                });
-            });
-        });
-    </script>
 </body>
 </html>
