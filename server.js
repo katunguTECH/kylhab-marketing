@@ -1,17 +1,28 @@
-const express = require('express');
+﻿const express = require('express');
 const path = require('path');
+
 const app = express();
 const port = process.env.PORT || 8080;
+const root = __dirname;
 
-// Serve static files from the current directory (images, CSS, JS, etc.)
-app.use(express.static(path.join(__dirname)));
+app.get('/robots.txt', (req, res) => {
+    res.type('text/plain');
+    res.sendFile(path.join(root, 'robots.txt'));
+});
 
-// For any request that doesn't match a static file, serve index.html
+app.get('/sitemap.xml', (req, res) => {
+    res.type('application/xml');
+    res.sendFile(path.join(root, 'sitemap.xml'));
+});
+
+app.use(express.static(root));
+
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(root, 'index.html'));
 });
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
-    console.log(`Serving files from: ${__dirname}`);
+    console.log(`Serving files from: ${root}`);
 });
+
