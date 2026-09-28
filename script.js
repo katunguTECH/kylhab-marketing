@@ -3,6 +3,8 @@
    Loads data from the data files (vehicles.js, electronics.js,
    household.js, kitchenware.js, shoes-clothing.js) and renders
    every grid on index.html.
+   Vehicles added through /admin are loaded from /api/vehicles
+   and shown first, followed by the ones in vehicles.js.
    IMPORTANT: this file must NOT re-declare any of those arrays.
    ========================================================= */
 
@@ -65,8 +67,17 @@ document.addEventListener('click', (e) => {
 });
 
 /* ---------- Render everything on load ---------- */
-document.addEventListener('DOMContentLoaded', () => {
-    renderGallery(getData('vehicles'),     'vehiclesGrid');
+document.addEventListener('DOMContentLoaded', async () => {
+    // Vehicles uploaded through /admin (empty list if the API is unreachable)
+    let uploaded = [];
+    try {
+        const res = await fetch('/api/vehicles');
+        if (res.ok) uploaded = await res.json();
+    } catch (err) {
+        console.warn('Could not load uploaded vehicles:', err);
+    }
+
+    renderGallery([...uploaded, ...getData('vehicles')], 'vehiclesGrid');
     renderGallery(getData('electronics'),  'electronicsGrid');
     renderGallery(getData('household'),    'householdGrid');
     renderGallery(getData('kitchenware'),  'kitchenwareGrid');

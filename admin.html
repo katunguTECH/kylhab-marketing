@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Kylhab Admin</title>
+<style>
+  *{box-sizing:border-box} body{font-family:system-ui,sans-serif;margin:0;background:#f4f5f7;color:#222}
+  main{max-width:720px;margin:0 auto;padding:16px}
+  .card{background:#fff;border-radius:12px;padding:16px;margin-bottom:16px;box-shadow:0 1px 4px #0001}
+  h1{font-size:1.3rem} h2{font-size:1.05rem;margin-top:0}
+  label{display:block;font-weight:600;margin:12px 0 4px;font-size:.9rem}
+  input,textarea{width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;font:inherit}
+  button{padding:12px 18px;border:0;border-radius:8px;background:#128c7e;color:#fff;font:inherit;font-weight:600;cursor:pointer}
+  button.del{background:#c0392b;padding:6px 12px;font-size:.85rem}
+  button:disabled{opacity:.6}
+  #thumbs{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  #thumbs img{width:72px;height:72px;object-fit:cover;border-radius:6px}
+  .row{display:flex;gap:12px;align-items:center;padding:8px 0;border-bottom:1px solid #eee}
+  .row img{width:64px;height:48px;object-fit:cover;border-radius:6px}
+  .row div{flex:1;min-width:0} .row small{color:#666}
+  #msg{margin-top:10px;font-weight:600}
+</style>
+</head>
+<body><main>
+<h1>🚗 Kylhab – Add a vehicle</h1>
+<div class="card">
+  <label>1. Paste the WhatsApp message</label>
+  <textarea id="paste" rows="5" placeholder="Land cruiser best suitable for tours&#10;Year 2017 models&#10;4200cc diesel&#10;Low mileage&#10;Kshs 5.85M"></textarea>
+
+  <label>2. Add the photos (saved WhatsApp pictures)</label>
+  <input type="file" id="photos" accept="image/*" multiple>
+  <div id="thumbs"></div>
+
+  <label>3. Check & edit</label>
+  <input id="name" placeholder="Name / title">
+  <input id="price" placeholder="Price e.g. 5,850,000 KSh" style="margin-top:8px">
+  <textarea id="details" rows="3" placeholder="Details" style="margin-top:8px"></textarea>
+
+  <p><button id="go">Publish to website</button></p>
+  <div id="msg"></div>
+</div>
+
+<div class="card"><h2>Live vehicles</h2><div id="list">Loading…</div></div>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+let blobs = [];
+
+function parse(text) {
+  const lines = text.split('\n').map(s => s.trim()).filter(s => s && !/^forwarded$/i.test(s));
+  let price = '';
+  const m = text.match(/(?:ksh?s?\.?)\s*([\d][\d,]*\.?\d*)\s*(m|million|k)?/i);
+  if (m) {
+    let n = parseFloat(m[1].replace(/,/g, ''));
+    const u = (m[2] || '').toLowerCase();
+    if (u === 'm' || u === 'million') n *= 1e6; else if (u === 'k') n *= 1e3;
+    price = Math.round(n).toLocaleString('en-US') + ' KSh';
+  }
+  const rest = lines.slice(1).filter(l => !/ksh?s?\.?\s*[\d]/i.test(l));
+  return { name: lines[0] || '', price, details: rest.join(' • ') };
+}
+$('paste').addEventListener('input', () => {
+  const p = parse($('paste').value);
+  $('name').value = p.name; $('price').value = p.price; $('details').value = p.details;
+});
+
+function shrink(file, max = 1200) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => {
+      const s = Math.min(1, max / Math.max(img.width, img.height));
+      const c = document.createElement('canvas');
+      c.width = img.width * s; c.height = img.height * s;
+      c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+      c.toBlob(b => b ? resolve(b) : reject(), 'image/jpeg', 0.82);
+    };
+    img.onerror = reject;
+    img.src = URL.createObjectURL(file);
+  });
+}
+$('photos').addEventListener('change', async e => {
+  $('thumbs').innerHTML = 'Preparing…';
+  blobs = await Promise.all([...e.target.files].map(f => shrink(f)));
+  $('thumbs').innerHTML = blobs.map(b => `<img src="${URL.createObjectURL(b)}">`).join('');
+});
+
+$('go').addEventListener('click', async () => {
+  if (!$('name').value.trim() || !blobs.length) { $('msg').textContent = '⚠️ Add a name and at least one photo.'; return; }
+  const fd = new FormData();
+  fd.append('name', $('name').value); fd.append('price', $('price').value); fd.append('details', $('details').value);
+  blobs.forEach((b, i) => fd.append('photos', b, `p${i}.jpg`));
+  $('go').disabled = true; $('msg').textContent = 'Uploading…';
+  try {
+    const r = await fetch('/api/vehicles', { method: 'POST', body: fd });
+    if (!r.ok) throw new Error((await r.json()).error || r.status);
+    $('msg').textContent = '✅ Published!';
+    $('paste').value = $('name').value = $('price').value = $('details').value = ''; $('photos').value = ''; $('thumbs').innerHTML = ''; blobs = [];
+    load();
+  } catch (err) { $('msg').textContent = '❌ ' + err.message; }
+  $('go').disabled = false;
+});
+
+async function load() {
+  const list = await (await fetch('/api/vehicles')).json();
+  $('list').innerHTML = list.length ? list.map(c => `
+    <div class="row"><img src="${c.image}"><div><b>${c.name.replace(/</g,'&lt;')}</b><br><small>${c.price}</small></div>
+    <button class="del" onclick="del(${c.id})">Delete</button></div>`).join('') : 'None yet.';
+}
+async function del(id) {
+  if (!confirm('Remove this vehicle from the website?')) return;
+  await fetch('/api/vehicles/' + id, { method: 'DELETE' }); load();
+}
+load();
+</script>
+</body></html>
