@@ -63,6 +63,10 @@ app.delete('/api/vehicles/:id', requireAdmin, (req, res) => {
 
 // ---- Existing site ----
 app.use(express.static(path.join(__dirname)));
-app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
+// Missing files (e.g. a .js or image) should 404, not return the home page
+app.get('*', (req, res) => {
+    if (path.extname(req.path)) return res.status(404).send('Not found');
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 app.listen(port, () => console.log(`Server running on port ${port}, data in ${DATA_DIR}`));

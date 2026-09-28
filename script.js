@@ -11,12 +11,23 @@
 const WHATSAPP_NUMBER = "254723652430";
 
 /* ---- Optional in-file data (keep hot deals / bestsellers here) ---- */
-const hotDeals = [];   // fill in if you want items in "BIDHAA KALI KALI"
-const hotSale  = [];   // fill in if you want items in "BRAND NEW HOT SALE"
+const hotDeals = [   // "BIDHAA KALI KALI"
+    { name: "Walker Boots", price: "3,300 KSh", details: "Sizes 37-43, normal fitting", image: "images/shoes-clothing-textiles/walker-boots.jpg" },
+    { name: "Prada Boots",  price: "3,500 KSh", details: "Sizes 37-42",                 image: "images/shoes-clothing-textiles/prada-boots.jpg" }
+];
+
+const hotSale = [    // "BRAND NEW HOT SALE"
+    { name: "iPhone 15 Pro",        price: "88,000 KSh", details: "256GB, 84% battery, physical SIM, clean unit",        image: "images/electronics-phones/iphone-15pro.jpg" },
+    { name: "Arsenal Retro Jersey", price: "3,000 KSh",  details: "Authentic retro design, high quality, limited stock", image: "images/shoes-clothing-textiles/arsenal-throwback.jpg" },
+    { name: "Arsenal Hoodie",       price: "3,700 KSh",  details: "High quality, Sizes L-3XL",                           image: "images/shoes-clothing-textiles/arsenal-hoodie.jpg" },
+    { name: "Jeep Laptop Bag",      price: "3,300 KSh",  details: "Size 38*27, fits laptop up to 15 inch",               image: "images/electronics-phones/jeep-laptop.jpg" }
+];
 
 const products = [
-    { id: 1, name: "Wireless Earbuds", price: "1,850 KSh", image: "https://placehold.co/600x400?text=Earbuds" },
-    { id: 2, name: "Smart LED Lamp",   price: "2,450 KSh", image: "https://placehold.co/600x400?text=LED+Lamp" }
+    { id: 1, name: "Wireless Bluetooth Earbuds", price: "1,850 KSh", details: "HD sound",            image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Earbuds" },
+    { id: 2, name: "Smart LED Desk Lamp",        price: "2,450 KSh", details: "Touch control",       image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Lamp" },
+    { id: 3, name: "Men's Casual Wristwatch",    price: "1,250 KSh", details: "Water resistant",     image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Watch" },
+    { id: 4, name: "Foldable Laptop Stand",      price: "1,950 KSh", details: "Aluminum, ergonomic", image: "https://placehold.co/600x400/eef2f7/1a2a36?text=Laptop+Stand" }
 ];
 
 /* ---------- Helpers ---------- */
@@ -45,8 +56,8 @@ function renderGallery(data, elementId) {
             <div class="product-info">
                 <h3 class="product-title">${escapeHtml(item.name)}</h3>
                 <div class="product-price">${escapeHtml(item.price || 'Call for Price')}</div>
-                <p class="product-desc">${escapeHtml(item.details || 'Quality guaranteed.')}</p>
-                <button class="whatsapp-btn" data-name="${escapeHtml(item.name)}">
+                <p class="product-desc">${escapeHtml(item.details || item.desc || 'Quality guaranteed.')}</p>
+                <button class="whatsapp-btn" data-name="${escapeHtml(item.name)}" data-price="${escapeHtml(item.price || '')}" data-desc="${escapeHtml(item.details || item.desc || '')}">
                     <i class="fab fa-whatsapp"></i> Inquire
                 </button>
             </div>
@@ -55,14 +66,23 @@ function renderGallery(data, elementId) {
 }
 
 /* Safe getter: returns the array if it exists, else [] */
-const getData = (name) => (typeof window[name] !== 'undefined' ? window[name] : []);
+const safe = (fn) => { try { const v = fn(); return Array.isArray(v) ? v : []; } catch (e) { return []; } };
+const getData = (name) => ({
+    vehicles:    () => safe(() => vehicles),
+    electronics: () => safe(() => electronics),
+    household:   () => safe(() => household),
+    kitchenware: () => safe(() => kitchenware),
+    shoes:       () => safe(() => shoes),
+    clothing:    () => safe(() => clothing)
+}[name] || (() => []))();
 
 /* ---------- WhatsApp click delegation ---------- */
 document.addEventListener('click', (e) => {
     const btn = e.target.closest('.whatsapp-btn');
     if (!btn) return;
-    const name = btn.dataset.name || 'this item';
-    const msg  = `Hello Kylhab Marketing, I am interested in ${name}. Please share more details.`;
+    const { name = 'this item', price = '', desc = '' } = btn.dataset;
+    const msg = [`*Product:* ${name}`, price ? `*Price:* ${price}` : '', desc ? `*Description:* ${desc}` : '', '', 'I would like to order this.']
+        .filter((l, i) => l || i === 3).join('\n');
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
 });
 
